@@ -221,63 +221,63 @@
     "href": "reflection.html",
     "title": "Reflection",
     "section": "",
-    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
+    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear — to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
   },
   {
-    "objectID": "reflection.html#the-project-in-one-sentence",
-    "href": "reflection.html#the-project-in-one-sentence",
+    "objectID": "reflection.html#starting-the-project",
+    "href": "reflection.html#starting-the-project",
     "title": "Reflection",
     "section": "",
-    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
+    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear — to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
   },
   {
     "objectID": "reflection.html#what-i-set-out-to-do",
     "href": "reflection.html#what-i-set-out-to-do",
     "title": "Reflection",
-    "section": "What I Set Out to Do",
-    "text": "What I Set Out to Do\nWhen I started, the instructions looked straightforward: spin up a Quarto site, write some pages, push it to GitHub Pages. Done. The reality of actually making each piece work — and work together — was more involved than I expected. In hindsight, that gap between “should be simple” and “actually works” is itself the lesson."
+    "section": "What I set out to do",
+    "text": "What I set out to do\nThe project required developing a professional e-portfolio using Quarto, managing it with Git, and publishing it through GitHub Pages. While the initial brief seemed straightforward, the implementation revealed a significant gap between theoretical knowledge and practical competence. Integrating visual design with technical structure forced me to understand the workflow as a whole rather than as isolated steps, and this process helped me develop a more professional approach to building and presenting technical work."
   },
   {
     "objectID": "reflection.html#the-learning-journey",
     "href": "reflection.html#the-learning-journey",
     "title": "Reflection",
-    "section": "The Learning Journey",
-    "text": "The Learning Journey\n\n\n\n\n\nflowchart LR\n    A[Start:&lt;br/&gt;Raw assignment brief] --&gt; B[Set up Quarto&lt;br/&gt;project structure]\n    B --&gt; C[Learn YAML&lt;br/&gt;configuration]\n    C --&gt; D[Write Python&lt;br/&gt;projects]\n    D --&gt; E[Customise with&lt;br/&gt;SCSS & Sass]\n    E --&gt; F[Deploy via&lt;br/&gt;GitHub Pages]\n    F --&gt; G[Iterate &&lt;br/&gt;polish]\n    G --&gt; H[Reflect on&lt;br/&gt;what worked]\n\n    style A fill:#e53e3e,stroke:#333,color:#fff\n    style H fill:#38a169,stroke:#333,color:#fff\n    style D fill:#2c5282,stroke:#333,color:#fff\n    style E fill:#ed8936,stroke:#333,color:#fff"
+    "section": "The learning journey",
+    "text": "The learning journey\n\n\n\n\n\nflowchart LR\n    A[Brief] --&gt; B[Quarto setup]\n    B --&gt; C[Configuration]\n    C --&gt; D[Python projects]\n    D --&gt; E[Git and deployment]\n    E --&gt; F[Polish and iterate]\n    F --&gt; G[Reflect]"
   },
   {
-    "objectID": "reflection.html#skills-i-actively-built",
-    "href": "reflection.html#skills-i-actively-built",
+    "objectID": "reflection.html#key-skills-developed",
+    "href": "reflection.html#key-skills-developed",
     "title": "Reflection",
-    "section": "Skills I Actively Built",
-    "text": "Skills I Actively Built\n\nGit and version control\nI have used Git before for personal projects, but this was the first time I tried to commit incrementally rather than batching a day’s work into one giant push. Writing descriptive commit messages as I worked turned out to be useful beyond the rubric — when I broke the navbar at one point, git log let me pinpoint exactly which change caused the issue and revert cleanly. That pattern is something I will carry into future work.\n\n\nQuarto\nI came in treating Quarto as “Markdown with extras” and left understanding it as a serious publishing system. The separation between content (.qmd files), configuration (_quarto.yml), and styling (styles.scss) mirrors good software architecture. Changing the site’s colour scheme in one file and seeing it propagate everywhere was satisfying in a way that taught me why that separation matters.\n\n\nPython for reproducible analysis\nEmbedding executable {python} chunks in prose changed how I think about technical writing. Instead of producing a chart in a notebook and screenshotting it into a document, the chart is the document. If the underlying data changes, the chart updates. This is closer to how analysis should work in a professional setting, and it is a workflow I will keep using.\n\n\nSass and design systems\nThe SCSS section was where I learned the most unexpected lesson. I started by copying a Bootswatch theme and tweaking colours. Then I realised I was repeating the same hex code in four places and that Sass variables existed for exactly this reason. Refactoring into variables taught me that design, like code, benefits from DRY principles."
+    "section": "Key skills developed",
+    "text": "Key skills developed\nQuarto as a publishing framework. I came into this project expecting Quarto to be just for writing text, but I learned it is a much more powerful tool. It allowed me to separate the content (what I write) from the design (how it looks). Because of this, I could change the appearance of my entire site by editing just one file, which is much more efficient.\nReproducible analysis with Python. Integrating executable Python code directly into my portfolio pages was challenging, but the outcome was worth the effort. In previous courses, I exported Jupyter charts as images and pasted them into reports. Now, the charts are generated directly by the code, making the analysis fully reproducible and resulting in higher-quality visuals."
   },
   {
-    "objectID": "reflection.html#challenges-i-had-to-work-through",
-    "href": "reflection.html#challenges-i-had-to-work-through",
+    "objectID": "reflection.html#challenges-and-technical-learning",
+    "href": "reflection.html#challenges-and-technical-learning",
     "title": "Reflection",
-    "section": "Challenges I Had to Work Through",
-    "text": "Challenges I Had to Work Through\n\n\n\n\n\n\nWarningThings that did not work the first time\n\n\n\n\nGitHub Pages deployment: The site initially 404’d because I had forgotten the .nojekyll file. Jekyll was silently eating files whose names started with an underscore.\nQuarto listing page: My project cards showed up empty at first because I had placed the individual project files in the wrong subdirectory relative to the contents field.\nSCSS not applying: Variables in scss:rules instead of scss:defaults — order matters.\nPlotly charts not rendering: Forgot that fig.show() is needed in Quarto {python} chunks the same way it is in scripts, not notebooks.\n\n\n\nEach of these cost me 20–40 minutes. Individually they are annoying; collectively they are where the real learning happened. Debugging deployment is a skill, and you only build it by having deployments break."
+    "section": "Challenges and technical learning",
+    "text": "Challenges and technical learning\nCertain obstacles during the project turned into some of the most valuable learning moments.\n\n\n\n\n\n\nWarningThree technical challenges worth highlighting\n\n\n\n1. YAML configuration. Changing the site theme required modifying the configuration file. What seemed like a simple edit resulted in some errors and delays. Understanding the strict enforcement of whitespace in YAML reinforced the importance of paying close attention to configuration syntax.\n2. File permissions on deployment. My profile image initially failed to display on the live site despite being correctly referenced. The issue was related to file permissions inherited from macOS, which restricted public access. Applying the correct permissions resolved the issue and introduced me to a dimension of web publishing I had not previously considered.\n3. Build cache. Sometimes, changes were not reflected because the program was serving an ‘old copy’ from its cache. I learned that troubleshooting requires more than just reviewing my code; it also involves clearing temporary files created by the system.\n\n\nThese three issues — YAML syntax, file permissions, and caching — They represent the type of operational knowledge that is covered in introductory courses, but it is in professional practice where we really learned."
   },
   {
-    "objectID": "reflection.html#what-i-would-do-differently",
-    "href": "reflection.html#what-i-would-do-differently",
+    "objectID": "reflection.html#what-i-would-refine",
+    "href": "reflection.html#what-i-would-refine",
     "title": "Reflection",
-    "section": "What I Would Do Differently",
-    "text": "What I Would Do Differently\n\nSet up deployment first, before any content. I wrote half the site before my first successful deploy. If I had deployed an empty skeleton on day one, I would have caught the .nojekyll issue earlier and with much less code to bisect.\nCommit more often. My early commits covered too many changes. When something broke, I had to untangle which change caused it. Smaller, atomic commits would have made rollback trivial.\nWrite the reflection as I went. I am writing this at the end, from memory. If I had kept running notes, the reflection would have more concrete detail and less post-hoc reconstruction."
+    "section": "What I would refine",
+    "text": "What I would refine\nLooking back, there are aspects of my workflow I would approach differently in future projects. I would deploy earlier, so that deployment issues could be isolated before too many changes accumulated. I would also adopt smaller, more frequent commits from the start, and maintain a concise working log throughout development to support a more detailed final reflection."
   },
   {
-    "objectID": "reflection.html#how-this-connects-to-where-i-am-going",
-    "href": "reflection.html#how-this-connects-to-where-i-am-going",
+    "objectID": "reflection.html#why-this-matters-for-what-comes-next",
+    "href": "reflection.html#why-this-matters-for-what-comes-next",
     "title": "Reflection",
-    "section": "How This Connects to Where I Am Going",
-    "text": "How This Connects to Where I Am Going\nThe skills this project exercised — reproducible analysis, version control discipline, configuration-driven design, publishing to the web — are the same skills I expect to use in any data or software role. Whether I end up writing reports for a team, publishing research, or shipping a product, the workflow of code → commit → render → publish will show up in some form. Having now done the full loop end-to-end on something that is actually live on the internet makes it feel less abstract.\nMore specifically, I want to:\n\nExtend one of the projects into a fuller machine-learning write-up with model evaluation.\nWrite a blog post using the same Quarto setup — the infrastructure is already here.\nContribute to an open-source Quarto extension to give something back to the tool that made this possible."
+    "section": "Why this matters for what comes next",
+    "text": "Why this matters for what comes next\nThe primary motivation for building this portfolio was to create a space where I can demonstrate my technical reasoning rather than simply list skills on a CV. As I apply for roles in Business Intelligence and Data Analysis in Dublin, having a live portfolio where recruiters can examine my approach — for instance, in the comparison of BERT, FinBERT, and LLaMA 3.2 for financial sentiment analysis — offers concrete evidence of my capabilities.\nMore broadly, the skills developed here extend beyond this assignment."
   },
   {
-    "objectID": "reflection.html#a-closing-thought",
-    "href": "reflection.html#a-closing-thought",
+    "objectID": "reflection.html#final-reflection",
+    "href": "reflection.html#final-reflection",
     "title": "Reflection",
-    "section": "A Closing Thought",
-    "text": "A Closing Thought\n\n\n\n\n\n\nNote\n\n\n\nThe best thing about this project was that it forced me to use a lot of small skills together. Any one of them alone is trivial; stitching them into something that works is where the difficulty — and the learning — lives."
+    "section": "Final reflection",
+    "text": "Final reflection\n\n\n\n\n\n\nNote\n\n\n\nThis project has strengthened both my technical confidence and my understanding of what it means to present work professionally. Each technical challenge — whether in configuration, deployment, or design — contributed to a broader understanding of how systems are built and maintained in practice. Beyond the specific tools, I developed a clearer sense of how to plan, execute, and refine a project from concept to public deliverable. This is a foundation I intend to build on throughout my career in Business Analytics."
   },
   {
     "objectID": "contact.html",
