@@ -1,0 +1,25 @@
+---
+title: "Lilian Cordova Hernandez"
+image: images/profile.jpg
+about:
+  template: jolla
+  image-shape: round
+  image-width: 15em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232/
+      target: _blank
+    - icon: github
+      text: GitHub
+      href: https://github.com/cordova-lilian
+      target: _blank
+    - icon: file-earmark-pdf
+      text: CV
+      href: cv/cv.pdf
+      target: _blank
+---
+
+Welcome to my portfolio. I am a [your field, e.g. data science student / software developer / analyst] with a focus on [your area, e.g. machine learning, web development, analytics].
+
+This site showcases my work, my journey, and the skills I have built. Browse the [projects](projects/index.qmd) page to see executable Python notebooks, or read more [about me](about.qmd) and the path that brought me here.
