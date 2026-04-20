@@ -3,25 +3,34 @@ project:
   output-dir: docs
 
 website:
-  title: "Lilian Elizabeth Cordova Hernandez"
-  # favicon: images/favicon.ico
+  title: "Lilian Cordova Hernandez"
+  description: "ePortfolio — MSc Business Analytics, Dublin City University."
+  favicon: images/favicon.svg
   site-url: "https://cordova-lilian.github.io/eportfolio"
   repo-url: "https://github.com/cordova-lilian/eportfolio"
 
   navbar:
-    # logo: images/logo.png
-    background: primary
+    logo: images/logo.svg
+    logo-alt: "Lilian Cordova Hernandez"
+    background: light
     search: true
+    collapse-below: lg
     left:
       - href: index.qmd
         text: Home
-        icon: house-door
+        icon: house
       - href: about.qmd
         text: About
         icon: person
-      - href: projects/index.qmd
-        text: Projects
+      - text: Projects
         icon: code-slash
+        menu:
+          - href: projects/index.qmd
+            text: All projects
+          - href: projects/list/sentiment_analysis.qmd
+            text: "Financial Sentiment Analysis"
+          - href: projects/list/penguins.qmd
+            text: "Palmer Penguins"
       - href: reflection.qmd
         text: Reflection
         icon: journal-text
@@ -33,33 +42,43 @@ website:
         icon: file-earmark-pdf
         href: cv/cv.pdf
         target: _blank
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232/"
+        target: _blank
+        aria-label: LinkedIn
       - icon: github
         href: "https://github.com/cordova-lilian"
         target: _blank
+        aria-label: GitHub
 
   page-footer:
-    left: "© 2026 Lilian Elizabeth Cordova Hernandez. All rights reserved."
-    center: "Built with [Quarto](https://quarto.org/)"
+    border: true
+    left: |
+      © 2026 Lilian Cordova Hernandez.
+      Built with [Quarto](https://quarto.org/) · [Source on GitHub](https://github.com/cordova-lilian/eportfolio)
     right:
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232/"
+        aria-label: LinkedIn
       - icon: github
         href: "https://github.com/cordova-lilian"
-      - icon: linkedin
-        href: "https://www.linkedin.com/in/linkedin.com/in/lilian-cordova-hernandez-916a37232/"
-      - icon: envelope
-        href: "https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232/"
+        aria-label: GitHub
 
 format:
   html:
     theme:
       light: [cosmo, styles.scss]
-    css: styles.scss
+      dark: [cosmo, styles.scss, styles-dark.scss]
     toc: true
     toc-location: right
+    toc-title: "On this page"
     code-copy: true
     code-overflow: wrap
     smooth-scroll: true
+    anchor-sections: true
     link-external-newwindow: true
     link-external-icon: true
+    fig-responsive: true
 
 execute:
   freeze: auto

@@ -1,0 +1,46 @@
+/*-- scss:defaults --*/
+// Dark-mode overrides — imported after styles.scss when dark theme is active.
+
+$blue-50:   #0f1a33;
+$blue-100:  #152242;
+$blue-200:  #1e3262;
+$blue-300:  #3a5aa3;
+$blue-400:  #6e8fe2;
+$blue-500:  #8aa9ff;
+$blue-600:  #a3beff;
+$blue-700:  #c3d4ff;
+$blue-800:  #e1e9ff;
+
+$off-white:     #0b1020;
+$paper:         #10162a;
+$tint:          #161d33;
+$border-soft:   #1f2844;
+$border:        #2a355a;
+$ink-soft:      #9aa3b8;
+$ink:           #d7dbe7;
+$ink-heading:   #ffffff;
+
+$body-bg:    $off-white;
+$body-color: $ink;
+
+$link-color:       $blue-500;
+$link-hover-color: $blue-600;
+
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+$navbar-hl: $blue-500;
+
+$code-bg:    $blue-100;
+$code-color: $blue-600;
+
+$footer-bg: $paper;
+$footer-fg: $ink-soft;
+
+
+/*-- scss:rules --*/
+body {
+  background:
+    radial-gradient(ellipse 1200px 600px at 15% -10%, rgba(138,169,255,.08), transparent 60%),
+    radial-gradient(ellipse 900px 500px at 90% 5%, rgba(138,169,255,.06), transparent 55%),
+    $off-white;
+}

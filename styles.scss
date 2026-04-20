@@ -1,64 +1,69 @@
 /*-- scss:defaults --*/
 
 // ═══════════════════════════════════════════════════════════════
-// Google Fonts: Instrument Serif + Inter + JetBrains Mono
+// Typography — Fraunces (display serif) + Inter (UI sans) + JetBrains Mono (code)
 // ═══════════════════════════════════════════════════════════════
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 // ═══════════════════════════════════════════════════════════════
-// Paleta editorial (azul profundo + crema)
+// Palette — light base, soft blue accents
+// Inspired by the Vern reference: generous whitespace, one
+// confident accent family, no decorative clutter.
 // ═══════════════════════════════════════════════════════════════
 
-// Azules
-$blue-50:   #eef4ff;
-$blue-100:  hwb(210 62% 2%);
-$blue-200:  #b9d0ff;
-$blue-400:  #6a94f0;
-$blue-500:  #4a7be0;
-$blue-600:  #2f5dcc;
-$blue-700:  #1e3d99;
-$sky:       #bcd4f7;
+// Core blues
+$blue-50:   #f3f7ff;
+$blue-100:  #e4ecff;
+$blue-200:  #c9d9ff;
+$blue-300:  #9db7f4;
+$blue-400:  #6e8fe2;
+$blue-500:  #4a6ed4;  // primary
+$blue-600:  #3957bd;
+$blue-700:  #2c4296;
+$blue-800:  #1f2f6d;
 
-// Neutros
-$cream:     hsl(253, 50%, 91%);
-$paper:     hsl(240, 49%, 86%);
-$ink:       #0e1830;
-$ink-soft:  #2a3656;
-$muted:     #6b7590;
-$line:      #dfe5f2;
-$accent:    $blue-600;
+// Neutrals (subtly cool off-whites and charcoals, saturation < 0.02)
+$off-white:     #fbfcfe;
+$paper:         #ffffff;
+$tint:          #f2f4f8;
+$border-soft:   #e5e9f0;
+$border:        #d8dde6;
+$ink-soft:      #5b6474;
+$ink:           #1d2433;
+$ink-heading:   #0f172a;
 
-// Bootstrap / Quarto
-$primary:   $blue-600;
-$secondary: $ink-soft;
-$success:   #10b981;
-$info:      $blue-500;
-$warning:   #f59e0b;
-$danger:    #e53e3e;
-$light:     $cream;
-$dark:      $ink;
+// Bootstrap/Quarto framework
+$primary:   $blue-500;
+$secondary: $blue-800;
+$success:   #1e9e6a;
+$info:      $blue-400;
+$warning:   #c98a1a;
+$danger:    #c84a4a;
+$light:     $off-white;
+$dark:      $ink-heading;
 
 // Body
-$body-bg:    $cream;
+$body-bg:    $off-white;
 $body-color: $ink;
 
 // Links
-$link-color:       $blue-600;
-$link-hover-color: $blue-700;
-$link-decoration:  none;
+$link-color:            $blue-600;
+$link-hover-color:      $blue-700;
+$link-decoration:       none;
+$link-hover-decoration: underline;
 
-// Typography stacks
-$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-$font-family-monospace:  'JetBrains Mono', Menlo, monospace;
-$headings-font-family:   'Instrument Serif', Georgia, serif;
-$headings-font-weight:   400;
-$headings-color:         $ink;
-$headings-line-height:   1.1;
+// Typography
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-monospace:  'JetBrains Mono', 'SF Mono', Menlo, monospace;
+$headings-font-family:   'Fraunces', Georgia, serif;
+$headings-font-weight:   500;
+$headings-color:         $ink-heading;
+$headings-line-height:   1.15;
 
-$font-size-base:   1rem;
-$line-height-base: 1.6;
+$font-size-base:   1.02rem;
+$line-height-base: 1.7;
 
-// Navbar (claro, minimal)
+// Navbar (light, quiet — like Vern)
 $navbar-bg: $paper;
 $navbar-fg: $ink;
 $navbar-hl: $blue-600;
@@ -68,583 +73,392 @@ $code-bg:    $blue-50;
 $code-color: $blue-700;
 
 // Footer
-$footer-bg: $ink;
-$footer-fg: $cream;
+$footer-bg: $paper;
+$footer-fg: $ink-soft;
 
 
 /*-- scss:rules --*/
 
-// ═══════════════════════════════════════════════════════════════
-// CSS Custom Properties — editorial design system
-// ═══════════════════════════════════════════════════════════════
-:root {
-  --accent: #{$blue-600};
-  --blue-50: #{$blue-50};
-  --blue-100: #{$blue-100};
-  --blue-200: #{$blue-200};
-  --blue-400: #{$blue-400};
-  --blue-500: #{$blue-500};
-  --blue-600: #{$blue-600};
-  --blue-700: #{$blue-700};
-  --cream: #{$cream};
-  --ink: #{$ink};
-  --ink-soft: #{$ink-soft};
-  --line: #{$line};
-  --mono: "JetBrains Mono", Menlo, monospace;
-  --muted: #{$muted};
-  --paper: #{$paper};
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --serif: "Instrument Serif", Georgia, serif;
-  --sky: #{$sky};
-}
-
-// ═══════════════════════════════════════════════════════════════
-// Page slide transitions (horizontal)
-// ═══════════════════════════════════════════════════════════════
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-main.content,
-.quarto-about-jolla,
-.quarto-title-block,
-#quarto-content > * {
-  animation: slideInFromRight 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-// Stagger: navbar first, then content
-.navbar {
-  animation: slideInFromBottom 0.4s ease-out both;
-}
-
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
 // Base
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
 body {
-  font-family: var(--sans);
-  background: var(--cream);
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-family-sans-serif;
+  letter-spacing: -0.005em;
+  background:
+    radial-gradient(ellipse 1200px 600px at 15% -10%, $blue-50, transparent 60%),
+    radial-gradient(ellipse 900px 500px at 90% 5%, $blue-100, transparent 55%),
+    $off-white;
+  background-attachment: fixed;
 }
 
-a {
-  color: var(--accent);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
+a { transition: color .15s ease; }
+html { scroll-behavior: smooth; }
+p  { margin-bottom: 1.15rem; text-wrap: pretty; }
 
-a:hover {
-  color: var(--blue-700);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// Typography — serif elegante para títulos
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
+// Headings — display serif, understated accent underline on h1
+// ───────────────────────────────────────────────────────────────
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--serif);
-  color: var(--ink);
+  font-family: $headings-font-family;
   letter-spacing: -0.02em;
-  font-weight: 400;
+  color: $ink-heading;
+  font-variation-settings: "opsz" 36;
 }
 
 h1 {
-  font-size: 3.2rem;
-  line-height: 1.05;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: clamp(2.1rem, 2.1rem + 1vw, 3rem);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  position: relative;
+  font-variation-settings: "opsz" 72;
+}
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 56px; height: 3px;
+  background: $blue-500;
+  border-radius: 2px;
 }
 
 h2 {
-  font-size: 2.25rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  line-height: 1.15;
-}
-
-h3 {
-  font-size: 1.65rem;
-  color: var(--ink-soft);
-  margin-top: 2rem;
-  font-style: italic;
-}
-
-h4 {
-  font-size: 1.3rem;
-  font-family: var(--sans);
   font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 1.75rem;
+  color: $ink-heading;
+  margin-top: 2.75rem;
+  margin-bottom: 0.9rem;
+}
+h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: $blue-800;
+  margin-top: 2rem;
 }
 
-p {
-  margin-bottom: 1.25rem;
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-}
-
-// Italic emphasis in serif
-em {
-  font-family: var(--serif);
-  font-style: italic;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// Navbar — minimal, claro
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
+// Navbar — quiet white, blue hover
+// ───────────────────────────────────────────────────────────────
 .navbar {
-  background-color: var(--paper) !important;
-  border-bottom: 1px solid var(--line);
-  box-shadow: none;
-  padding: 1rem 1.5rem;
+  background-color: $paper !important;
+  border-bottom: 1px solid $border-soft;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
+  padding: 0.5rem 1rem;
 
   .navbar-brand {
-    font-family: var(--serif);
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--ink) !important;
+    color: $ink-heading !important;
+    font-family: $headings-font-family;
+    font-weight: 600;
     letter-spacing: -0.01em;
+    font-size: 1.15rem;
+    img { max-height: 34px; }
   }
 
   .nav-link {
-    color: var(--ink-soft) !important;
-    font-family: var(--sans);
+    color: $ink !important;
     font-weight: 500;
     font-size: 0.95rem;
-    padding: 0.5rem 1rem !important;
-    transition: color 0.2s ease;
+    letter-spacing: 0.005em;
+    transition: color .15s ease;
   }
-
   .nav-link:hover,
   .nav-link.active {
-    color: var(--accent) !important;
+    color: $blue-600 !important;
   }
 
-  .navbar-brand img {
-    max-height: 36px;
-  }
+  .navbar-toggler { border-color: $border; }
 }
 
-// Search icon in navbar
-.navbar .aa-DetachedSearchButton {
-  background: var(--blue-50);
-  border: 1px solid var(--line);
-  color: var(--ink-soft);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// Landing page (jolla template)
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
+// Landing page (jolla)
+// ───────────────────────────────────────────────────────────────
 .quarto-about-jolla {
-  padding: 5rem 1rem 3rem;
-  background: var(--cream);
+  padding: 4.5rem 1rem 3rem;
 
   .about-image {
-    border: none;
-    box-shadow: 0 20px 50px rgba(14, 24, 48, 0.15);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 3px solid $paper;
+    box-shadow:
+      0 0 0 1px $border-soft,
+      0 20px 60px -20px rgba(74, 110, 212, 0.25);
+    transition: transform .3s ease;
   }
-
-  .about-image:hover {
-    transform: translateY(-4px) scale(1.02);
-  }
+  .about-image:hover { transform: translateY(-3px); }
 
   h1.title {
-    font-family: var(--serif);
-    color: var(--ink);
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: -0.03em;
-    margin-top: 2rem;
+    color: $ink-heading;
+    font-size: clamp(2.4rem, 2.4rem + 1.2vw, 3.4rem);
+    font-variation-settings: "opsz" 96;
+    padding-bottom: 0;
   }
+  h1.title::after { display: none; }
 
   .about-links a {
-    color: var(--ink) !important;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    padding: 0.6rem 1.5rem;
-    border-radius: 8px;
-    margin: 0.3rem;
-    transition: all 0.25s ease;
-    font-family: var(--sans);
+    color: $blue-700 !important;
+    background: $paper;
+    border: 1px solid $border;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    margin: 0.25rem;
     font-weight: 500;
     font-size: 0.9rem;
+    transition: all .2s ease;
   }
-
   .about-links a:hover {
-    background: var(--ink);
-    color: var(--paper) !important;
-    border-color: var(--ink);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(14, 24, 48, 0.15);
+    background: $blue-500;
+    color: #fff !important;
+    border-color: $blue-500;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px -6px rgba(74, 110, 212, 0.45);
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// Project cards (grid listing)
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
+// Projects grid
+// ───────────────────────────────────────────────────────────────
 .quarto-grid-item {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
+  background: $paper;
+  border: 1px solid $border-soft;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(14, 24, 48, 0.04);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-
 .quarto-grid-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(14, 24, 48, 0.12);
-  border-color: var(--blue-200);
+  transform: translateY(-4px);
+  border-color: $blue-200;
+  box-shadow: 0 18px 40px -20px rgba(74, 110, 212, 0.35);
 }
-
-.quarto-grid-item h5.title,
-.quarto-grid-item .listing-title {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: 1.4rem;
-  letter-spacing: -0.01em;
+.quarto-grid-item .listing-title,
+.quarto-grid-item h5.title {
+  color: $ink-heading;
+  font-family: $headings-font-family;
+  font-weight: 600;
 }
-
 .quarto-grid-item .listing-description {
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  color: $ink-soft;
+  font-size: 0.93rem;
+  line-height: 1.55;
 }
-
 .quarto-grid-item .listing-categories .listing-category {
-  background: var(--blue-50);
-  color: var(--blue-700);
-  border: 1px solid var(--blue-100);
-  padding: 0.2rem 0.65rem;
-  border-radius: 12px;
+  background: $blue-50;
+  color: $blue-700;
+  border: 1px solid $blue-100;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 500;
-  font-family: var(--sans);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  margin-right: 0.25rem;
 }
 
-.quarto-grid-item .listing-date,
-.quarto-grid-item .listing-author {
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-family: var(--mono);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// Callouts — editorial minimal
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
+// Callouts
+// ───────────────────────────────────────────────────────────────
 .callout {
   border-radius: 10px;
-  border: 1px solid var(--line);
   border-left-width: 3px;
-  background: var(--paper);
-  box-shadow: 0 1px 3px rgba(14, 24, 48, 0.03);
-  margin: 2rem 0;
+  background: $paper;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  margin: 1.5rem 0;
 }
-
 .callout.callout-style-default > .callout-header {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: 1.15rem;
-  background: transparent;
-  color: var(--ink);
+  font-family: $headings-font-family;
+  font-weight: 600;
+  background: $tint;
 }
+.callout-note    { border-left-color: $blue-500; }
+.callout-tip     { border-left-color: $success; }
+.callout-warning { border-left-color: $warning; }
+.callout-important { border-left-color: $danger; }
 
-.callout-note {
-  border-left-color: var(--blue-500);
-  background: var(--blue-50);
-}
-
-.callout-tip {
-  border-left-color: #10b981;
-  background: #f0fdf4;
-}
-
-.callout-warning {
-  border-left-color: #f59e0b;
-  background: #fffbeb;
-}
-
-.callout-important {
-  border-left-color: #e53e3e;
-  background: #fef2f2;
-}
-
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
 // Code blocks
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
 pre.sourceCode {
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  background: var(--paper) !important;
-  padding: 1.25rem;
-  box-shadow: 0 2px 8px rgba(14, 24, 48, 0.04);
+  border-radius: 8px;
+  border: 1px solid $border-soft;
+  background: $paper;
+  padding: 1rem;
   font-size: 0.88rem;
 }
-
 code {
-  background: var(--blue-50);
-  color: var(--blue-700);
-  padding: 0.1rem 0.4rem;
+  background: $blue-50;
+  color: $blue-700;
+  padding: 0.12rem 0.4rem;
   border-radius: 4px;
-  font-family: var(--mono);
-  font-size: 0.88em;
-  font-weight: 500;
+  font-size: 0.9em;
 }
+pre code { background: transparent; padding: 0; color: inherit; }
 
-pre code {
-  background: transparent;
-  padding: 0;
-  color: var(--ink);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// Tables — editorial
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
+// Tables
+// ───────────────────────────────────────────────────────────────
 table {
   border-collapse: collapse;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   width: 100%;
-  border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
-  background: var(--paper);
-  box-shadow: 0 1px 3px rgba(14, 24, 48, 0.04);
+  border: 1px solid $border-soft;
 }
-
 table thead {
-  background: var(--cream);
-  border-bottom: 2px solid var(--line);
+  background: $tint;
+  color: $ink-heading;
 }
-
 table thead th {
-  font-family: var(--sans);
+  font-family: $headings-font-family;
   font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  padding: 1rem 1.2rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid $border;
 }
+table tbody tr { border-bottom: 1px solid $border-soft; transition: background .15s ease; }
+table tbody tr:last-child { border-bottom: none; }
+table tbody tr:hover { background: $blue-50; }
+table tbody td { padding: 0.7rem 1rem; font-size: 0.95rem; }
 
-table tbody tr {
-  border-bottom: 1px solid var(--line);
-  transition: background 0.15s ease;
-}
-
-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-table tbody tr:hover {
-  background: var(--blue-50);
-}
-
-table tbody td {
-  padding: 0.85rem 1.2rem;
-  color: var(--ink-soft);
-}
-
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
 // Buttons
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
 .btn-primary,
 a.btn {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
-  font-family: var(--sans);
+  background: $blue-600;
+  border-color: $blue-600;
+  color: #fff;
   font-weight: 500;
-  letter-spacing: -0.005em;
+  letter-spacing: 0.01em;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
   font-size: 0.9rem;
-  padding: 0.7rem 1.6rem;
-  border-radius: 8px;
-  transition: all 0.25s ease;
+  transition: all .2s ease;
 }
-
 .btn-primary:hover,
 a.btn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(47, 93, 204, 0.25);
+  background: $blue-700;
+  border-color: $blue-700;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -8px rgba(44, 66, 150, 0.5);
 }
 
-// ═══════════════════════════════════════════════════════════════
-// Footer — oscuro, minimal
-// ═══════════════════════════════════════════════════════════════
+// ───────────────────────────────────────────────────────────────
+// Footer
+// ───────────────────────────────────────────────────────────────
 .page-footer,
 .nav-footer {
-  background-color: var(--ink);
-  color: var(--cream);
-  padding: 2.5rem 0;
-  margin-top: 4rem;
-  border-top: 1px solid var(--ink-soft);
-
-  a {
-    color: var(--blue-200);
-  }
-
-  a:hover {
-    color: var(--paper);
-  }
-}
-
-// ═══════════════════════════════════════════════════════════════
-// Title banner (listing pages like Projects)
-// ═══════════════════════════════════════════════════════════════
-.quarto-title-block.default .quarto-title-banner {
-  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%);
-  color: var(--paper);
-  padding: 5rem 1rem;
-}
-
-.quarto-title-block.default .quarto-title-banner h1.title {
-  color: var(--paper);
-  font-family: var(--serif);
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: -0.03em;
-}
-
-.quarto-title-block.default .quarto-title-banner .subtitle {
-  color: var(--blue-200);
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-family: var(--serif);
-  font-style: italic;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// TOC (Table of Contents lateral)
-// ═══════════════════════════════════════════════════════════════
-#TOC {
-  border-left: 1px solid var(--line);
-  padding-left: 1.25rem;
+  background-color: $paper;
+  color: $ink-soft;
+  border-top: 1px solid $border-soft;
+  padding: 2rem 0;
   font-size: 0.88rem;
 
-  > ul > li > a {
-    color: var(--ink);
-    font-weight: 500;
-    font-family: var(--sans);
-  }
+  a { color: $blue-600; }
+  a:hover { color: $blue-700; }
+}
 
-  a {
-    color: var(--muted);
-    transition: color 0.2s ease;
-  }
+// ───────────────────────────────────────────────────────────────
+// Title banner (listing / projects)
+// ───────────────────────────────────────────────────────────────
+.quarto-title-block.default .quarto-title-banner {
+  background:
+    radial-gradient(ellipse 1000px 400px at 20% 100%, $blue-100, transparent 60%),
+    linear-gradient(180deg, $paper 0%, $blue-50 100%);
+  color: $ink-heading;
+  padding: 4rem 1rem 3.5rem;
+  border-bottom: 1px solid $border-soft;
+}
+.quarto-title-block.default .quarto-title-banner h1.title {
+  color: $ink-heading;
+  font-size: clamp(2.2rem, 2.2rem + 1.2vw, 3.2rem);
+  padding-bottom: 0;
+  font-variation-settings: "opsz" 96;
+}
+.quarto-title-block.default .quarto-title-banner h1.title::after { display: none; }
+.quarto-title-block.default .quarto-title-banner .subtitle {
+  color: $ink-soft;
+  font-weight: 400;
+  font-size: 1.1rem;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+}
 
-  a:hover,
-  a.active {
-    color: var(--accent);
-    font-weight: 500;
+// ───────────────────────────────────────────────────────────────
+// Sidebar TOC
+// ───────────────────────────────────────────────────────────────
+#TOC, .sidebar nav[role="doc-toc"] {
+  border-left: 1px solid $border-soft;
+  padding-left: 1rem;
+
+  .toc-title { font-family: $headings-font-family; font-weight: 600; color: $ink-heading; font-size: 0.95rem; }
+
+  ul li a {
+    color: $ink-soft;
+    font-size: 0.88rem;
+    padding: 0.2rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+    margin-left: -0.75rem;
+    transition: all .15s ease;
+  }
+  ul li a:hover,
+  ul li a.active {
+    color: $blue-700;
+    border-left-color: $blue-500;
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// Extras
-// ═══════════════════════════════════════════════════════════════
-
-// Smooth scrolling
-html {
-  scroll-behavior: smooth;
+// ───────────────────────────────────────────────────────────────
+// Images
+// ───────────────────────────────────────────────────────────────
+img.img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 10px 30px -15px rgba(74,110,212,.2);
 }
 
-// Horizontal rules — elegant
+// ───────────────────────────────────────────────────────────────
+// Horizontal rules — soft gradient
+// ───────────────────────────────────────────────────────────────
 hr {
   border: none;
   height: 1px;
-  background: var(--line);
-  margin: 3rem auto;
-  max-width: 300px;
+  background: linear-gradient(to right, transparent, $border 20%, $border 80%, transparent);
+  margin: 2.5rem 0;
 }
 
-// Images with subtle shadows
-img.img-fluid {
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(14, 24, 48, 0.08);
-}
-
-// Blockquotes — editorial
+// ───────────────────────────────────────────────────────────────
+// Blockquotes
+// ───────────────────────────────────────────────────────────────
 blockquote {
-  border-left: 3px solid var(--accent);
-  padding: 0.5rem 1.5rem;
-  margin: 2rem 0;
-  font-family: var(--serif);
-  font-size: 1.3rem;
+  border-left: 3px solid $blue-300;
+  background: $blue-50;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  color: $ink;
   font-style: italic;
-  color: var(--ink-soft);
-  line-height: 1.5;
+
+  p:last-child { margin-bottom: 0; }
 }
 
-// Date formatting
-.quarto-title-meta {
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
+// ───────────────────────────────────────────────────────────────
+// Small utilities for hand-authored sections
+// ───────────────────────────────────────────────────────────────
+.accent { color: $blue-600; }
+.muted  { color: $ink-soft; }
 
-// Section numbers (for .section-number class if used)
 .section-number {
-  font-family: var(--serif);
-  font-size: 4rem;
-  font-weight: 400;
-  color: var(--blue-200);
+  font-family: $headings-font-family;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: $blue-200;
   line-height: 1;
-  font-style: italic;
 }
 
-// Lists
-ul li, ol li {
-  margin-bottom: 0.5rem;
-  color: var(--ink-soft);
-}
-
-// Inline code in paragraphs
-p code {
-  background: var(--blue-50);
-  color: var(--blue-700);
-}
-
-// Selection color
-::selection {
-  background: var(--blue-200);
-  color: var(--ink);
-}
-
-// Reduce motion accessibility
-@media (prefers-reduced-motion: reduce) {
-  main.content,
-  .quarto-about-jolla,
-  .quarto-title-block,
-  #quarto-content > *,
-  .navbar {
-    animation: none !important;
-  }
-
-  * {
-    transition: none !important;
-  }
+// Category badge on project detail pages
+.quarto-categories .quarto-category {
+  background: $blue-50;
+  color: $blue-700;
+  border: 1px solid $blue-100;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.75rem;
 }
