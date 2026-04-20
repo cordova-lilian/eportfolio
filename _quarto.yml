@@ -4,12 +4,12 @@ project:
 
 website:
   title: "Lilian Elizabeth Cordova Hernandez"
-  favicon: images/favicon.ico
+  # favicon: images/favicon.ico
   site-url: "https://cordova-lilian.github.io/eportfolio"
   repo-url: "https://github.com/cordova-lilian/eportfolio"
 
   navbar:
-    logo: images/logo.png
+    # logo: images/logo.png
     background: primary
     search: true
     left:
