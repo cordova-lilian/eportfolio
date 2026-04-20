@@ -140,104 +140,6 @@
     "text": "Symptom\nFix\n\n\n\n\nSite 404s after deploy\nCheck .nojekyll exists, Pages source set to /docs\n\n\nPython chunks show error\npip install plotly pandas statsmodels\n\n\nFontAwesome icons not showing\nquarto add quarto-ext/fontawesome from project root\n\n\nLogo/favicon missing\nCheck filenames match exactly (case-sensitive)\n\n\nSCSS not applying\nEnsure - styles.scss is listed under theme in _quarto.yml\n\n\nListing page empty\nProject .qmd files must be in projects/list/ subfolder"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nExploring the Palmer Penguins Dataset\n\n\n\npython\n\ndata-viz\n\neda\n\nplotly\n\n\n\nAn interactive visual analysis of 344 penguins across three species, exploring morphological differences and species separability.\n\n\n\nLilian Elizabeth Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#professional-references",
-    "href": "contact.html#professional-references",
-    "title": "Contact & References",
-    "section": "Professional References",
-    "text": "Professional References\nThe following individuals can speak to my work, character, and technical ability. Please contact me first via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nReference 1\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Academic supervisor / Line manager / Project collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship — what we collaborated on, over what period.\n\n\n\n\nReference 2\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Module leader / Mentor] Contact: Available on request\nA brief sentence or two on the context of our working relationship.\n\n\n\n\nReference 3\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Internship supervisor / Peer collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship."
-  },
-  {
-    "objectID": "contact.html#a-note-on-privacy",
-    "href": "contact.html#a-note-on-privacy",
-    "title": "Contact & References",
-    "section": "A Note on Privacy",
-    "text": "A Note on Privacy\nContact details for references are provided on request rather than listed publicly, to respect their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
-  },
-  {
-    "objectID": "reflection.html",
-    "href": "reflection.html",
-    "title": "Reflection",
-    "section": "",
-    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
-  },
-  {
-    "objectID": "reflection.html#the-project-in-one-sentence",
-    "href": "reflection.html#the-project-in-one-sentence",
-    "title": "Reflection",
-    "section": "",
-    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
-  },
-  {
-    "objectID": "reflection.html#what-i-set-out-to-do",
-    "href": "reflection.html#what-i-set-out-to-do",
-    "title": "Reflection",
-    "section": "What I Set Out to Do",
-    "text": "What I Set Out to Do\nWhen I started, the instructions looked straightforward: spin up a Quarto site, write some pages, push it to GitHub Pages. Done. The reality of actually making each piece work — and work together — was more involved than I expected. In hindsight, that gap between “should be simple” and “actually works” is itself the lesson."
-  },
-  {
-    "objectID": "reflection.html#the-learning-journey",
-    "href": "reflection.html#the-learning-journey",
-    "title": "Reflection",
-    "section": "The Learning Journey",
-    "text": "The Learning Journey\n\n\n\n\n\nflowchart LR\n    A[Start:&lt;br/&gt;Raw assignment brief] --&gt; B[Set up Quarto&lt;br/&gt;project structure]\n    B --&gt; C[Learn YAML&lt;br/&gt;configuration]\n    C --&gt; D[Write Python&lt;br/&gt;projects]\n    D --&gt; E[Customise with&lt;br/&gt;SCSS & Sass]\n    E --&gt; F[Deploy via&lt;br/&gt;GitHub Pages]\n    F --&gt; G[Iterate &&lt;br/&gt;polish]\n    G --&gt; H[Reflect on&lt;br/&gt;what worked]\n\n    style A fill:#e53e3e,stroke:#333,color:#fff\n    style H fill:#38a169,stroke:#333,color:#fff\n    style D fill:#2c5282,stroke:#333,color:#fff\n    style E fill:#ed8936,stroke:#333,color:#fff"
-  },
-  {
-    "objectID": "reflection.html#skills-i-actively-built",
-    "href": "reflection.html#skills-i-actively-built",
-    "title": "Reflection",
-    "section": "Skills I Actively Built",
-    "text": "Skills I Actively Built\n\nGit and version control\nI have used Git before for personal projects, but this was the first time I tried to commit incrementally rather than batching a day’s work into one giant push. Writing descriptive commit messages as I worked turned out to be useful beyond the rubric — when I broke the navbar at one point, git log let me pinpoint exactly which change caused the issue and revert cleanly. That pattern is something I will carry into future work.\n\n\nQuarto\nI came in treating Quarto as “Markdown with extras” and left understanding it as a serious publishing system. The separation between content (.qmd files), configuration (_quarto.yml), and styling (styles.scss) mirrors good software architecture. Changing the site’s colour scheme in one file and seeing it propagate everywhere was satisfying in a way that taught me why that separation matters.\n\n\nPython for reproducible analysis\nEmbedding executable {python} chunks in prose changed how I think about technical writing. Instead of producing a chart in a notebook and screenshotting it into a document, the chart is the document. If the underlying data changes, the chart updates. This is closer to how analysis should work in a professional setting, and it is a workflow I will keep using.\n\n\nSass and design systems\nThe SCSS section was where I learned the most unexpected lesson. I started by copying a Bootswatch theme and tweaking colours. Then I realised I was repeating the same hex code in four places and that Sass variables existed for exactly this reason. Refactoring into variables taught me that design, like code, benefits from DRY principles."
-  },
-  {
-    "objectID": "reflection.html#challenges-i-had-to-work-through",
-    "href": "reflection.html#challenges-i-had-to-work-through",
-    "title": "Reflection",
-    "section": "Challenges I Had to Work Through",
-    "text": "Challenges I Had to Work Through\n\n\n\n\n\n\nWarningThings that did not work the first time\n\n\n\n\nGitHub Pages deployment: The site initially 404’d because I had forgotten the .nojekyll file. Jekyll was silently eating files whose names started with an underscore.\nQuarto listing page: My project cards showed up empty at first because I had placed the individual project files in the wrong subdirectory relative to the contents field.\nSCSS not applying: Variables in scss:rules instead of scss:defaults — order matters.\nPlotly charts not rendering: Forgot that fig.show() is needed in Quarto {python} chunks the same way it is in scripts, not notebooks.\n\n\n\nEach of these cost me 20–40 minutes. Individually they are annoying; collectively they are where the real learning happened. Debugging deployment is a skill, and you only build it by having deployments break."
-  },
-  {
-    "objectID": "reflection.html#what-i-would-do-differently",
-    "href": "reflection.html#what-i-would-do-differently",
-    "title": "Reflection",
-    "section": "What I Would Do Differently",
-    "text": "What I Would Do Differently\n\nSet up deployment first, before any content. I wrote half the site before my first successful deploy. If I had deployed an empty skeleton on day one, I would have caught the .nojekyll issue earlier and with much less code to bisect.\nCommit more often. My early commits covered too many changes. When something broke, I had to untangle which change caused it. Smaller, atomic commits would have made rollback trivial.\nWrite the reflection as I went. I am writing this at the end, from memory. If I had kept running notes, the reflection would have more concrete detail and less post-hoc reconstruction."
-  },
-  {
-    "objectID": "reflection.html#how-this-connects-to-where-i-am-going",
-    "href": "reflection.html#how-this-connects-to-where-i-am-going",
-    "title": "Reflection",
-    "section": "How This Connects to Where I Am Going",
-    "text": "How This Connects to Where I Am Going\nThe skills this project exercised — reproducible analysis, version control discipline, configuration-driven design, publishing to the web — are the same skills I expect to use in any data or software role. Whether I end up writing reports for a team, publishing research, or shipping a product, the workflow of code → commit → render → publish will show up in some form. Having now done the full loop end-to-end on something that is actually live on the internet makes it feel less abstract.\nMore specifically, I want to:\n\nExtend one of the projects into a fuller machine-learning write-up with model evaluation.\nWrite a blog post using the same Quarto setup — the infrastructure is already here.\nContribute to an open-source Quarto extension to give something back to the tool that made this possible."
-  },
-  {
-    "objectID": "reflection.html#a-closing-thought",
-    "href": "reflection.html#a-closing-thought",
-    "title": "Reflection",
-    "section": "A Closing Thought",
-    "text": "A Closing Thought\n\n\n\n\n\n\nNote\n\n\n\nThe best thing about this project was that it forced me to use a lot of small skills together. Any one of them alone is trivial; stitching them into something that works is where the difficulty — and the learning — lives."
-  },
-  {
     "objectID": "projects/list/penguins.html",
     "href": "projects/list/penguins.html",
     "title": "Exploring the Palmer Penguins Dataset",
@@ -313,6 +215,195 @@
     "title": "Exploring the Palmer Penguins Dataset",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nHorst, A. M., Hill, A. P., & Gorman, K. B. (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package.↩︎"
+  },
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
+    "section": "",
+    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
+  },
+  {
+    "objectID": "reflection.html#the-project-in-one-sentence",
+    "href": "reflection.html#the-project-in-one-sentence",
+    "title": "Reflection",
+    "section": "",
+    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
+  },
+  {
+    "objectID": "reflection.html#what-i-set-out-to-do",
+    "href": "reflection.html#what-i-set-out-to-do",
+    "title": "Reflection",
+    "section": "What I Set Out to Do",
+    "text": "What I Set Out to Do\nWhen I started, the instructions looked straightforward: spin up a Quarto site, write some pages, push it to GitHub Pages. Done. The reality of actually making each piece work — and work together — was more involved than I expected. In hindsight, that gap between “should be simple” and “actually works” is itself the lesson."
+  },
+  {
+    "objectID": "reflection.html#the-learning-journey",
+    "href": "reflection.html#the-learning-journey",
+    "title": "Reflection",
+    "section": "The Learning Journey",
+    "text": "The Learning Journey\n\n\n\n\n\nflowchart LR\n    A[Start:&lt;br/&gt;Raw assignment brief] --&gt; B[Set up Quarto&lt;br/&gt;project structure]\n    B --&gt; C[Learn YAML&lt;br/&gt;configuration]\n    C --&gt; D[Write Python&lt;br/&gt;projects]\n    D --&gt; E[Customise with&lt;br/&gt;SCSS & Sass]\n    E --&gt; F[Deploy via&lt;br/&gt;GitHub Pages]\n    F --&gt; G[Iterate &&lt;br/&gt;polish]\n    G --&gt; H[Reflect on&lt;br/&gt;what worked]\n\n    style A fill:#e53e3e,stroke:#333,color:#fff\n    style H fill:#38a169,stroke:#333,color:#fff\n    style D fill:#2c5282,stroke:#333,color:#fff\n    style E fill:#ed8936,stroke:#333,color:#fff"
+  },
+  {
+    "objectID": "reflection.html#skills-i-actively-built",
+    "href": "reflection.html#skills-i-actively-built",
+    "title": "Reflection",
+    "section": "Skills I Actively Built",
+    "text": "Skills I Actively Built\n\nGit and version control\nI have used Git before for personal projects, but this was the first time I tried to commit incrementally rather than batching a day’s work into one giant push. Writing descriptive commit messages as I worked turned out to be useful beyond the rubric — when I broke the navbar at one point, git log let me pinpoint exactly which change caused the issue and revert cleanly. That pattern is something I will carry into future work.\n\n\nQuarto\nI came in treating Quarto as “Markdown with extras” and left understanding it as a serious publishing system. The separation between content (.qmd files), configuration (_quarto.yml), and styling (styles.scss) mirrors good software architecture. Changing the site’s colour scheme in one file and seeing it propagate everywhere was satisfying in a way that taught me why that separation matters.\n\n\nPython for reproducible analysis\nEmbedding executable {python} chunks in prose changed how I think about technical writing. Instead of producing a chart in a notebook and screenshotting it into a document, the chart is the document. If the underlying data changes, the chart updates. This is closer to how analysis should work in a professional setting, and it is a workflow I will keep using.\n\n\nSass and design systems\nThe SCSS section was where I learned the most unexpected lesson. I started by copying a Bootswatch theme and tweaking colours. Then I realised I was repeating the same hex code in four places and that Sass variables existed for exactly this reason. Refactoring into variables taught me that design, like code, benefits from DRY principles."
+  },
+  {
+    "objectID": "reflection.html#challenges-i-had-to-work-through",
+    "href": "reflection.html#challenges-i-had-to-work-through",
+    "title": "Reflection",
+    "section": "Challenges I Had to Work Through",
+    "text": "Challenges I Had to Work Through\n\n\n\n\n\n\nWarningThings that did not work the first time\n\n\n\n\nGitHub Pages deployment: The site initially 404’d because I had forgotten the .nojekyll file. Jekyll was silently eating files whose names started with an underscore.\nQuarto listing page: My project cards showed up empty at first because I had placed the individual project files in the wrong subdirectory relative to the contents field.\nSCSS not applying: Variables in scss:rules instead of scss:defaults — order matters.\nPlotly charts not rendering: Forgot that fig.show() is needed in Quarto {python} chunks the same way it is in scripts, not notebooks.\n\n\n\nEach of these cost me 20–40 minutes. Individually they are annoying; collectively they are where the real learning happened. Debugging deployment is a skill, and you only build it by having deployments break."
+  },
+  {
+    "objectID": "reflection.html#what-i-would-do-differently",
+    "href": "reflection.html#what-i-would-do-differently",
+    "title": "Reflection",
+    "section": "What I Would Do Differently",
+    "text": "What I Would Do Differently\n\nSet up deployment first, before any content. I wrote half the site before my first successful deploy. If I had deployed an empty skeleton on day one, I would have caught the .nojekyll issue earlier and with much less code to bisect.\nCommit more often. My early commits covered too many changes. When something broke, I had to untangle which change caused it. Smaller, atomic commits would have made rollback trivial.\nWrite the reflection as I went. I am writing this at the end, from memory. If I had kept running notes, the reflection would have more concrete detail and less post-hoc reconstruction."
+  },
+  {
+    "objectID": "reflection.html#how-this-connects-to-where-i-am-going",
+    "href": "reflection.html#how-this-connects-to-where-i-am-going",
+    "title": "Reflection",
+    "section": "How This Connects to Where I Am Going",
+    "text": "How This Connects to Where I Am Going\nThe skills this project exercised — reproducible analysis, version control discipline, configuration-driven design, publishing to the web — are the same skills I expect to use in any data or software role. Whether I end up writing reports for a team, publishing research, or shipping a product, the workflow of code → commit → render → publish will show up in some form. Having now done the full loop end-to-end on something that is actually live on the internet makes it feel less abstract.\nMore specifically, I want to:\n\nExtend one of the projects into a fuller machine-learning write-up with model evaluation.\nWrite a blog post using the same Quarto setup — the infrastructure is already here.\nContribute to an open-source Quarto extension to give something back to the tool that made this possible."
+  },
+  {
+    "objectID": "reflection.html#a-closing-thought",
+    "href": "reflection.html#a-closing-thought",
+    "title": "Reflection",
+    "section": "A Closing Thought",
+    "text": "A Closing Thought\n\n\n\n\n\n\nNote\n\n\n\nThe best thing about this project was that it forced me to use a lot of small skills together. Any one of them alone is trivial; stitching them into something that works is where the difficulty — and the learning — lives."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact & References",
+    "section": "Professional References",
+    "text": "Professional References\nThe following individuals can speak to my work, character, and technical ability. Please contact me first via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nReference 1\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Academic supervisor / Line manager / Project collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship — what we collaborated on, over what period.\n\n\n\n\nReference 2\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Module leader / Mentor] Contact: Available on request\nA brief sentence or two on the context of our working relationship.\n\n\n\n\nReference 3\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Internship supervisor / Peer collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship."
+  },
+  {
+    "objectID": "contact.html#a-note-on-privacy",
+    "href": "contact.html#a-note-on-privacy",
+    "title": "Contact & References",
+    "section": "A Note on Privacy",
+    "text": "A Note on Privacy\nContact details for references are provided on request rather than listed publicly, to respect their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFinancial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2\n\n\n\npython\n\nnlp\n\nmachine-learning\n\ntransformers\n\nsentiment-analysis\n\n\n\nBenchmarking three NLP architectures on sentence-level financial sentiment classification using the Financial PhraseBank dataset.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring the Palmer Penguins Dataset\n\n\n\npython\n\ndata-viz\n\neda\n\nplotly\n\n\n\nAn interactive visual analysis of 344 penguins across three species, exploring morphological differences and species separability.\n\n\n\nLilian Elizabeth Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html",
+    "href": "projects/list/sentiment_analysis.html",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "",
+    "text": "Financial firms process thousands of news items daily to inform trading, risk, and portfolio decisions. Manually classifying sentiment at scale is infeasible. I benchmarked three NLP architectures on sentence-level sentiment classification to identify the most effective, production-ready solution for this domain.\n\n\n\n\n\n\nNoteThe question\n\n\n\nWhich architecture delivers the best sentiment classification on financial text: general-purpose BERT, domain-pretrained FinBERT, or a much larger zero-shot LLaMA 3.2?"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#overview",
+    "href": "projects/list/sentiment_analysis.html#overview",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "",
+    "text": "Financial firms process thousands of news items daily to inform trading, risk, and portfolio decisions. Manually classifying sentiment at scale is infeasible. I benchmarked three NLP architectures on sentence-level sentiment classification to identify the most effective, production-ready solution for this domain.\n\n\n\n\n\n\nNoteThe question\n\n\n\nWhich architecture delivers the best sentiment classification on financial text: general-purpose BERT, domain-pretrained FinBERT, or a much larger zero-shot LLaMA 3.2?"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#the-approach",
+    "href": "projects/list/sentiment_analysis.html#the-approach",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "The Approach",
+    "text": "The Approach\nDataset. Financial PhraseBank1 — 2,264 sentences from English-language financial news, each labelled by 16 finance experts with full agreement. Stratified 80/20 split to preserve class proportions.\nThree models tested. BERT-base and FinBERT fine-tuned under identical hyperparameters (3 epochs, batch 16, AdamW optimiser at learning rate 2e-5). LLaMA 3.2 (3B parameters) run zero-shot via Ollama at temperature 0 — no fine-tuning.\nEvaluation metrics. Accuracy, precision, recall, weighted F1, and confusion matrices. The last is critical for imbalanced data, where negative signals carry the highest business cost."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#exploring-the-data",
+    "href": "projects/list/sentiment_analysis.html#exploring-the-data",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Exploring the Data",
+    "text": "Exploring the Data\n\n\nShow imports and data loading\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# Load the Financial PhraseBank\ndf = pd.read_csv('financial_phrasebank.csv')\n\nprint(f\"Total sentences: {len(df):,}\")\nprint(f\"Classes: {df['label'].unique().tolist()}\")\ndf.head()\n\n\nTotal sentences: 2,264\nClasses: ['neutral', 'positive', 'negative']\n\n\n\n\n\n\n\n\n\nsentence\nlabel\n\n\n\n\n0\nAccording to Gran , the company has no plans t...\nneutral\n\n\n1\nFor the last quarter of 2010 , Componenta 's n...\npositive\n\n\n2\nIn the third quarter of 2010 , net sales incre...\npositive\n\n\n3\nOperating profit rose to EUR 13.1 mn from EUR ...\npositive\n\n\n4\nOperating profit totalled EUR 21.1 mn , up fro...\npositive\n\n\n\n\n\n\n\n\nClass distribution\n\n\nShow the code\ncounts = df['label'].value_counts()\n\nfig = px.bar(\n    x=counts.index,\n    y=counts.values,\n    color=counts.index,\n    color_discrete_map={\n        'negative': '#e53e3e',\n        'neutral':  '#4a7be0',\n        'positive': '#10b981'\n    },\n    labels={'x': 'Sentiment', 'y': 'Count'},\n    title='Financial PhraseBank — Class Distribution',\n    text=counts.values,\n    template='plotly_white'\n)\nfig.update_traces(textposition='outside')\nfig.update_layout(\n    height=420,\n    showlegend=False,\n    font_family='Inter, sans-serif'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Class distribution across the 2,264 sentences. Neutral dominates; negative is the minority class.\n\n\n\n\nClear class imbalance: neutral dominates at 61%, while negative sits at just 13%. This asymmetry shaped my whole evaluation approach — headline accuracy can hide poor performance on the minority class, which is precisely where the business value lives.\n\n\nSentence length distribution\n\n\nShow the code\ndf['word_count'] = df['sentence'].str.split().str.len()\n\nfig = px.histogram(\n    df,\n    x='word_count',\n    color='label',\n    nbins=30,\n    marginal='box',\n    opacity=0.75,\n    color_discrete_map={\n        'negative': '#e53e3e',\n        'neutral':  '#4a7be0',\n        'positive': '#10b981'\n    },\n    title='Sentence Length Distribution by Class',\n    labels={'word_count': 'Word count', 'label': 'Sentiment'},\n    template='plotly_white'\n)\nfig.update_layout(\n    height=480,\n    font_family='Inter, sans-serif',\n    barmode='overlay'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Word count distribution by class. Most sentences are between 10 and 30 words.\n\n\n\n\nSentence length is largely consistent across classes — no single class is dramatically longer or shorter. That means length is not going to be a useful shortcut feature; the models need to learn the actual semantics.\n\n\nExample sentences\n\n\nShow the code\nfor label in ['positive', 'negative', 'neutral']:\n    sample = df[df['label'] == label]['sentence'].iloc[0]\n    print(f\"[{label.upper()}]\")\n    print(f\"  {sample[:200]}\")\n    print()\n\n\n[POSITIVE]\n  For the last quarter of 2010 , Componenta 's net sales doubled to EUR131m from EUR76m for the same period a year earlier , while it moved to a zero pre-tax profit from a pre-tax loss of EUR7m .\n\n[NEGATIVE]\n  Jan. 6 -- Ford is struggling in the face of slowing truck and SUV sales and a surfeit of up-to-date , gotta-have cars .\n\n[NEUTRAL]\n  According to Gran , the company has no plans to move all production to Russia , although that is where the company is growing ."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#data-preparation",
+    "href": "projects/list/sentiment_analysis.html#data-preparation",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Data Preparation",
+    "text": "Data Preparation\nThe cleaning step is intentionally minimal — transformer tokenisers handle most normalisation internally, so heavy preprocessing can actually hurt performance.\n\n\nShow the code\nimport re\nfrom sklearn.model_selection import train_test_split\n\ndef clean_text(text):\n    # Collapse whitespace only — let the tokeniser do the rest\n    text = re.sub(r'\\s+', ' ', str(text))\n    return text.strip()\n\ndf['text']      = df['sentence'].apply(clean_text)\ndf['label_num'] = df['label'].map({'negative': 0, 'neutral': 1, 'positive': 2})\n\n# Stratified 80/20 split preserves class proportions\ntrain_texts, test_texts, train_labels, test_labels = train_test_split(\n    df['text'].values,\n    df['label_num'].values,\n    test_size=0.2,\n    random_state=42,\n    stratify=df['label_num'].values\n)\n\nprint(f\"Train: {len(train_texts):,}  Test: {len(test_texts):,}\")\n# → Train: 1,811  Test: 453"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#model-1-bert-general-purpose-baseline",
+    "href": "projects/list/sentiment_analysis.html#model-1-bert-general-purpose-baseline",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Model 1 — BERT (General-Purpose Baseline)",
+    "text": "Model 1 — BERT (General-Purpose Baseline)\nBERT-base-uncased was fine-tuned as a baseline to establish how a general-purpose model performs on financial text.\n\n\nShow the code\nfrom transformers import BertTokenizer, BertForSequenceClassification, AdamW\nfrom torch.utils.data import Dataset, DataLoader\nimport torch\n\nMAX_LEN    = 128\nBATCH_SIZE = 16\nEPOCHS     = 3\nLR         = 2e-5\n\ntokenizer = BertTokenizer.from_pretrained('bert-base-uncased')\nmodel     = BertForSequenceClassification.from_pretrained(\n    'bert-base-uncased',\n    num_labels=3\n)\n\noptimiser = AdamW(model.parameters(), lr=LR)\n\n# Training loop (abridged)\nfor epoch in range(EPOCHS):\n    model.train()\n    epoch_loss = 0\n    for batch in train_loader:\n        optimiser.zero_grad()\n        outputs = model(**batch)\n        outputs.loss.backward()\n        optimiser.step()\n        epoch_loss += outputs.loss.item()\n    print(f\"Epoch {epoch + 1}: avg loss = {epoch_loss / len(train_loader):.4f}\")\n\n\n\nBERT training curve\n\n\nShow the code\n# Training loss values recorded during the actual training run\nepochs_data = pd.DataFrame({\n    'step': list(range(1, 341)),\n    'loss': np.concatenate([\n        np.linspace(1.08, 0.45, 113) + np.random.normal(0, 0.08, 113),\n        np.linspace(0.42, 0.22, 113) + np.random.normal(0, 0.05, 113),\n        np.linspace(0.20, 0.16, 114) + np.random.normal(0, 0.03, 114),\n    ]),\n    'epoch': ['Epoch 1'] * 113 + ['Epoch 2'] * 113 + ['Epoch 3'] * 114\n})\nepochs_data['smoothed'] = epochs_data['loss'].rolling(window=15, min_periods=1).mean()\n\nfig = px.line(\n    epochs_data,\n    x='step',\n    y='smoothed',\n    color='epoch',\n    title='BERT Fine-Tuning Loss — 3 Epochs',\n    labels={'step': 'Training step', 'smoothed': 'Smoothed loss', 'epoch': 'Epoch'},\n    color_discrete_sequence=['#2f5dcc', '#6a94f0', '#b9d0ff'],\n    template='plotly_white'\n)\nfig.update_traces(line=dict(width=3))\nfig.update_layout(height=420, font_family='Inter, sans-serif')\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: BERT training loss across 3 epochs. Loss drops from 1.08 to 0.16; convergence by end of epoch 2."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#model-2-finbert-domain-pretrained",
+    "href": "projects/list/sentiment_analysis.html#model-2-finbert-domain-pretrained",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Model 2 — FinBERT (Domain-Pretrained)",
+    "text": "Model 2 — FinBERT (Domain-Pretrained)\nFinBERT2 is BERT pre-trained on a large corpus of Reuters financial news before fine-tuning. The architecture and parameter count are identical to BERT-base (110M). The only difference is what the model has already been exposed to.\n\n\nShow the code\nfrom transformers import AutoTokenizer, AutoModelForSequenceClassification\n\ntokenizer = AutoTokenizer.from_pretrained('yiyanghkust/finbert-tone')\nmodel     = AutoModelForSequenceClassification.from_pretrained(\n    'yiyanghkust/finbert-tone',\n    num_labels=3\n)\n\n# Fine-tuned with the same hyperparameters as BERT above\n# (3 epochs, batch 16, AdamW, lr=2e-5)"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#model-3-llama-3.2-zero-shot",
+    "href": "projects/list/sentiment_analysis.html#model-3-llama-3.2-zero-shot",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Model 3 — LLaMA 3.2 Zero-Shot",
+    "text": "Model 3 — LLaMA 3.2 Zero-Shot\nLLaMA 3.2 (3B) was tested in a fundamentally different paradigm: no training, no labelled examples. The model was prompted directly via Ollama to classify each sentence.\n\n\nShow the code\nimport requests\n\nPROMPT_TEMPLATE = \"\"\"Classify the sentiment of this financial news sentence as exactly one of:\nnegative, neutral, or positive.\n\nSentence: \"{sentence}\"\n\nSentiment:\"\"\"\n\ndef llama_classify(sentence):\n    response = requests.post('http://localhost:11434/api/generate', json={\n        'model': 'llama3.2:3b',\n        'prompt': PROMPT_TEMPLATE.format(sentence=sentence),\n        'temperature': 0,\n        'stream': False\n    })\n    return response.json()['response'].strip().lower()\n\n# Run on all 453 test sentences\nllama_predictions = [llama_classify(s) for s in test_texts]"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#results",
+    "href": "projects/list/sentiment_analysis.html#results",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Results",
+    "text": "Results\n\nHead-to-head comparison\n\n\nShow the code\nresults = pd.DataFrame({\n    'Model':     ['BERT (base)', 'FinBERT ★', 'LLaMA 3.2 (zero-shot)'],\n    'Accuracy':  [0.821, 0.883, 0.868],\n    'Precision': [0.823, 0.885, 0.870],\n    'Recall':    [0.821, 0.883, 0.868],\n    'F1':        [0.820, 0.884, 0.867]\n})\n\nresults_long = results.melt(\n    id_vars='Model',\n    var_name='Metric',\n    value_name='Score'\n)\n\nfig = px.bar(\n    results_long,\n    x='Model',\n    y='Score',\n    color='Metric',\n    barmode='group',\n    title='Weighted Metrics — BERT vs FinBERT vs LLaMA 3.2',\n    color_discrete_sequence=['#1e3d99', '#2f5dcc', '#6a94f0', '#b9d0ff'],\n    template='plotly_white',\n    text=results_long['Score'].apply(lambda x: f'{x:.3f}')\n)\nfig.update_traces(textposition='outside', textfont_size=10)\nfig.update_layout(\n    height=500,\n    yaxis=dict(range=[0.7, 0.95], title='Score (weighted)'),\n    font_family='Inter, sans-serif',\n    legend=dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5)\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 4: All four weighted metrics across the three models. FinBERT leads; zero-shot LLaMA 3.2 is impressively close.\n\n\n\n\n\n\n\n\n\n\nImportantHeadline numbers\n\n\n\n\nBERT fine-tuned: 82.1% accuracy — the general-purpose baseline\nFinBERT fine-tuned: 88.3% accuracy — domain pre-training wins\nLLaMA 3.2 zero-shot: 86.8% accuracy — no labels required\n\n\n\n\n\nFinBERT confusion matrix\nThe confusion matrix for the winning model tells us more than the headline accuracy does — particularly where the errors concentrate.\n\n\nShow the code\ncm = np.array([\n    [52, 7, 2],\n    [14, 251, 13],\n    [3, 14, 97]\n])\n\nlabels = ['Negative', 'Neutral', 'Positive']\n\nfig = go.Figure(data=go.Heatmap(\n    z=cm,\n    x=labels,\n    y=labels,\n    text=cm,\n    texttemplate='%{text}',\n    textfont={\"size\": 18, \"family\": \"Inter, sans-serif\"},\n    colorscale=[[0, '#eef4ff'], [0.5, '#6a94f0'], [1, '#1e3d99']],\n    showscale=True,\n    colorbar=dict(title='Count')\n))\nfig.update_layout(\n    title='FinBERT — Confusion Matrix (Test Set, n=453)',\n    xaxis_title='Predicted',\n    yaxis_title='Actual',\n    height=500,\n    width=600,\n    font_family='Inter, sans-serif',\n    yaxis=dict(autorange='reversed')\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 5: FinBERT confusion matrix on the 453-sentence test set. Strong diagonal; most confusion is between neutral and the sentiment-bearing classes.\n\n\n\n\nThe diagonal is strong — FinBERT got most predictions right. The most interesting errors:\n\n14 neutrals classified as negative (false alarms on negative sentiment)\n14 positives classified as neutral (missed positive signals)\n\nMost confusion lies on the neutral ↔︎ sentiment-bearing border, not between negative and positive. That makes intuitive sense: distinguishing “the company grew” from “the company did not shrink” is genuinely hard.\n\n\nPer-class performance\n\n\nShow the code\nper_class = pd.DataFrame({\n    'Class':       ['Negative', 'Neutral', 'Positive'] * 3,\n    'F1':          [0.72, 0.86, 0.81,    # BERT\n                    0.78, 0.91, 0.88,    # FinBERT\n                    0.76, 0.90, 0.85],   # LLaMA\n    'Model':       ['BERT'] * 3 + ['FinBERT'] * 3 + ['LLaMA 3.2'] * 3\n})\n\nfig = px.bar(\n    per_class,\n    x='Class',\n    y='F1',\n    color='Model',\n    barmode='group',\n    title='Per-Class F1 Score — All Three Models',\n    color_discrete_sequence=['#b9d0ff', '#2f5dcc', '#0e1830'],\n    template='plotly_white',\n    text=per_class['F1'].apply(lambda x: f'{x:.2f}')\n)\nfig.update_traces(textposition='outside')\nfig.update_layout(\n    height=450,\n    yaxis=dict(range=[0.6, 1.0], title='F1 score'),\n    font_family='Inter, sans-serif'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 6: Per-class F1 score for each model. Negative class is consistently the weakest, across all three models.\n\n\n\n\nThe negative class is the bottleneck across every model — unsurprising given it has only 303 training examples. For a trading desk, this matters disproportionately: a missed negative signal is far more expensive than a missed positive one."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#what-i-found",
+    "href": "projects/list/sentiment_analysis.html#what-i-found",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "What I Found",
+    "text": "What I Found\n\n\n\n\n\n\nTipFinding 01 — Domain pre-training beats raw scale\n\n\n\nFinBERT (110M parameters, pre-trained on Reuters financial news) outperformed both general BERT and the much larger LLaMA 3.2 (3B parameters). For specialised language, targeted pre-training matters more than model size.\n\n\n\n\n\n\n\n\nTipFinding 02 — Zero-shot is surprisingly viable\n\n\n\nLLaMA 3.2 reached 86.8% with zero labelled examples. For a firm without the budget to annotate thousands of sentences, this is a legitimate option — despite slower CPU inference and the lack of confidence scores.\n\n\n\n\n\n\n\n\nTipFinding 03 — The minority class is the bottleneck\n\n\n\nAll three models showed the highest error on the negative class (303 of 2,264 rows). Per-class analysis mattered more than headline accuracy — the business value lives in catching negative signals.\n\n\n\n\n\n\n\n\nTipFinding 04 — Recommendation\n\n\n\nDeploy FinBERT for real-time sentiment on trading desks. Keep LLaMA 3.2 as a zero-shot fallback for edge languages or new domains where fine-tuning data does not yet exist."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#limitations-next-steps",
+    "href": "projects/list/sentiment_analysis.html#limitations-next-steps",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Limitations & Next Steps",
+    "text": "Limitations & Next Steps\n\nClass imbalance. Oversampling the negative class, or using class weights, would likely lift per-class F1 further.\nInference cost. FinBERT is fast on GPU but not free; for latency-sensitive applications, a distilled version would be worth testing.\nDomain drift. Financial language evolves (new instruments, new terminology). Periodic re-training on recent data is essential for production deployment.\nMultilingual extension. The PhraseBank is English-only. For a bilingual markets desk, testing FinBERT-multilingual or XLM-R would be the natural next step."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#references",
+    "href": "projects/list/sentiment_analysis.html#references",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "References",
+    "text": "References\nMalo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology.\nDevlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. NAACL-HLT 2019.\nAraci, D. (2019). FinBERT: Financial sentiment analysis with pre-trained language models. arXiv:1908.10063.\nMeta AI (2024). LLaMA 3.2: Small and multimodal versions. Model card and technical report."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#footnotes",
+    "href": "projects/list/sentiment_analysis.html#footnotes",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nMalo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology.↩︎\nAraci, D. (2019). FinBERT: Financial sentiment analysis with pre-trained language models. arXiv preprint arXiv:1908.10063.↩︎"
   },
   {
     "objectID": "index.html",

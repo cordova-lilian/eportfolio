@@ -2,6 +2,7 @@
   {
     "listing": "/projects/index.html",
     "items": [
+      "/projects/list/sentiment_analysis.html",
       "/projects/list/penguins.html"
     ]
   }
