@@ -1,0 +1,380 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am [Lilian Elizabeth Cordova Hernandez], a [your role, e.g. data science student at XYZ University]. I am passionate about [your interests, e.g. turning messy data into clear insights, building tools that solve real problems, learning how complex systems work].\nMy journey into this field began when [your story, e.g. I took my first programming class and realised how much I loved the puzzle of debugging]. Since then, I have worked on [brief mention of 1–2 things you have done].\n\n\n\n\n\n\nNoteQuick summary\n\n\n\n\nBackground: [e.g. BSc in Computer Science, currently pursuing MSc in Data Analytics]\nFocus areas: Python, data visualisation, statistical analysis, web development\nCurrently learning: [e.g. deep learning, cloud deployment, Rust]"
+  },
+  {
+    "objectID": "about.html#who-i-am",
+    "href": "about.html#who-i-am",
+    "title": "About Me",
+    "section": "",
+    "text": "I am [Lilian Elizabeth Cordova Hernandez], a [your role, e.g. data science student at XYZ University]. I am passionate about [your interests, e.g. turning messy data into clear insights, building tools that solve real problems, learning how complex systems work].\nMy journey into this field began when [your story, e.g. I took my first programming class and realised how much I loved the puzzle of debugging]. Since then, I have worked on [brief mention of 1–2 things you have done].\n\n\n\n\n\n\nNoteQuick summary\n\n\n\n\nBackground: [e.g. BSc in Computer Science, currently pursuing MSc in Data Analytics]\nFocus areas: Python, data visualisation, statistical analysis, web development\nCurrently learning: [e.g. deep learning, cloud deployment, Rust]"
+  },
+  {
+    "objectID": "about.html#what-i-do",
+    "href": "about.html#what-i-do",
+    "title": "About Me",
+    "section": "What I Do",
+    "text": "What I Do\nI work with data and code to build things that are useful. That includes exploratory analysis, machine learning models, dashboards, and occasionally a portfolio site like this one."
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About Me",
+    "section": "Skills",
+    "text": "Skills\n\n\n\nCategory\nTools & Technologies\n\n\n\n\nLanguages\nPython, SQL, R, JavaScript\n\n\nData & ML\npandas, NumPy, scikit-learn, Plotly, matplotlib\n\n\nWeb\nQuarto, HTML/CSS, Git, GitHub Pages\n\n\nWorkflow\nJupyter, VS Code, Linux, Markdown"
+  },
+  {
+    "objectID": "about.html#goals",
+    "href": "about.html#goals",
+    "title": "About Me",
+    "section": "Goals",
+    "text": "Goals\n\n\n\n\n\n\nTipWhere I am heading\n\n\n\n\nShort term: Complete my current programme and build a body of portfolio work that demonstrates real technical depth.\nMedium term: Move into a role where I can apply data skills to meaningful problems — ideally in [your area of interest, e.g. healthcare, climate, fintech].\nLong term: Keep learning. Technology moves fast and so should I."
+  },
+  {
+    "objectID": "about.html#beyond-the-screen",
+    "href": "about.html#beyond-the-screen",
+    "title": "About Me",
+    "section": "Beyond the Screen",
+    "text": "Beyond the Screen\nWhen I am not at a keyboard, I enjoy [e.g. hiking, reading science fiction, cooking, running]. I think stepping away from the laptop is part of what makes the work at the laptop worthwhile."
+  },
+  {
+    "objectID": "about.html#a-note-on-this-site",
+    "href": "about.html#a-note-on-this-site",
+    "title": "About Me",
+    "section": "A Note on This Site",
+    "text": "A Note on This Site\nThis portfolio was built with Quarto, styled with custom Sass, and deployed via GitHub Pages. The source code is publicly available on GitHub — feel free to take a look."
+  },
+  {
+    "objectID": "QUICKSTART.html",
+    "href": "QUICKSTART.html",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "This is everything you need to go from zero to a deployed site today.\n\n\n# Install Quarto from https://quarto.org/docs/get-started/\n\n# Install Python packages for the projects\npip install plotly pandas statsmodels\n\n# Install FontAwesome extension (from inside the project folder)\nquarto add quarto-ext/fontawesome\n\n\n\nSearch across all files for these strings and replace them. Use your editor’s project-wide search (VS Code: Ctrl+Shift+F).\n\n\n\n\n\n\n\nPlaceholder\nReplace with\n\n\n\n\nLilian Elizabeth Cordova Hernandez\nYour actual name\n\n\ncordova-lilian\nYour GitHub username\n\n\neportfolio\nYour repository name\n\n\nlinkedin.com/in/lilian-cordova-hernandez-916a37232\nYour LinkedIn username (the part after /in/)\n\n\nlilian-cordova-hernandez-916a37232\nYour email\n\n\n[your field, ...] etc.\nWrite your actual content — all bracketed placeholders\n\n\n\n\n\n\nDrop these files into the images/ and cv/ folders:\n\nimages/profile.jpg — a professional headshot (roughly square, 500x500+ recommended)\nimages/favicon.ico — generate one at favicon.io\nimages/logo.png — a small logo for the navbar (~200x50)\ncv/cv.pdf — your CV as a PDF\nprojects/list/thumbnail.jpg — a cover image for each project (copy the same file twice if you need to, or screenshot the rendered chart later)\n\n\n\n\nquarto preview\nThis starts a local server. If everything works, you’ll see your site at http://localhost:port. Fix any errors now before pushing.\n\n\n\ngit init\ngit add .gitignore .nojekyll README.md _quarto.yml styles.scss\ngit commit -m \"Initial project scaffold: Quarto config, gitignore, styles\"\n\ngit add index.qmd about.qmd\ngit commit -m \"Add landing page with jolla About template and about page\"\n\ngit add projects/\ngit commit -m \"Add projects listing and two Python project pages (penguins, gapminder)\"\n\ngit add reflection.qmd contact.qmd\ngit commit -m \"Add reflection page and contact/references page\"\n\ngit add images/ cv/\ngit commit -m \"Add profile image, favicon, logo, and CV PDF\"\n\n\n\nquarto render\n\ngit add docs/\ngit commit -m \"Render site output\"\n\n# Connect to GitHub (create the repo on github.com first, empty)\ngit remote add origin https://github.com/cordova-lilian/eportfolio.git\ngit branch -M main\ngit push -u origin main\n\n\n\nOn GitHub: 1. Go to your repo → Settings → Pages 2. Source: Deploy from a branch 3. Branch: main, Folder: /docs 4. Save. Wait 1–2 minutes. 5. Your site is live at https://cordova-lilian.github.io/eportfolio/\n\n\n\nThe rubric rewards incremental commits. As you customise, commit after every meaningful change:\n\n“Customise About page with personal background”\n“Add real CV PDF and update link”\n“Tune SCSS colour palette to match personal branding”\n“Expand Reflection with specific debugging story”\n“Update project descriptions and add thumbnails”\n“Add third project on [topic]” (if time)\n“Fix navbar logo sizing”\n“Proofread and fix typos across all pages”\n\nDo not squash these into one giant commit at the end. The rubric explicitly checks for incremental history.\n\n\n\nBefore submitting, verify:\n\nLive site URL loads without errors\nAll navbar links work\nCV link opens in a new tab\nBoth Python projects render with charts visible\nAt least 5 commits with descriptive messages\n.gitignore is present and committed\n.nojekyll is present at the repo root\nFavicon shows in browser tab\nNo broken images or 404s\nSpell-checked everything\n\n\n\n\n\n\n\n\n\n\n\nSymptom\nFix\n\n\n\n\nSite 404s after deploy\nCheck .nojekyll exists, Pages source set to /docs\n\n\nPython chunks show error\npip install plotly pandas statsmodels\n\n\nFontAwesome icons not showing\nquarto add quarto-ext/fontawesome from project root\n\n\nLogo/favicon missing\nCheck filenames match exactly (case-sensitive)\n\n\nSCSS not applying\nEnsure - styles.scss is listed under theme in _quarto.yml\n\n\nListing page empty\nProject .qmd files must be in projects/list/ subfolder"
+  },
+  {
+    "objectID": "QUICKSTART.html#step-1-install-prerequisites-10-min",
+    "href": "QUICKSTART.html#step-1-install-prerequisites-10-min",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "# Install Quarto from https://quarto.org/docs/get-started/\n\n# Install Python packages for the projects\npip install plotly pandas statsmodels\n\n# Install FontAwesome extension (from inside the project folder)\nquarto add quarto-ext/fontawesome"
+  },
+  {
+    "objectID": "QUICKSTART.html#step-2-find-and-replace-placeholders-15-min",
+    "href": "QUICKSTART.html#step-2-find-and-replace-placeholders-15-min",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "Search across all files for these strings and replace them. Use your editor’s project-wide search (VS Code: Ctrl+Shift+F).\n\n\n\n\n\n\n\nPlaceholder\nReplace with\n\n\n\n\nLilian Elizabeth Cordova Hernandez\nYour actual name\n\n\ncordova-lilian\nYour GitHub username\n\n\neportfolio\nYour repository name\n\n\nlinkedin.com/in/lilian-cordova-hernandez-916a37232\nYour LinkedIn username (the part after /in/)\n\n\nlilian-cordova-hernandez-916a37232\nYour email\n\n\n[your field, ...] etc.\nWrite your actual content — all bracketed placeholders"
+  },
+  {
+    "objectID": "QUICKSTART.html#step-3-add-your-assets-10-min",
+    "href": "QUICKSTART.html#step-3-add-your-assets-10-min",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "Drop these files into the images/ and cv/ folders:\n\nimages/profile.jpg — a professional headshot (roughly square, 500x500+ recommended)\nimages/favicon.ico — generate one at favicon.io\nimages/logo.png — a small logo for the navbar (~200x50)\ncv/cv.pdf — your CV as a PDF\nprojects/list/thumbnail.jpg — a cover image for each project (copy the same file twice if you need to, or screenshot the rendered chart later)"
+  },
+  {
+    "objectID": "QUICKSTART.html#step-4-first-local-render-5-min",
+    "href": "QUICKSTART.html#step-4-first-local-render-5-min",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "quarto preview\nThis starts a local server. If everything works, you’ll see your site at http://localhost:port. Fix any errors now before pushing."
+  },
+  {
+    "objectID": "QUICKSTART.html#step-5-git-init-and-first-commit-5-min",
+    "href": "QUICKSTART.html#step-5-git-init-and-first-commit-5-min",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "git init\ngit add .gitignore .nojekyll README.md _quarto.yml styles.scss\ngit commit -m \"Initial project scaffold: Quarto config, gitignore, styles\"\n\ngit add index.qmd about.qmd\ngit commit -m \"Add landing page with jolla About template and about page\"\n\ngit add projects/\ngit commit -m \"Add projects listing and two Python project pages (penguins, gapminder)\"\n\ngit add reflection.qmd contact.qmd\ngit commit -m \"Add reflection page and contact/references page\"\n\ngit add images/ cv/\ngit commit -m \"Add profile image, favicon, logo, and CV PDF\""
+  },
+  {
+    "objectID": "QUICKSTART.html#step-6-render-and-push-5-min",
+    "href": "QUICKSTART.html#step-6-render-and-push-5-min",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "quarto render\n\ngit add docs/\ngit commit -m \"Render site output\"\n\n# Connect to GitHub (create the repo on github.com first, empty)\ngit remote add origin https://github.com/cordova-lilian/eportfolio.git\ngit branch -M main\ngit push -u origin main"
+  },
+  {
+    "objectID": "QUICKSTART.html#step-7-enable-github-pages-2-min",
+    "href": "QUICKSTART.html#step-7-enable-github-pages-2-min",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "On GitHub: 1. Go to your repo → Settings → Pages 2. Source: Deploy from a branch 3. Branch: main, Folder: /docs 4. Save. Wait 1–2 minutes. 5. Your site is live at https://cordova-lilian.github.io/eportfolio/"
+  },
+  {
+    "objectID": "QUICKSTART.html#commit-checklist-for-good-git-history",
+    "href": "QUICKSTART.html#commit-checklist-for-good-git-history",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "The rubric rewards incremental commits. As you customise, commit after every meaningful change:\n\n“Customise About page with personal background”\n“Add real CV PDF and update link”\n“Tune SCSS colour palette to match personal branding”\n“Expand Reflection with specific debugging story”\n“Update project descriptions and add thumbnails”\n“Add third project on [topic]” (if time)\n“Fix navbar logo sizing”\n“Proofread and fix typos across all pages”\n\nDo not squash these into one giant commit at the end. The rubric explicitly checks for incremental history."
+  },
+  {
+    "objectID": "QUICKSTART.html#rubric-quick-check",
+    "href": "QUICKSTART.html#rubric-quick-check",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "Before submitting, verify:\n\nLive site URL loads without errors\nAll navbar links work\nCV link opens in a new tab\nBoth Python projects render with charts visible\nAt least 5 commits with descriptive messages\n.gitignore is present and committed\n.nojekyll is present at the repo root\nFavicon shows in browser tab\nNo broken images or 404s\nSpell-checked everything"
+  },
+  {
+    "objectID": "QUICKSTART.html#common-failures-and-fixes",
+    "href": "QUICKSTART.html#common-failures-and-fixes",
+    "title": "Quick Start — Read Me First",
+    "section": "",
+    "text": "Symptom\nFix\n\n\n\n\nSite 404s after deploy\nCheck .nojekyll exists, Pages source set to /docs\n\n\nPython chunks show error\npip install plotly pandas statsmodels\n\n\nFontAwesome icons not showing\nquarto add quarto-ext/fontawesome from project root\n\n\nLogo/favicon missing\nCheck filenames match exactly (case-sensitive)\n\n\nSCSS not applying\nEnsure - styles.scss is listed under theme in _quarto.yml\n\n\nListing page empty\nProject .qmd files must be in projects/list/ subfolder"
+  },
+  {
+    "objectID": "projects/list/gapminder.html",
+    "href": "projects/list/gapminder.html",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "",
+    "text": "This project uses the Gapminder dataset — the same data that Hans Rosling used in his famous TED talks1 — to explore how the world has changed between 1952 and 2007. The dataset contains life expectancy, GDP per capita, and population for 142 countries across 12 five-year snapshots.\n\n\n\n\n\n\nNoteQuestions this analysis answers\n\n\n\n\nHow has global life expectancy changed over time?\nIs there still a strong link between wealth and longevity?\nWhich continents have gained the most?"
+  },
+  {
+    "objectID": "projects/list/gapminder.html#overview",
+    "href": "projects/list/gapminder.html#overview",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "",
+    "text": "This project uses the Gapminder dataset — the same data that Hans Rosling used in his famous TED talks1 — to explore how the world has changed between 1952 and 2007. The dataset contains life expectancy, GDP per capita, and population for 142 countries across 12 five-year snapshots.\n\n\n\n\n\n\nNoteQuestions this analysis answers\n\n\n\n\nHow has global life expectancy changed over time?\nIs there still a strong link between wealth and longevity?\nWhich continents have gained the most?"
+  },
+  {
+    "objectID": "projects/list/gapminder.html#the-relationship-between-wealth-and-life-expectancy",
+    "href": "projects/list/gapminder.html#the-relationship-between-wealth-and-life-expectancy",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "The Relationship Between Wealth and Life Expectancy",
+    "text": "The Relationship Between Wealth and Life Expectancy\n\n\nShow setup code\nimport plotly.express as px\nimport pandas as pd\n\ndf = px.data.gapminder()\nprint(f\"Dataset covers {df['country'].nunique()} countries across {df['year'].nunique()} years\")\nprint(f\"Years: {df['year'].min()} to {df['year'].max()}\")\n\n\nDataset covers 142 countries across 12 years\nYears: 1952 to 2007\n\n\n\n\nShow the code\nfig = px.scatter(\n    df,\n    x='gdpPercap',\n    y='lifeExp',\n    animation_frame='year',\n    animation_group='country',\n    size='pop',\n    color='continent',\n    hover_name='country',\n    log_x=True,\n    size_max=55,\n    range_x=[100, 100000],\n    range_y=[25, 90],\n    title='Wealth vs Life Expectancy, 1952 to 2007',\n    labels={\n        'gdpPercap': 'GDP per Capita (USD, log scale)',\n        'lifeExp': 'Life Expectancy (years)',\n        'pop': 'Population'\n    },\n    template='plotly_white'\n)\nfig.update_layout(height=550)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Animated bubble chart: GDP per capita vs life expectancy over time. Press play to watch 55 years of progress.\n\n\n\n\nThis is the chart Hans Rosling made famous. The headline story is remarkable — across the period, every continent moved up and to the right. The world as a whole is healthier and wealthier than it was in 1952."
+  },
+  {
+    "objectID": "projects/list/gapminder.html#life-expectancy-over-time",
+    "href": "projects/list/gapminder.html#life-expectancy-over-time",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "Life Expectancy Over Time",
+    "text": "Life Expectancy Over Time\n\n\nShow the code\ncontinent_avg = df.groupby(['year', 'continent'])['lifeExp'].mean().reset_index()\n\nfig = px.line(\n    continent_avg,\n    x='year',\n    y='lifeExp',\n    color='continent',\n    markers=True,\n    title='Average Life Expectancy by Continent',\n    labels={'lifeExp': 'Life Expectancy (years)', 'year': 'Year'},\n    color_discrete_sequence=px.colors.qualitative.Set1,\n    template='plotly_white'\n)\nfig.update_layout(height=450)\nfig.update_traces(line=dict(width=3))\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Continental average life expectancy over time\n\n\n\n\nAfrica’s trajectory is notably different — the curve flattens around the 1990s, reflecting the devastating impact of the HIV/AIDS epidemic on sub-Saharan countries. Asia shows the steepest gains of any continent over the period."
+  },
+  {
+    "objectID": "projects/list/gapminder.html#the-gains-ranked",
+    "href": "projects/list/gapminder.html#the-gains-ranked",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "The Gains, Ranked",
+    "text": "The Gains, Ranked\n\n\nShow the code\nfirst_year = df[df['year'] == 1952][['country', 'continent', 'lifeExp']].rename(columns={'lifeExp': 'lifeExp_1952'})\nlast_year = df[df['year'] == 2007][['country', 'lifeExp']].rename(columns={'lifeExp': 'lifeExp_2007'})\n\nchange = first_year.merge(last_year, on='country')\nchange['gain'] = change['lifeExp_2007'] - change['lifeExp_1952']\ntop_gains = change.nlargest(15, 'gain').sort_values('gain')\n\nfig = px.bar(\n    top_gains,\n    x='gain',\n    y='country',\n    color='continent',\n    orientation='h',\n    title='Top 15 Countries by Life Expectancy Gain (1952 → 2007)',\n    labels={'gain': 'Years gained', 'country': ''},\n    color_discrete_sequence=px.colors.qualitative.Bold,\n    template='plotly_white'\n)\nfig.update_layout(height=500)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: Top 15 countries by absolute gain in life expectancy, 1952 to 2007\n\n\n\n\nOman leads the table — a country that transformed its healthcare infrastructure dramatically over this period. Several Asian countries feature heavily, reflecting the rapid development seen in that region."
+  },
+  {
+    "objectID": "projects/list/gapminder.html#a-snapshot-2007",
+    "href": "projects/list/gapminder.html#a-snapshot-2007",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "A Snapshot: 2007",
+    "text": "A Snapshot: 2007\n\n\nShow the code\ndf_2007 = df[df['year'] == 2007]\n\nfig = px.scatter(\n    df_2007,\n    x='gdpPercap',\n    y='lifeExp',\n    size='pop',\n    color='continent',\n    hover_name='country',\n    log_x=True,\n    size_max=60,\n    title='The World in 2007',\n    labels={'gdpPercap': 'GDP per Capita (USD, log scale)', 'lifeExp': 'Life Expectancy (years)'},\n    template='plotly_white',\n    trendline='ols',\n    trendline_scope='overall',\n    trendline_color_override='gray'\n)\nfig.update_layout(height=500)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 4: GDP vs life expectancy in 2007, the most recent year in the dataset\n\n\n\n\nThe relationship is still clearly logarithmic — each additional unit of wealth buys less longevity than the last. A country at USD 1,000 per capita gains far more years from doubling to USD 2,000 than a country at USD 30,000 would from doubling to USD 60,000."
+  },
+  {
+    "objectID": "projects/list/gapminder.html#summary-statistics",
+    "href": "projects/list/gapminder.html#summary-statistics",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\n\nShow the code\nsummary = df.groupby(['continent', 'year']).agg(\n    avg_life_exp=('lifeExp', 'mean'),\n    avg_gdp=('gdpPercap', 'mean'),\n    total_pop=('pop', 'sum')\n).reset_index()\n\nsummary_wide = summary.pivot(index='continent', columns='year', values='avg_life_exp').round(1)\nsummary_wide[[1952, 1977, 2007]].style.background_gradient(cmap='RdYlGn', axis=None)\n\n\n\n\n\n\n\nyear\n1952\n1977\n2007\n\n\ncontinent\n \n \n \n\n\n\n\nAfrica\n39.100000\n49.600000\n54.800000\n\n\nAmericas\n53.300000\n64.400000\n73.600000\n\n\nAsia\n46.300000\n59.600000\n70.700000\n\n\nEurope\n64.400000\n71.900000\n77.600000\n\n\nOceania\n69.300000\n72.900000\n80.700000"
+  },
+  {
+    "objectID": "projects/list/gapminder.html#key-takeaways",
+    "href": "projects/list/gapminder.html#key-takeaways",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\n\n\n\n\nTipWhat the data shows\n\n\n\n\nThe world has become dramatically healthier over 55 years.\nThe link between income and longevity remains strong but follows a logarithmic curve.\nAsia has seen the fastest sustained gains.\nAfrica’s progress was disrupted by the HIV/AIDS epidemic."
+  },
+  {
+    "objectID": "projects/list/gapminder.html#references",
+    "href": "projects/list/gapminder.html#references",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "References",
+    "text": "References\nData source: plotly.express.data.gapminder(), sourced from the Gapminder Foundation. Originally compiled by Hans Rosling and colleagues."
+  },
+  {
+    "objectID": "projects/list/gapminder.html#footnotes",
+    "href": "projects/list/gapminder.html#footnotes",
+    "title": "Global Development Trends: A Gapminder Analysis",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRosling, H. (2006). The best stats you’ve ever seen. TED Talk. The Gapminder foundation maintains the underlying data.↩︎"
+  },
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
+    "section": "",
+    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
+  },
+  {
+    "objectID": "reflection.html#the-project-in-one-sentence",
+    "href": "reflection.html#the-project-in-one-sentence",
+    "title": "Reflection",
+    "section": "",
+    "text": "Building this portfolio taught me that the gap between knowing a tool and being fluent with it is mostly closed by the inevitable small frustrations that a real project forces you through."
+  },
+  {
+    "objectID": "reflection.html#what-i-set-out-to-do",
+    "href": "reflection.html#what-i-set-out-to-do",
+    "title": "Reflection",
+    "section": "What I Set Out to Do",
+    "text": "What I Set Out to Do\nWhen I started, the instructions looked straightforward: spin up a Quarto site, write some pages, push it to GitHub Pages. Done. The reality of actually making each piece work — and work together — was more involved than I expected. In hindsight, that gap between “should be simple” and “actually works” is itself the lesson."
+  },
+  {
+    "objectID": "reflection.html#the-learning-journey",
+    "href": "reflection.html#the-learning-journey",
+    "title": "Reflection",
+    "section": "The Learning Journey",
+    "text": "The Learning Journey\n\n\n\n\n\nflowchart LR\n    A[Start:&lt;br/&gt;Raw assignment brief] --&gt; B[Set up Quarto&lt;br/&gt;project structure]\n    B --&gt; C[Learn YAML&lt;br/&gt;configuration]\n    C --&gt; D[Write Python&lt;br/&gt;projects]\n    D --&gt; E[Customise with&lt;br/&gt;SCSS & Sass]\n    E --&gt; F[Deploy via&lt;br/&gt;GitHub Pages]\n    F --&gt; G[Iterate &&lt;br/&gt;polish]\n    G --&gt; H[Reflect on&lt;br/&gt;what worked]\n\n    style A fill:#e53e3e,stroke:#333,color:#fff\n    style H fill:#38a169,stroke:#333,color:#fff\n    style D fill:#2c5282,stroke:#333,color:#fff\n    style E fill:#ed8936,stroke:#333,color:#fff"
+  },
+  {
+    "objectID": "reflection.html#skills-i-actively-built",
+    "href": "reflection.html#skills-i-actively-built",
+    "title": "Reflection",
+    "section": "Skills I Actively Built",
+    "text": "Skills I Actively Built\n\nGit and version control\nI have used Git before for personal projects, but this was the first time I tried to commit incrementally rather than batching a day’s work into one giant push. Writing descriptive commit messages as I worked turned out to be useful beyond the rubric — when I broke the navbar at one point, git log let me pinpoint exactly which change caused the issue and revert cleanly. That pattern is something I will carry into future work.\n\n\nQuarto\nI came in treating Quarto as “Markdown with extras” and left understanding it as a serious publishing system. The separation between content (.qmd files), configuration (_quarto.yml), and styling (styles.scss) mirrors good software architecture. Changing the site’s colour scheme in one file and seeing it propagate everywhere was satisfying in a way that taught me why that separation matters.\n\n\nPython for reproducible analysis\nEmbedding executable {python} chunks in prose changed how I think about technical writing. Instead of producing a chart in a notebook and screenshotting it into a document, the chart is the document. If the underlying data changes, the chart updates. This is closer to how analysis should work in a professional setting, and it is a workflow I will keep using.\n\n\nSass and design systems\nThe SCSS section was where I learned the most unexpected lesson. I started by copying a Bootswatch theme and tweaking colours. Then I realised I was repeating the same hex code in four places and that Sass variables existed for exactly this reason. Refactoring into variables taught me that design, like code, benefits from DRY principles."
+  },
+  {
+    "objectID": "reflection.html#challenges-i-had-to-work-through",
+    "href": "reflection.html#challenges-i-had-to-work-through",
+    "title": "Reflection",
+    "section": "Challenges I Had to Work Through",
+    "text": "Challenges I Had to Work Through\n\n\n\n\n\n\nWarningThings that did not work the first time\n\n\n\n\nGitHub Pages deployment: The site initially 404’d because I had forgotten the .nojekyll file. Jekyll was silently eating files whose names started with an underscore.\nQuarto listing page: My project cards showed up empty at first because I had placed the individual project files in the wrong subdirectory relative to the contents field.\nSCSS not applying: Variables in scss:rules instead of scss:defaults — order matters.\nPlotly charts not rendering: Forgot that fig.show() is needed in Quarto {python} chunks the same way it is in scripts, not notebooks.\n\n\n\nEach of these cost me 20–40 minutes. Individually they are annoying; collectively they are where the real learning happened. Debugging deployment is a skill, and you only build it by having deployments break."
+  },
+  {
+    "objectID": "reflection.html#what-i-would-do-differently",
+    "href": "reflection.html#what-i-would-do-differently",
+    "title": "Reflection",
+    "section": "What I Would Do Differently",
+    "text": "What I Would Do Differently\n\nSet up deployment first, before any content. I wrote half the site before my first successful deploy. If I had deployed an empty skeleton on day one, I would have caught the .nojekyll issue earlier and with much less code to bisect.\nCommit more often. My early commits covered too many changes. When something broke, I had to untangle which change caused it. Smaller, atomic commits would have made rollback trivial.\nWrite the reflection as I went. I am writing this at the end, from memory. If I had kept running notes, the reflection would have more concrete detail and less post-hoc reconstruction."
+  },
+  {
+    "objectID": "reflection.html#how-this-connects-to-where-i-am-going",
+    "href": "reflection.html#how-this-connects-to-where-i-am-going",
+    "title": "Reflection",
+    "section": "How This Connects to Where I Am Going",
+    "text": "How This Connects to Where I Am Going\nThe skills this project exercised — reproducible analysis, version control discipline, configuration-driven design, publishing to the web — are the same skills I expect to use in any data or software role. Whether I end up writing reports for a team, publishing research, or shipping a product, the workflow of code → commit → render → publish will show up in some form. Having now done the full loop end-to-end on something that is actually live on the internet makes it feel less abstract.\nMore specifically, I want to:\n\nExtend one of the projects into a fuller machine-learning write-up with model evaluation.\nWrite a blog post using the same Quarto setup — the infrastructure is already here.\nContribute to an open-source Quarto extension to give something back to the tool that made this possible."
+  },
+  {
+    "objectID": "reflection.html#a-closing-thought",
+    "href": "reflection.html#a-closing-thought",
+    "title": "Reflection",
+    "section": "A Closing Thought",
+    "text": "A Closing Thought\n\n\n\n\n\n\nNote\n\n\n\nThe best thing about this project was that it forced me to use a lot of small skills together. Any one of them alone is trivial; stitching them into something that works is where the difficulty — and the learning — lives."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact & References",
+    "section": "Professional References",
+    "text": "Professional References\nThe following individuals can speak to my work, character, and technical ability. Please contact me first via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nReference 1\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Academic supervisor / Line manager / Project collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship — what we collaborated on, over what period.\n\n\n\n\nReference 2\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Module leader / Mentor] Contact: Available on request\nA brief sentence or two on the context of our working relationship.\n\n\n\n\nReference 3\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Internship supervisor / Peer collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship."
+  },
+  {
+    "objectID": "contact.html#a-note-on-privacy",
+    "href": "contact.html#a-note-on-privacy",
+    "title": "Contact & References",
+    "section": "A Note on Privacy",
+    "text": "A Note on Privacy\nContact details for references are provided on request rather than listed publicly, to respect their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nExploring the Palmer Penguins Dataset\n\n\n\npython\n\ndata-viz\n\neda\n\nplotly\n\n\n\nAn interactive visual analysis of 344 penguins across three species, exploring morphological differences and species separability.\n\n\n\nLilian Elizabeth Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nGlobal Development Trends: A Gapminder Analysis\n\n\n\npython\n\nplotly\n\ntime-series\n\nvisualisation\n\n\n\nAn interactive look at how life expectancy, income, and population have evolved across continents over five decades.\n\n\n\nLilian Elizabeth Cordova Hernandez\n\n\nApr 10, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/list/penguins.html",
+    "href": "projects/list/penguins.html",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "",
+    "text": "The Palmer Penguins dataset is a widely used alternative to the classic Iris dataset. It contains physical measurements of 344 penguins from three species — Adelie, Chinstrap, and Gentoo — collected at the Palmer Station, Antarctica1.\nIn this project I explore how the four key morphological features separate the three species and whether bill dimensions alone are enough to distinguish them.\n\n\n\n\n\n\nNoteQuestions this analysis answers\n\n\n\n\nHow do the three species differ in body size?\nCan bill length and depth alone separate the species?\nAre there sex-based differences within species?"
+  },
+  {
+    "objectID": "projects/list/penguins.html#overview",
+    "href": "projects/list/penguins.html#overview",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "",
+    "text": "The Palmer Penguins dataset is a widely used alternative to the classic Iris dataset. It contains physical measurements of 344 penguins from three species — Adelie, Chinstrap, and Gentoo — collected at the Palmer Station, Antarctica1.\nIn this project I explore how the four key morphological features separate the three species and whether bill dimensions alone are enough to distinguish them.\n\n\n\n\n\n\nNoteQuestions this analysis answers\n\n\n\n\nHow do the three species differ in body size?\nCan bill length and depth alone separate the species?\nAre there sex-based differences within species?"
+  },
+  {
+    "objectID": "projects/list/penguins.html#loading-the-data",
+    "href": "projects/list/penguins.html#loading-the-data",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Loading the Data",
+    "text": "Loading the Data\n\n\nShow the code\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# Load from the plotly-maintained copy of palmer penguins\nurl = \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv\"\ndf = pd.read_csv(url)\ndf = df.dropna()  # drop rows with missing measurements\n\ndf.head()\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nMALE\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nFEMALE\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nFEMALE\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nFEMALE\n\n\n5\nAdelie\nTorgersen\n39.3\n20.6\n190.0\n3650.0\nMALE\n\n\n\n\n\nFirst five rows of the dataset\n\n\nThe cleaned dataset contains 333 penguins with complete measurements across the following features:\n\n\nShow the code\ndf.describe().round(2)\n\n\n\n\n\n\n\n\n\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\n\n\n\n\ncount\n333.00\n333.00\n333.00\n333.00\n\n\nmean\n43.99\n17.16\n200.97\n4207.06\n\n\nstd\n5.47\n1.97\n14.02\n805.22\n\n\nmin\n32.10\n13.10\n172.00\n2700.00\n\n\n25%\n39.50\n15.60\n190.00\n3550.00\n\n\n50%\n44.50\n17.30\n197.00\n4050.00\n\n\n75%\n48.60\n18.70\n213.00\n4775.00\n\n\nmax\n59.60\n21.50\n231.00\n6300.00"
+  },
+  {
+    "objectID": "projects/list/penguins.html#species-distribution",
+    "href": "projects/list/penguins.html#species-distribution",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Species Distribution",
+    "text": "Species Distribution\n\n\nShow the code\ncounts = df.groupby(['species', 'island']).size().reset_index(name='count')\n\nfig = px.bar(\n    counts,\n    x='species',\n    y='count',\n    color='island',\n    barmode='group',\n    title='Penguin Counts by Species and Island',\n    color_discrete_sequence=px.colors.qualitative.Set2,\n    template='plotly_white'\n)\nfig.update_layout(height=400, showlegend=True)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Number of penguins per species and island\n\n\n\n\nInteresting observation: Gentoo penguins appear only on Biscoe island, and Chinstrap only on Dream island, while Adelie are spread across all three. Island is effectively a strong predictor on its own."
+  },
+  {
+    "objectID": "projects/list/penguins.html#bill-dimensions-the-star-feature",
+    "href": "projects/list/penguins.html#bill-dimensions-the-star-feature",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Bill Dimensions: The Star Feature",
+    "text": "Bill Dimensions: The Star Feature\n\n\nShow the code\nfig = px.scatter(\n    df,\n    x='bill_length_mm',\n    y='bill_depth_mm',\n    color='species',\n    symbol='sex',\n    size='body_mass_g',\n    hover_data=['island', 'flipper_length_mm'],\n    title='Bill Length vs Bill Depth by Species',\n    labels={\n        'bill_length_mm': 'Bill Length (mm)',\n        'bill_depth_mm': 'Bill Depth (mm)'\n    },\n    color_discrete_sequence=px.colors.qualitative.Bold,\n    template='plotly_white'\n)\nfig.update_layout(height=500)\nfig.update_traces(marker=dict(line=dict(width=1, color='DarkSlateGrey')))\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Bill length versus bill depth coloured by species. Clear clustering is visible.\n\n\n\n\nThis is a classic example of Simpson’s paradox in disguise. If you ignore species, bill length and bill depth appear negatively correlated. But within each species, they are positively correlated. The three species form visually distinct clusters, and this single plot suggests bill measurements alone could power a reasonable classifier."
+  },
+  {
+    "objectID": "projects/list/penguins.html#body-mass-distribution",
+    "href": "projects/list/penguins.html#body-mass-distribution",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Body Mass Distribution",
+    "text": "Body Mass Distribution\n\n\nShow the code\nfig = px.box(\n    df,\n    x='species',\n    y='body_mass_g',\n    color='sex',\n    points='all',\n    title='Body Mass by Species and Sex',\n    labels={'body_mass_g': 'Body Mass (g)'},\n    color_discrete_sequence=['#ed8936', '#2c5282'],\n    template='plotly_white'\n)\nfig.update_layout(height=450)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: Body mass distribution by species and sex\n\n\n\n\nGentoo penguins are substantially larger than the other two species. Within every species, males are consistently heavier than females — a clean example of sexual dimorphism."
+  },
+  {
+    "objectID": "projects/list/penguins.html#correlation-matrix",
+    "href": "projects/list/penguins.html#correlation-matrix",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Correlation Matrix",
+    "text": "Correlation Matrix\n\n\nShow the code\nnumeric_cols = ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g']\ncorr = df[numeric_cols].corr().round(2)\n\nfig = px.imshow(\n    corr,\n    text_auto=True,\n    aspect='auto',\n    color_continuous_scale='RdBu_r',\n    zmin=-1, zmax=1,\n    title='Feature Correlation Matrix'\n)\nfig.update_layout(height=450, width=550)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 4: Pearson correlation between the four numerical features\n\n\n\n\nFlipper length and body mass are tightly correlated (0.87). Bill depth shows the negative correlation with other size features that the species-level analysis revealed is actually paradoxical."
+  },
+  {
+    "objectID": "projects/list/penguins.html#key-takeaways",
+    "href": "projects/list/penguins.html#key-takeaways",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\n\n\n\n\nTipSummary\n\n\n\n\nThe three species are well-separated in bill-dimension space.\nGentoo is the largest species by a clear margin.\nIsland alone is a strong proxy for species — useful for quick classification.\nSexual dimorphism is present within every species."
+  },
+  {
+    "objectID": "projects/list/penguins.html#next-steps",
+    "href": "projects/list/penguins.html#next-steps",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nFit a logistic regression classifier on bill dimensions and measure accuracy\nCompare with a k-NN classifier\nBuild an interactive dashboard for live filtering"
+  },
+  {
+    "objectID": "projects/list/penguins.html#references",
+    "href": "projects/list/penguins.html#references",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "References",
+    "text": "References\nData source: seaborn-data GitHub repository, which mirrors the R palmerpenguins package by Horst, Hill, and Gorman (2020)."
+  },
+  {
+    "objectID": "projects/list/penguins.html#footnotes",
+    "href": "projects/list/penguins.html#footnotes",
+    "title": "Exploring the Palmer Penguins Dataset",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHorst, A. M., Hill, A. P., & Gorman, K. B. (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package.↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lilian Cordova Hernandez",
+    "section": "",
+    "text": "Welcome to my portfolio. I am a [your field, e.g. data science student / software developer / analyst] with a focus on [your area, e.g. machine learning, web development, analytics].\nThis site showcases my work, my journey, and the skills I have built. Browse the projects page to see executable Python notebooks, or read more about me and the path that brought me here."
+  }
+]
