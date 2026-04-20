@@ -20,6 +20,6 @@ about:
       target: _blank
 ---
 
-Welcome to my portfolio. I am a **Postgraduate Business Analytics student** in Dublin, specialising in NLP, machine learning, and business intelligence. My background in International Trade gives me a distinct lens for applying analytics to real commercial problems.
+Welcome to my portfolio. I am a **Postgraduate Business Analytics student at Dublin City University**, specialising in NLP, machine learning, and business intelligence. My background in International Trade gives me a distinct lens for applying analytics to real commercial problems.
 
 This site showcases my technical work, the path that brought me here, and the skills I am building. Browse the [projects](projects/index.qmd) page to see executable Python notebooks, or read more [about me](about.qmd).

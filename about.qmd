@@ -6,15 +6,15 @@ date: last-modified
 
 ## Who I Am
 
-I am a results-oriented Master's student in Ireland specializing in **Business Analytics and AI-driven business solutions**. My work sits at the intersection of international trade and advanced analytics — translating complex data into strategic insights that inform real decisions.
+I am a results-oriented Master's student in Ireland specialising in **Business Analytics and AI-driven business solutions**. My work sits at the intersection of international trade and advanced analytics — translating complex data into strategic insights that inform real decisions.
 
-My professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in high-volume commercial environments across Mexico. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.
+My professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.
 
 I am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.
 
 ::: {.callout-note}
 ## At a glance
-- **Current programme:** MSc Business Analytics, Dorset College Ireland (Expected 2026)
+- **Current programme:** MSc Business Analytics, **Dublin City University** (Expected 2026)
 - **Prior education:** BSc in International Trade and Business, Universidad de Sonora (Mexico)
 - **Target roles:** Business Intelligence, Data Analysis, NLP Applications
 - **Languages:** English (Advanced/C1 — IELTS Band 7), Spanish (Native)
@@ -30,46 +30,40 @@ I apply data science techniques — particularly **Natural Language Processing (
 | Category | Tools & Technologies |
 |----------|---------------------|
 | **Programming** | Python (Scikit-learn, Pandas, NLTK), SQL |
-| **Machine Learning** | Random Forest, Gradient Boosting, Sentiment Analysis, TF-IDF |
-| **Business Intelligence** | Advanced Microsoft Excel, Power BI, Tableau |
+| **Machine Learning** | Random Forest, Gradient Boosting, Sentiment Analysis, TF-IDF Vectorisation |
+| **Business Intelligence** | Advanced Microsoft Excel (KPI tracking, reporting tools), Power BI, Tableau |
 | **Logistics & Strategy** | Materials Requirement Planning (MRP), VRIO Analysis, Cross-docking, Supply Chain Digitalisation |
 | **Web & Publishing** | Quarto, HTML/CSS, Git, GitHub Pages |
 
-## Key Academic Modules
+## Academic Focus
 
-My MSc programme has focused on applying analytics directly to business problems:
+My MSc programme at **Dublin City University** centres on applying analytics directly to business problems:
 
 - **Applied Business Analytics** — statistical methods and analytical frameworks for business decision-making
 - **Machine Learning for Business** — supervised and unsupervised methods with applied case studies
 - **Strategic AI Integration** — how organisations deploy AI effectively within existing operations
 
+**Applied research:** I developed an LLM-enabled content production pipeline to optimise workflow efficiency for Kilkenny Design — a project that combined my interest in language models with the operational challenges of a real business.
+
 ## Professional Background
 
-My professional journey has spanned retail, consulting, and the financial services sector:
+**Florería y Regalos Martha** — Customer Service / Social Media (Hermosillo, Mexico, Feb–May 2025)
 
-- **General Manager / Social Media** — Florería y Regalos Martha, Mexico (Feb–May 2025)
-  Managed inventory and logistics for a retail environment; developed commercial awareness through direct customer interaction and social media management.
-
-- **Sales / Professional Staff** — Coco Bongo Show and Disco, Playa del Carmen, Mexico (2015–2016)
-  Applied problem-solving and communication in a fast-paced international tourism hub. Gained strong commercial awareness through high-volume customer interaction.
-
-- **Consultancy Support (Intern)** — Consultoría Especializada de Sonora, Mexico (Jan–Jun 2015)
-  Assisted in consultancy and quality management projects, gaining foundational experience in business operations.
-
-Each of these roles reinforced my conviction that data — when properly interpreted — is the most powerful tool a business has for understanding its customers and improving its operations.
+In this role I managed inventory and logistics for a retail environment, improving service delivery efficiency. I also developed commercial awareness through direct customer interaction and social media management. It was in positions like this that I first noticed the patterns in customer behaviour that would later draw me toward analytics as a discipline.
 
 ## Goals
 
 ::: {.callout-tip}
 ## Where I am heading
-1. **Short term:** Complete the MSc Business Analytics programme and build a portfolio of analytical work that demonstrates genuine technical depth in NLP and machine learning.
+1. **Short term:** Complete the MSc Business Analytics programme at DCU and build a portfolio of analytical work that demonstrates genuine technical depth in NLP and machine learning.
 2. **Medium term:** Secure a role in **Business Intelligence** or **Data Analysis**, ideally at a company operating across international markets where my bilingual and cross-cultural background adds value.
 3. **Long term:** Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence.
 :::
 
 ## Additional Information
 
-- **Certifications:** IELTS Academic Band 7; Irish Manual Handling Legislation; Food Safety Standards
+- **Certifications:** IELTS Academic Band 7
+- **Training:** Certified in Irish Manual Handling Legislation and Food Safety Standards
 - **Interests:** Technology-driven venture development and Virtual Reality (VR) applications for skill-building
 
 ## A Note on This Site
