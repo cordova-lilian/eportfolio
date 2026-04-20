@@ -1,0 +1,129 @@
+/*-- scss:defaults --*/
+
+// Google Font import
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// Custom colour palette
+$primary:   #2c5282;
+$secondary: #4a5568;
+$success:   #38a169;
+$info:      #3182ce;
+$warning:   #d69e2e;
+$danger:    #e53e3e;
+$light:     #f7fafc;
+$dark:      #1a202c;
+
+// Brand colours
+$brand-accent: #ed8936;
+$brand-muted:  #718096;
+
+// Typography
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-monospace: 'JetBrains Mono', 'Courier New', monospace;
+$headings-font-weight: 600;
+$headings-color: $dark;
+
+// Layout
+$body-bg: #ffffff;
+$body-color: #2d3748;
+$link-color: $primary;
+$link-hover-color: $brand-accent;
+
+// Navbar
+$navbar-bg: $primary;
+$navbar-fg: #ffffff;
+$navbar-hl: $brand-accent;
+
+// Code blocks
+$code-bg: #f1f5f9;
+$code-color: $danger;
+
+// Footer
+$footer-bg: $dark;
+$footer-fg: $light;
+
+
+/*-- scss:rules --*/
+
+// Smooth transitions
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+// Headings with accent underline for h1
+h1 {
+  border-bottom: 3px solid $brand-accent;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: $primary;
+  margin-top: 2rem;
+}
+
+// Navbar polish
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+// Cards for project listing
+.quarto-grid-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+// Callout polish
+.callout {
+  border-radius: 6px;
+}
+
+// Code block styling
+pre.sourceCode {
+  border-radius: 6px;
+  border-left: 4px solid $primary;
+}
+
+// About template profile image
+.about-image img {
+  border: 4px solid $brand-accent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+// Footer
+.page-footer {
+  background-color: $footer-bg;
+  color: $footer-fg;
+  padding: 1.5rem 0;
+}
+
+.page-footer a {
+  color: $brand-accent;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table thead {
+  background-color: $primary;
+  color: white;
+}
+
+// Social icons spacing
+.about-links .about-link {
+  margin: 0 0.5rem;
+}
