@@ -1,0 +1,83 @@
+---
+title: "Reflection"
+subtitle: "What I learned building this portfolio"
+date: last-modified
+---
+
+## The Project in One Sentence
+
+Building this portfolio taught me that the gap between *knowing a tool* and *being fluent with it* is mostly closed by the inevitable small frustrations that a real project forces you through.
+
+## What I Set Out to Do
+
+When I started, the instructions looked straightforward: spin up a Quarto site, write some pages, push it to GitHub Pages. Done. The reality of actually making each piece work — and work together — was more involved than I expected. In hindsight, that gap between "should be simple" and "actually works" is itself the lesson.
+
+## The Learning Journey
+
+```{mermaid}
+flowchart LR
+    A[Start:<br/>Raw assignment brief] --> B[Set up Quarto<br/>project structure]
+    B --> C[Learn YAML<br/>configuration]
+    C --> D[Write Python<br/>projects]
+    D --> E[Customise with<br/>SCSS & Sass]
+    E --> F[Deploy via<br/>GitHub Pages]
+    F --> G[Iterate &<br/>polish]
+    G --> H[Reflect on<br/>what worked]
+
+    style A fill:#e53e3e,stroke:#333,color:#fff
+    style H fill:#38a169,stroke:#333,color:#fff
+    style D fill:#2c5282,stroke:#333,color:#fff
+    style E fill:#ed8936,stroke:#333,color:#fff
+```
+
+## Skills I Actively Built
+
+### Git and version control
+
+I have used Git before for personal projects, but this was the first time I tried to commit *incrementally* rather than batching a day's work into one giant push. Writing descriptive commit messages as I worked turned out to be useful beyond the rubric — when I broke the navbar at one point, `git log` let me pinpoint exactly which change caused the issue and revert cleanly. That pattern is something I will carry into future work.
+
+### Quarto
+
+I came in treating Quarto as "Markdown with extras" and left understanding it as a serious publishing system. The separation between content (`.qmd` files), configuration (`_quarto.yml`), and styling (`styles.scss`) mirrors good software architecture. Changing the site's colour scheme in one file and seeing it propagate everywhere was satisfying in a way that taught me *why* that separation matters.
+
+### Python for reproducible analysis
+
+Embedding executable `{python}` chunks in prose changed how I think about technical writing. Instead of producing a chart in a notebook and screenshotting it into a document, the chart *is* the document. If the underlying data changes, the chart updates. This is closer to how analysis should work in a professional setting, and it is a workflow I will keep using.
+
+### Sass and design systems
+
+The SCSS section was where I learned the most unexpected lesson. I started by copying a Bootswatch theme and tweaking colours. Then I realised I was repeating the same hex code in four places and that Sass variables existed for exactly this reason. Refactoring into variables taught me that design, like code, benefits from DRY principles.
+
+## Challenges I Had to Work Through
+
+::: {.callout-warning}
+## Things that did not work the first time
+- **GitHub Pages deployment:** The site initially 404'd because I had forgotten the `.nojekyll` file. Jekyll was silently eating files whose names started with an underscore.
+- **Quarto listing page:** My project cards showed up empty at first because I had placed the individual project files in the wrong subdirectory relative to the `contents` field.
+- **SCSS not applying:** Variables in `scss:rules` instead of `scss:defaults` — order matters.
+- **Plotly charts not rendering:** Forgot that `fig.show()` is needed in Quarto `{python}` chunks the same way it is in scripts, not notebooks.
+:::
+
+Each of these cost me 20–40 minutes. Individually they are annoying; collectively they are where the real learning happened. Debugging deployment is a skill, and you only build it by having deployments break.
+
+## What I Would Do Differently
+
+1. **Set up deployment first, before any content.** I wrote half the site before my first successful deploy. If I had deployed an empty skeleton on day one, I would have caught the `.nojekyll` issue earlier and with much less code to bisect.
+2. **Commit more often.** My early commits covered too many changes. When something broke, I had to untangle which change caused it. Smaller, atomic commits would have made rollback trivial.
+3. **Write the reflection as I went.** I am writing this at the end, from memory. If I had kept running notes, the reflection would have more concrete detail and less post-hoc reconstruction.
+
+## How This Connects to Where I Am Going
+
+The skills this project exercised — reproducible analysis, version control discipline, configuration-driven design, publishing to the web — are the same skills I expect to use in any data or software role. Whether I end up writing reports for a team, publishing research, or shipping a product, the workflow of *code → commit → render → publish* will show up in some form. Having now done the full loop end-to-end on something that is actually live on the internet makes it feel less abstract.
+
+More specifically, I want to:
+
+- **Extend one of the projects** into a fuller machine-learning write-up with model evaluation.
+- **Write a blog post** using the same Quarto setup — the infrastructure is already here.
+- **Contribute to an open-source Quarto extension** to give something back to the tool that made this possible.
+
+## A Closing Thought
+
+::: {.callout-note icon=false}
+The best thing about this project was that it forced me to use a lot of small skills together. Any one of them alone is trivial; stitching them into something that works is where the difficulty — and the learning — lives.
+:::
