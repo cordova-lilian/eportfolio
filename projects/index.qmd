@@ -1,0 +1,23 @@
+---
+title: "Projects"
+subtitle: "A selection of my technical work"
+listing:
+  contents: list
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, author, description, categories]
+  grid-columns: 2
+  image-height: 200px
+page-layout: full
+title-block-banner: true
+---
+
+Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.
+
+::: {.callout-note icon=false}
+## How to read these projects
+Every project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the **Code** toggle on each page to expand or hide source.
+:::
