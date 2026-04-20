@@ -51,8 +51,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, styles-blue.scss]
-    css: styles-blue.scss
+      light: [cosmo, styles.scss]
+    css: styles.scss
     toc: true
     toc-location: right
     code-copy: true
