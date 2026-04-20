@@ -4,42 +4,49 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "I am [Lilian Elizabeth Cordova Hernandez], a [your role, e.g. data science student at XYZ University]. I am passionate about [your interests, e.g. turning messy data into clear insights, building tools that solve real problems, learning how complex systems work].\nMy journey into this field began when [your story, e.g. I took my first programming class and realised how much I loved the puzzle of debugging]. Since then, I have worked on [brief mention of 1–2 things you have done].\n\n\n\n\n\n\nNoteQuick summary\n\n\n\n\nBackground: [e.g. BSc in Computer Science, currently pursuing MSc in Data Analytics]\nFocus areas: Python, data visualisation, statistical analysis, web development\nCurrently learning: [e.g. deep learning, cloud deployment, Rust]"
+    "text": "I am a Postgraduate Business Analytics student at Dublin City University, dedicated to leveraging data-driven insights to optimize customer-centric strategies and operational efficiency.\nMy professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in the retail sector in Hermosillo, Sonora, Mexico. During my time in customer-facing roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behavior. This firsthand observation of market variables served as the catalyst for my transition into the field of advanced analytics.\nCurrently, I am refining my technical proficiency in Python, SQL, and Tableau to translate complex datasets into actionable business intelligence. I aim to combine my international business background with rigorous quantitative analysis to help organizations bridge the gap between high-level global strategy and localized operational impact.\nI am passionate about transforming raw data into clear, strategic narratives that drive growth and enhance the customer experience.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University\nPrior education: BSc in International Business and Trade, Universidad de Sonora\nLanguages: Spanish (native), English (IELTS 7 — Advanced)\nBased in: Dublin, Ireland"
   },
   {
     "objectID": "about.html#who-i-am",
     "href": "about.html#who-i-am",
     "title": "About Me",
     "section": "",
-    "text": "I am [Lilian Elizabeth Cordova Hernandez], a [your role, e.g. data science student at XYZ University]. I am passionate about [your interests, e.g. turning messy data into clear insights, building tools that solve real problems, learning how complex systems work].\nMy journey into this field began when [your story, e.g. I took my first programming class and realised how much I loved the puzzle of debugging]. Since then, I have worked on [brief mention of 1–2 things you have done].\n\n\n\n\n\n\nNoteQuick summary\n\n\n\n\nBackground: [e.g. BSc in Computer Science, currently pursuing MSc in Data Analytics]\nFocus areas: Python, data visualisation, statistical analysis, web development\nCurrently learning: [e.g. deep learning, cloud deployment, Rust]"
+    "text": "I am a Postgraduate Business Analytics student at Dublin City University, dedicated to leveraging data-driven insights to optimize customer-centric strategies and operational efficiency.\nMy professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in the retail sector in Hermosillo, Sonora, Mexico. During my time in customer-facing roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behavior. This firsthand observation of market variables served as the catalyst for my transition into the field of advanced analytics.\nCurrently, I am refining my technical proficiency in Python, SQL, and Tableau to translate complex datasets into actionable business intelligence. I aim to combine my international business background with rigorous quantitative analysis to help organizations bridge the gap between high-level global strategy and localized operational impact.\nI am passionate about transforming raw data into clear, strategic narratives that drive growth and enhance the customer experience.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University\nPrior education: BSc in International Business and Trade, Universidad de Sonora\nLanguages: Spanish (native), English (IELTS 7 — Advanced)\nBased in: Dublin, Ireland"
   },
   {
     "objectID": "about.html#what-i-do",
     "href": "about.html#what-i-do",
     "title": "About Me",
     "section": "What I Do",
-    "text": "What I Do\nI work with data and code to build things that are useful. That includes exploratory analysis, machine learning models, dashboards, and occasionally a portfolio site like this one."
+    "text": "What I Do\nI work at the intersection of international business strategy and data analytics. My focus is on translating quantitative findings into clear, strategic narratives that inform decision-making — particularly in customer behaviour, retail operations, and market dynamics."
   },
   {
     "objectID": "about.html#skills",
     "href": "about.html#skills",
     "title": "About Me",
     "section": "Skills",
-    "text": "Skills\n\n\n\nCategory\nTools & Technologies\n\n\n\n\nLanguages\nPython, SQL, R, JavaScript\n\n\nData & ML\npandas, NumPy, scikit-learn, Plotly, matplotlib\n\n\nWeb\nQuarto, HTML/CSS, Git, GitHub Pages\n\n\nWorkflow\nJupyter, VS Code, Linux, Markdown"
+    "text": "Skills\n\n\n\n\n\n\n\nCategory\nTools & Technologies\n\n\n\n\nProgramming\nPython, SQL\n\n\nData & Visualisation\npandas, NumPy, Plotly, Tableau, matplotlib\n\n\nAnalytics\nStatistical analysis, exploratory data analysis, business intelligence\n\n\nWeb & Publishing\nQuarto, HTML/CSS, Git, GitHub Pages\n\n\nOffice & Productivity\nMicrosoft Excel, Word, PowerPoint"
+  },
+  {
+    "objectID": "about.html#professional-background",
+    "href": "about.html#professional-background",
+    "title": "About Me",
+    "section": "Professional Background",
+    "text": "Professional Background\nMy professional journey has spanned multiple industries and geographies:\n\nPersonal Assistant Intern — EY UK & Ireland Financial Services, 2020\nCustomer Service & Social Media — Florería y Regalos Martha, Hermosillo, 2025\nSales — Coco Bongo Show and Disco, Playa del Carmen, 2015–2016\nQuality Consulting Intern — Consultoría Especializada de Sonora (COESSO), 2015\n\nEach of these roles reinforced my conviction that data, when properly interpreted, is the most powerful tool a business has for understanding its customers and improving its operations."
   },
   {
     "objectID": "about.html#goals",
     "href": "about.html#goals",
     "title": "About Me",
     "section": "Goals",
-    "text": "Goals\n\n\n\n\n\n\nTipWhere I am heading\n\n\n\n\nShort term: Complete my current programme and build a body of portfolio work that demonstrates real technical depth.\nMedium term: Move into a role where I can apply data skills to meaningful problems — ideally in [your area of interest, e.g. healthcare, climate, fintech].\nLong term: Keep learning. Technology moves fast and so should I."
+    "text": "Goals\n\n\n\n\n\n\nTipWhere I am heading\n\n\n\n\nShort term: Complete the MSc Business Analytics programme at DCU and build a portfolio of analytical work that demonstrates genuine technical depth.\nMedium term: Secure a role in business analytics or data-driven strategy, ideally in a company that operates across international markets.\nLong term: Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence."
   },
   {
     "objectID": "about.html#beyond-the-screen",
     "href": "about.html#beyond-the-screen",
     "title": "About Me",
     "section": "Beyond the Screen",
-    "text": "Beyond the Screen\nWhen I am not at a keyboard, I enjoy [e.g. hiking, reading science fiction, cooking, running]. I think stepping away from the laptop is part of what makes the work at the laptop worthwhile."
+    "text": "Beyond the Screen\nOutside of data and code, I enjoy exploring Dublin, practising languages, and staying connected with the international community that makes this city so dynamic."
   },
   {
     "objectID": "about.html#a-note-on-this-site",
