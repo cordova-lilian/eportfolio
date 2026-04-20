@@ -51,7 +51,7 @@ website:
 format:
   html:
     theme:
-      light: [flatly, styles.scss]
+      light: [cosmo, styles.scss]
     css: styles.scss
     toc: true
     toc-location: right
