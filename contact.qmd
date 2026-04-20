@@ -6,15 +6,15 @@ date: last-modified
 
 ## Get in Touch
 
-I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.
+I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
 ### Direct Contact
 
-- **Primary channel:** LinkedIn (see right)
-- **Location:** [Your City, Country]
+- **Primary channel:** LinkedIn
+- **Location:** Dublin, Ireland
 - **Response time:** Usually within 48 hours
 
 :::
@@ -32,49 +32,38 @@ I am always happy to hear from people interested in similar work, or in collabor
 
 ::: {.callout-tip}
 ## Best way to reach me
-For anything work-related, **LinkedIn** is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the [GitHub repository](https://github.com/cordova-lilian/eportfolio).
+For work-related enquiries, **LinkedIn** is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the [GitHub repository](https://github.com/cordova-lilian/eportfolio).
 :::
 
 ## Professional References
 
-The following individuals can speak to my work, character, and technical ability. Please contact me first via LinkedIn before reaching out to them so I can let them know to expect your message.
+The following individuals can speak to my work ethic, character, and professional abilities. Please contact me via LinkedIn before reaching out to them so I can let them know to expect your message.
 
-### Reference 1
+### Martina Keane
 
 ::: {.callout-note icon=false}
-## [Name, Title]
-**Organisation:** [Where they work]
-**Relationship:** [e.g. Academic supervisor / Line manager / Project collaborator]
+## Financial Services Leader
+**Organisation:** EY UK & Ireland
+**Relationship:** Former manager during my professional assistant role
 **Contact:** Available on request
 
-A brief sentence or two on the context of our working relationship — what we collaborated on, over what period.
+During my time working with Martina, I supported her in a demanding professional environment that required high levels of responsibility, discretion, and organisation. She can speak to my reliability, work ethic, and ability to adapt quickly to new contexts.
 :::
 
-### Reference 2
+### Wendy Lucio
 
 ::: {.callout-note icon=false}
-## [Name, Title]
-**Organisation:** [Where they work]
-**Relationship:** [e.g. Module leader / Mentor]
+## MSc Business Analytics — Credit Risk, Predictive Modelling & Scoring
+**Organisation:** Dublin City University
+**Relationship:** Classmate and current practicum teammate
 **Contact:** Available on request
 
-A brief sentence or two on the context of our working relationship.
-:::
-
-### Reference 3
-
-::: {.callout-note icon=false}
-## [Name, Title]
-**Organisation:** [Where they work]
-**Relationship:** [e.g. Internship supervisor / Peer collaborator]
-**Contact:** Available on request
-
-A brief sentence or two on the context of our working relationship.
+Wendy and I are completing the MSc Business Analytics programme at DCU together, and we are currently collaborating on the same practicum team. She can speak to my technical contributions, my collaborative approach to teamwork, and the quality of my analytical work in academic and applied settings.
 :::
 
 ## A Note on Privacy
 
-Contact details for references are provided on request rather than listed publicly, to respect their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.
+Full contact details for references are provided on request rather than listed publicly, out of respect for their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.
 
 ---
 
