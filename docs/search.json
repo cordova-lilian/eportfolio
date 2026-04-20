@@ -4,56 +4,63 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "I am a Postgraduate Business Analytics student at Dublin City University, dedicated to leveraging data-driven insights to optimize customer-centric strategies and operational efficiency.\nMy professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in the retail sector in Hermosillo, Sonora, Mexico. During my time in customer-facing roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behavior. This firsthand observation of market variables served as the catalyst for my transition into the field of advanced analytics.\nCurrently, I am refining my technical proficiency in Python, SQL, and Tableau to translate complex datasets into actionable business intelligence. I aim to combine my international business background with rigorous quantitative analysis to help organizations bridge the gap between high-level global strategy and localized operational impact.\nI am passionate about transforming raw data into clear, strategic narratives that drive growth and enhance the customer experience.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University\nPrior education: BSc in International Business and Trade, Universidad de Sonora\nLanguages: Spanish (native), English (IELTS 7 — Advanced)\nBased in: Dublin, Ireland"
+    "text": "I am a results-oriented Master’s student in Ireland specializing in Business Analytics and AI-driven business solutions. My work sits at the intersection of international trade and advanced analytics — translating complex data into strategic insights that inform real decisions.\nMy professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in high-volume commercial environments across Mexico. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.\nI am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dorset College Ireland (Expected 2026)\nPrior education: BSc in International Trade and Business, Universidad de Sonora (Mexico)\nTarget roles: Business Intelligence, Data Analysis, NLP Applications\nLanguages: English (Advanced/C1 — IELTS Band 7), Spanish (Native)\nBased in: Dublin, Ireland"
   },
   {
     "objectID": "about.html#who-i-am",
     "href": "about.html#who-i-am",
     "title": "About Me",
     "section": "",
-    "text": "I am a Postgraduate Business Analytics student at Dublin City University, dedicated to leveraging data-driven insights to optimize customer-centric strategies and operational efficiency.\nMy professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in the retail sector in Hermosillo, Sonora, Mexico. During my time in customer-facing roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behavior. This firsthand observation of market variables served as the catalyst for my transition into the field of advanced analytics.\nCurrently, I am refining my technical proficiency in Python, SQL, and Tableau to translate complex datasets into actionable business intelligence. I aim to combine my international business background with rigorous quantitative analysis to help organizations bridge the gap between high-level global strategy and localized operational impact.\nI am passionate about transforming raw data into clear, strategic narratives that drive growth and enhance the customer experience.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University\nPrior education: BSc in International Business and Trade, Universidad de Sonora\nLanguages: Spanish (native), English (IELTS 7 — Advanced)\nBased in: Dublin, Ireland"
+    "text": "I am a results-oriented Master’s student in Ireland specializing in Business Analytics and AI-driven business solutions. My work sits at the intersection of international trade and advanced analytics — translating complex data into strategic insights that inform real decisions.\nMy professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in high-volume commercial environments across Mexico. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.\nI am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dorset College Ireland (Expected 2026)\nPrior education: BSc in International Trade and Business, Universidad de Sonora (Mexico)\nTarget roles: Business Intelligence, Data Analysis, NLP Applications\nLanguages: English (Advanced/C1 — IELTS Band 7), Spanish (Native)\nBased in: Dublin, Ireland"
   },
   {
     "objectID": "about.html#what-i-do",
     "href": "about.html#what-i-do",
     "title": "About Me",
     "section": "What I Do",
-    "text": "What I Do\nI work at the intersection of international business strategy and data analytics. My focus is on translating quantitative findings into clear, strategic narratives that inform decision-making — particularly in customer behaviour, retail operations, and market dynamics."
+    "text": "What I Do\nI apply data science techniques — particularly Natural Language Processing (NLP) and Machine Learning — to business problems. My recent work has focused on financial sentiment analysis, LLM-enabled content pipelines, and supply chain digitalisation. I am most energised when a technical project connects back to a concrete strategic question."
   },
   {
-    "objectID": "about.html#skills",
-    "href": "about.html#skills",
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
     "title": "About Me",
-    "section": "Skills",
-    "text": "Skills\n\n\n\n\n\n\n\nCategory\nTools & Technologies\n\n\n\n\nProgramming\nPython, SQL\n\n\nData & Visualisation\npandas, NumPy, Plotly, Tableau, matplotlib\n\n\nAnalytics\nStatistical analysis, exploratory data analysis, business intelligence\n\n\nWeb & Publishing\nQuarto, HTML/CSS, Git, GitHub Pages\n\n\nOffice & Productivity\nMicrosoft Excel, Word, PowerPoint"
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\n\n\n\n\n\n\nCategory\nTools & Technologies\n\n\n\n\nProgramming\nPython (Scikit-learn, Pandas, NLTK), SQL\n\n\nMachine Learning\nRandom Forest, Gradient Boosting, Sentiment Analysis, TF-IDF\n\n\nBusiness Intelligence\nAdvanced Microsoft Excel, Power BI, Tableau\n\n\nLogistics & Strategy\nMaterials Requirement Planning (MRP), VRIO Analysis, Cross-docking, Supply Chain Digitalisation\n\n\nWeb & Publishing\nQuarto, HTML/CSS, Git, GitHub Pages"
+  },
+  {
+    "objectID": "about.html#key-academic-modules",
+    "href": "about.html#key-academic-modules",
+    "title": "About Me",
+    "section": "Key Academic Modules",
+    "text": "Key Academic Modules\nMy MSc programme has focused on applying analytics directly to business problems:\n\nApplied Business Analytics — statistical methods and analytical frameworks for business decision-making\nMachine Learning for Business — supervised and unsupervised methods with applied case studies\nStrategic AI Integration — how organisations deploy AI effectively within existing operations"
   },
   {
     "objectID": "about.html#professional-background",
     "href": "about.html#professional-background",
     "title": "About Me",
     "section": "Professional Background",
-    "text": "Professional Background\nMy professional journey has spanned multiple industries and geographies:\n\nPersonal Assistant Intern — EY UK & Ireland Financial Services, 2020\nCustomer Service & Social Media — Florería y Regalos Martha, Hermosillo, 2025\nSales — Coco Bongo Show and Disco, Playa del Carmen, 2015–2016\nQuality Consulting Intern — Consultoría Especializada de Sonora (COESSO), 2015\n\nEach of these roles reinforced my conviction that data, when properly interpreted, is the most powerful tool a business has for understanding its customers and improving its operations."
+    "text": "Professional Background\nMy professional journey has spanned retail, consulting, and the financial services sector:\n\nGeneral Manager / Social Media — Florería y Regalos Martha, Mexico (Feb–May 2025) Managed inventory and logistics for a retail environment; developed commercial awareness through direct customer interaction and social media management.\nSales / Professional Staff — Coco Bongo Show and Disco, Playa del Carmen, Mexico (2015–2016) Applied problem-solving and communication in a fast-paced international tourism hub. Gained strong commercial awareness through high-volume customer interaction.\nConsultancy Support (Intern) — Consultoría Especializada de Sonora, Mexico (Jan–Jun 2015) Assisted in consultancy and quality management projects, gaining foundational experience in business operations.\n\nEach of these roles reinforced my conviction that data — when properly interpreted — is the most powerful tool a business has for understanding its customers and improving its operations."
   },
   {
     "objectID": "about.html#goals",
     "href": "about.html#goals",
     "title": "About Me",
     "section": "Goals",
-    "text": "Goals\n\n\n\n\n\n\nTipWhere I am heading\n\n\n\n\nShort term: Complete the MSc Business Analytics programme at DCU and build a portfolio of analytical work that demonstrates genuine technical depth.\nMedium term: Secure a role in business analytics or data-driven strategy, ideally in a company that operates across international markets.\nLong term: Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence."
+    "text": "Goals\n\n\n\n\n\n\nTipWhere I am heading\n\n\n\n\nShort term: Complete the MSc Business Analytics programme and build a portfolio of analytical work that demonstrates genuine technical depth in NLP and machine learning.\nMedium term: Secure a role in Business Intelligence or Data Analysis, ideally at a company operating across international markets where my bilingual and cross-cultural background adds value.\nLong term: Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence."
   },
   {
-    "objectID": "about.html#beyond-the-screen",
-    "href": "about.html#beyond-the-screen",
+    "objectID": "about.html#additional-information",
+    "href": "about.html#additional-information",
     "title": "About Me",
-    "section": "Beyond the Screen",
-    "text": "Beyond the Screen\nOutside of data and code, I enjoy exploring Dublin, practising languages, and staying connected with the international community that makes this city so dynamic."
+    "section": "Additional Information",
+    "text": "Additional Information\n\nCertifications: IELTS Academic Band 7; Irish Manual Handling Legislation; Food Safety Standards\nInterests: Technology-driven venture development and Virtual Reality (VR) applications for skill-building"
   },
   {
     "objectID": "about.html#a-note-on-this-site",
     "href": "about.html#a-note-on-this-site",
     "title": "About Me",
     "section": "A Note on This Site",
-    "text": "A Note on This Site\nThis portfolio was built with Quarto, styled with custom Sass, and deployed via GitHub Pages. The source code is publicly available on GitHub — feel free to take a look."
+    "text": "A Note on This Site\nThis portfolio was built with Quarto, styled with custom Sass, and deployed via GitHub Pages. The source code is publicly available on GitHub — take a look if you are curious about the implementation."
   },
   {
     "objectID": "QUICKSTART.html",
@@ -382,6 +389,6 @@
     "href": "index.html",
     "title": "Lilian Cordova Hernandez",
     "section": "",
-    "text": "Welcome to my portfolio. I am a [your field, e.g. data science student / software developer / analyst] with a focus on [your area, e.g. machine learning, web development, analytics].\nThis site showcases my work, my journey, and the skills I have built. Browse the projects page to see executable Python notebooks, or read more about me and the path that brought me here."
+    "text": "Welcome to my portfolio. I am a Postgraduate Business Analytics student in Dublin, specialising in NLP, machine learning, and business intelligence. My background in International Trade gives me a distinct lens for applying analytics to real commercial problems.\nThis site showcases my technical work, the path that brought me here, and the skills I am building. Browse the projects page to see executable Python notebooks, or read more about me."
   }
 ]

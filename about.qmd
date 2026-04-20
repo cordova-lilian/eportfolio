@@ -6,60 +6,72 @@ date: last-modified
 
 ## Who I Am
 
-I am a Postgraduate Business Analytics student at Dublin City University, dedicated to leveraging data-driven insights to optimize customer-centric strategies and operational efficiency.
+I am a results-oriented Master's student in Ireland specializing in **Business Analytics and AI-driven business solutions**. My work sits at the intersection of international trade and advanced analytics — translating complex data into strategic insights that inform real decisions.
 
-My professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in the retail sector in Hermosillo, Sonora, Mexico. During my time in customer-facing roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behavior. This firsthand observation of market variables served as the catalyst for my transition into the field of advanced analytics.
+My professional perspective is built upon a foundation in International Business and Trade, further enriched by practical experience in high-volume commercial environments across Mexico. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.
 
-Currently, I am refining my technical proficiency in Python, SQL, and Tableau to translate complex datasets into actionable business intelligence. I aim to combine my international business background with rigorous quantitative analysis to help organizations bridge the gap between high-level global strategy and localized operational impact.
-
-I am passionate about transforming raw data into clear, strategic narratives that drive growth and enhance the customer experience.
+I am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.
 
 ::: {.callout-note}
 ## At a glance
-- **Current programme:** MSc Business Analytics, Dublin City University
-- **Prior education:** BSc in International Business and Trade, Universidad de Sonora
-- **Languages:** Spanish (native), English (IELTS 7 — Advanced)
+- **Current programme:** MSc Business Analytics, Dorset College Ireland (Expected 2026)
+- **Prior education:** BSc in International Trade and Business, Universidad de Sonora (Mexico)
+- **Target roles:** Business Intelligence, Data Analysis, NLP Applications
+- **Languages:** English (Advanced/C1 — IELTS Band 7), Spanish (Native)
 - **Based in:** Dublin, Ireland
 :::
 
 ## What I Do
 
-I work at the intersection of international business strategy and data analytics. My focus is on translating quantitative findings into clear, strategic narratives that inform decision-making — particularly in customer behaviour, retail operations, and market dynamics.
+I apply data science techniques — particularly **Natural Language Processing (NLP)** and **Machine Learning** — to business problems. My recent work has focused on financial sentiment analysis, LLM-enabled content pipelines, and supply chain digitalisation. I am most energised when a technical project connects back to a concrete strategic question.
 
-## Skills
+## Technical Skills
 
 | Category | Tools & Technologies |
 |----------|---------------------|
-| **Programming** | Python, SQL |
-| **Data & Visualisation** | pandas, NumPy, Plotly, Tableau, matplotlib |
-| **Analytics** | Statistical analysis, exploratory data analysis, business intelligence |
+| **Programming** | Python (Scikit-learn, Pandas, NLTK), SQL |
+| **Machine Learning** | Random Forest, Gradient Boosting, Sentiment Analysis, TF-IDF |
+| **Business Intelligence** | Advanced Microsoft Excel, Power BI, Tableau |
+| **Logistics & Strategy** | Materials Requirement Planning (MRP), VRIO Analysis, Cross-docking, Supply Chain Digitalisation |
 | **Web & Publishing** | Quarto, HTML/CSS, Git, GitHub Pages |
-| **Office & Productivity** | Microsoft Excel, Word, PowerPoint |
+
+## Key Academic Modules
+
+My MSc programme has focused on applying analytics directly to business problems:
+
+- **Applied Business Analytics** — statistical methods and analytical frameworks for business decision-making
+- **Machine Learning for Business** — supervised and unsupervised methods with applied case studies
+- **Strategic AI Integration** — how organisations deploy AI effectively within existing operations
 
 ## Professional Background
 
-My professional journey has spanned multiple industries and geographies:
+My professional journey has spanned retail, consulting, and the financial services sector:
 
-- **Personal Assistant Intern** — EY UK & Ireland Financial Services, 2020
-- **Customer Service & Social Media** — Florería y Regalos Martha, Hermosillo, 2025
-- **Sales** — Coco Bongo Show and Disco, Playa del Carmen, 2015–2016
-- **Quality Consulting Intern** — Consultoría Especializada de Sonora (COESSO), 2015
+- **General Manager / Social Media** — Florería y Regalos Martha, Mexico (Feb–May 2025)
+  Managed inventory and logistics for a retail environment; developed commercial awareness through direct customer interaction and social media management.
 
-Each of these roles reinforced my conviction that data, when properly interpreted, is the most powerful tool a business has for understanding its customers and improving its operations.
+- **Sales / Professional Staff** — Coco Bongo Show and Disco, Playa del Carmen, Mexico (2015–2016)
+  Applied problem-solving and communication in a fast-paced international tourism hub. Gained strong commercial awareness through high-volume customer interaction.
+
+- **Consultancy Support (Intern)** — Consultoría Especializada de Sonora, Mexico (Jan–Jun 2015)
+  Assisted in consultancy and quality management projects, gaining foundational experience in business operations.
+
+Each of these roles reinforced my conviction that data — when properly interpreted — is the most powerful tool a business has for understanding its customers and improving its operations.
 
 ## Goals
 
 ::: {.callout-tip}
 ## Where I am heading
-1. **Short term:** Complete the MSc Business Analytics programme at DCU and build a portfolio of analytical work that demonstrates genuine technical depth.
-2. **Medium term:** Secure a role in business analytics or data-driven strategy, ideally in a company that operates across international markets.
+1. **Short term:** Complete the MSc Business Analytics programme and build a portfolio of analytical work that demonstrates genuine technical depth in NLP and machine learning.
+2. **Medium term:** Secure a role in **Business Intelligence** or **Data Analysis**, ideally at a company operating across international markets where my bilingual and cross-cultural background adds value.
 3. **Long term:** Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence.
 :::
 
-## Beyond the Screen
+## Additional Information
 
-Outside of data and code, I enjoy exploring Dublin, practising languages, and staying connected with the international community that makes this city so dynamic.
+- **Certifications:** IELTS Academic Band 7; Irish Manual Handling Legislation; Food Safety Standards
+- **Interests:** Technology-driven venture development and Virtual Reality (VR) applications for skill-building
 
 ## A Note on This Site
 
-This portfolio was built with [Quarto](https://quarto.org/), styled with custom Sass, and deployed via GitHub Pages. The source code is [publicly available on GitHub](https://github.com/cordova-lilian/eportfolio) — feel free to take a look.
+This portfolio was built with [Quarto](https://quarto.org/), styled with custom Sass, and deployed via GitHub Pages. The source code is [publicly available on GitHub](https://github.com/cordova-lilian/eportfolio) — take a look if you are curious about the implementation.
