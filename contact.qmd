@@ -39,26 +39,25 @@ For work-related enquiries, **LinkedIn** is the most reliable channel. For techn
 
 The following individuals can speak to my work ethic, character, and professional abilities. Please contact me via LinkedIn before reaching out to them so I can let them know to expect your message.
 
-### Martina Keane
-
-::: {.callout-note icon=false}
-## Financial Services Leader
-**Organisation:** EY UK & Ireland
-**Relationship:** Former manager during my professional assistant role
-**Contact:** Available on request
-
-During my time working with Martina, I supported her in a demanding professional environment that required high levels of responsibility, discretion, and organisation. She can speak to my reliability, work ethic, and ability to adapt quickly to new contexts.
-:::
-
 ### Wendy Lucio
 
 ::: {.callout-note icon=false}
-## MSc Business Analytics — Credit Risk, Predictive Modelling & Scoring
-**Organisation:** Dublin City University
+## Academic Reference
+**Focus areas:** Credit Risk, Predictive Modelling & Scoring
+**Organisation:** Dublin City University — MSc Business Analytics
 **Relationship:** Classmate and current practicum teammate
 **Contact:** Available on request
 
-Wendy and I are completing the MSc Business Analytics programme at DCU together, and we are currently collaborating on the same practicum team. She can speak to my technical contributions, my collaborative approach to teamwork, and the quality of my analytical work in academic and applied settings.
+Wendy and I are completing the MSc Business Analytics programme at DCU together and are currently collaborating on the same practicum team. She can speak to my technical contributions, my collaborative approach to teamwork, and the quality of my analytical work in academic and applied settings.
+:::
+
+### Martina Keane
+
+::: {.callout-note icon=false}
+## Personal Reference
+**Contact:** Available on request
+
+Martina can speak to my reliability, responsibility, and personal character, based on our professional working relationship. She is able to provide a strong personal reference regarding my work ethic and conduct.
 :::
 
 ## A Note on Privacy
