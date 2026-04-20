@@ -11,7 +11,7 @@
 
 // Azules
 $blue-50:   #eef4ff;
-$blue-100:  #dbe7ff;
+$blue-100:  hwb(210 62% 2%);
 $blue-200:  #b9d0ff;
 $blue-400:  #6a94f0;
 $blue-500:  #4a7be0;
@@ -20,8 +20,8 @@ $blue-700:  #1e3d99;
 $sky:       #bcd4f7;
 
 // Neutros
-$cream:     #f6f8ff;
-$paper:     #ffffff;
+$cream:     hsl(253, 50%, 91%);
+$paper:     hsl(240, 49%, 86%);
 $ink:       #0e1830;
 $ink-soft:  #2a3656;
 $muted:     #6b7590;
