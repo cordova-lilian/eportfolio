@@ -1,0 +1,48 @@
+---
+title: "About Me"
+subtitle: "Background, skills, and goals"
+date: last-modified
+---
+
+## Who I Am
+
+I am [Lilian Elizabeth Cordova Hernandez], a [your role, e.g. data science student at XYZ University]. I am passionate about [your interests, e.g. turning messy data into clear insights, building tools that solve real problems, learning how complex systems work].
+
+My journey into this field began when [your story, e.g. I took my first programming class and realised how much I loved the puzzle of debugging]. Since then, I have worked on [brief mention of 1–2 things you have done].
+
+::: {.callout-note}
+## Quick summary
+- **Background:** [e.g. BSc in Computer Science, currently pursuing MSc in Data Analytics]
+- **Focus areas:** Python, data visualisation, statistical analysis, web development
+- **Currently learning:** [e.g. deep learning, cloud deployment, Rust]
+:::
+
+## What I Do
+
+I work with data and code to build things that are useful. That includes exploratory analysis, machine learning models, dashboards, and occasionally a portfolio site like this one.
+
+## Skills
+
+| Category | Tools & Technologies |
+|----------|---------------------|
+| **Languages** | Python, SQL, R, JavaScript |
+| **Data & ML** | pandas, NumPy, scikit-learn, Plotly, matplotlib |
+| **Web** | Quarto, HTML/CSS, Git, GitHub Pages |
+| **Workflow** | Jupyter, VS Code, Linux, Markdown |
+
+## Goals
+
+::: {.callout-tip}
+## Where I am heading
+1. **Short term:** Complete my current programme and build a body of portfolio work that demonstrates real technical depth.
+2. **Medium term:** Move into a role where I can apply data skills to meaningful problems — ideally in [your area of interest, e.g. healthcare, climate, fintech].
+3. **Long term:** Keep learning. Technology moves fast and so should I.
+:::
+
+## Beyond the Screen
+
+When I am not at a keyboard, I enjoy [e.g. hiking, reading science fiction, cooking, running]. I think stepping away from the laptop is part of what makes the work at the laptop worthwhile.
+
+## A Note on This Site
+
+This portfolio was built with [Quarto](https://quarto.org/), styled with custom Sass, and deployed via GitHub Pages. The source code is [publicly available on GitHub](https://github.com/cordova-lilian/eportfolio) — feel free to take a look.
