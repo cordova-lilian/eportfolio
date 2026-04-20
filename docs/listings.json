@@ -2,8 +2,7 @@
   {
     "listing": "/projects/index.html",
     "items": [
-      "/projects/list/penguins.html",
-      "/projects/list/gapminder.html"
+      "/projects/list/penguins.html"
     ]
   }
 ]

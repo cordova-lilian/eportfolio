@@ -140,74 +140,39 @@
     "text": "Symptom\nFix\n\n\n\n\nSite 404s after deploy\nCheck .nojekyll exists, Pages source set to /docs\n\n\nPython chunks show error\npip install plotly pandas statsmodels\n\n\nFontAwesome icons not showing\nquarto add quarto-ext/fontawesome from project root\n\n\nLogo/favicon missing\nCheck filenames match exactly (case-sensitive)\n\n\nSCSS not applying\nEnsure - styles.scss is listed under theme in _quarto.yml\n\n\nListing page empty\nProject .qmd files must be in projects/list/ subfolder"
   },
   {
-    "objectID": "projects/list/gapminder.html",
-    "href": "projects/list/gapminder.html",
-    "title": "Global Development Trends: A Gapminder Analysis",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "This project uses the Gapminder dataset — the same data that Hans Rosling used in his famous TED talks1 — to explore how the world has changed between 1952 and 2007. The dataset contains life expectancy, GDP per capita, and population for 142 countries across 12 five-year snapshots.\n\n\n\n\n\n\nNoteQuestions this analysis answers\n\n\n\n\nHow has global life expectancy changed over time?\nIs there still a strong link between wealth and longevity?\nWhich continents have gained the most?"
+    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nExploring the Palmer Penguins Dataset\n\n\n\npython\n\ndata-viz\n\neda\n\nplotly\n\n\n\nAn interactive visual analysis of 344 penguins across three species, exploring morphological differences and species separability.\n\n\n\nLilian Elizabeth Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/list/gapminder.html#overview",
-    "href": "projects/list/gapminder.html#overview",
-    "title": "Global Development Trends: A Gapminder Analysis",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
     "section": "",
-    "text": "This project uses the Gapminder dataset — the same data that Hans Rosling used in his famous TED talks1 — to explore how the world has changed between 1952 and 2007. The dataset contains life expectancy, GDP per capita, and population for 142 countries across 12 five-year snapshots.\n\n\n\n\n\n\nNoteQuestions this analysis answers\n\n\n\n\nHow has global life expectancy changed over time?\nIs there still a strong link between wealth and longevity?\nWhich continents have gained the most?"
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
   },
   {
-    "objectID": "projects/list/gapminder.html#the-relationship-between-wealth-and-life-expectancy",
-    "href": "projects/list/gapminder.html#the-relationship-between-wealth-and-life-expectancy",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "The Relationship Between Wealth and Life Expectancy",
-    "text": "The Relationship Between Wealth and Life Expectancy\n\n\nShow setup code\nimport plotly.express as px\nimport pandas as pd\n\ndf = px.data.gapminder()\nprint(f\"Dataset covers {df['country'].nunique()} countries across {df['year'].nunique()} years\")\nprint(f\"Years: {df['year'].min()} to {df['year'].max()}\")\n\n\nDataset covers 142 countries across 12 years\nYears: 1952 to 2007\n\n\n\n\nShow the code\nfig = px.scatter(\n    df,\n    x='gdpPercap',\n    y='lifeExp',\n    animation_frame='year',\n    animation_group='country',\n    size='pop',\n    color='continent',\n    hover_name='country',\n    log_x=True,\n    size_max=55,\n    range_x=[100, 100000],\n    range_y=[25, 90],\n    title='Wealth vs Life Expectancy, 1952 to 2007',\n    labels={\n        'gdpPercap': 'GDP per Capita (USD, log scale)',\n        'lifeExp': 'Life Expectancy (years)',\n        'pop': 'Population'\n    },\n    template='plotly_white'\n)\nfig.update_layout(height=550)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Animated bubble chart: GDP per capita vs life expectancy over time. Press play to watch 55 years of progress.\n\n\n\n\nThis is the chart Hans Rosling made famous. The headline story is remarkable — across the period, every continent moved up and to the right. The world as a whole is healthier and wealthier than it was in 1952."
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
   },
   {
-    "objectID": "projects/list/gapminder.html#life-expectancy-over-time",
-    "href": "projects/list/gapminder.html#life-expectancy-over-time",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "Life Expectancy Over Time",
-    "text": "Life Expectancy Over Time\n\n\nShow the code\ncontinent_avg = df.groupby(['year', 'continent'])['lifeExp'].mean().reset_index()\n\nfig = px.line(\n    continent_avg,\n    x='year',\n    y='lifeExp',\n    color='continent',\n    markers=True,\n    title='Average Life Expectancy by Continent',\n    labels={'lifeExp': 'Life Expectancy (years)', 'year': 'Year'},\n    color_discrete_sequence=px.colors.qualitative.Set1,\n    template='plotly_white'\n)\nfig.update_layout(height=450)\nfig.update_traces(line=dict(width=3))\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Continental average life expectancy over time\n\n\n\n\nAfrica’s trajectory is notably different — the curve flattens around the 1990s, reflecting the devastating impact of the HIV/AIDS epidemic on sub-Saharan countries. Asia shows the steepest gains of any continent over the period."
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact & References",
+    "section": "Professional References",
+    "text": "Professional References\nThe following individuals can speak to my work, character, and technical ability. Please contact me first via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nReference 1\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Academic supervisor / Line manager / Project collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship — what we collaborated on, over what period.\n\n\n\n\nReference 2\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Module leader / Mentor] Contact: Available on request\nA brief sentence or two on the context of our working relationship.\n\n\n\n\nReference 3\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Internship supervisor / Peer collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship."
   },
   {
-    "objectID": "projects/list/gapminder.html#the-gains-ranked",
-    "href": "projects/list/gapminder.html#the-gains-ranked",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "The Gains, Ranked",
-    "text": "The Gains, Ranked\n\n\nShow the code\nfirst_year = df[df['year'] == 1952][['country', 'continent', 'lifeExp']].rename(columns={'lifeExp': 'lifeExp_1952'})\nlast_year = df[df['year'] == 2007][['country', 'lifeExp']].rename(columns={'lifeExp': 'lifeExp_2007'})\n\nchange = first_year.merge(last_year, on='country')\nchange['gain'] = change['lifeExp_2007'] - change['lifeExp_1952']\ntop_gains = change.nlargest(15, 'gain').sort_values('gain')\n\nfig = px.bar(\n    top_gains,\n    x='gain',\n    y='country',\n    color='continent',\n    orientation='h',\n    title='Top 15 Countries by Life Expectancy Gain (1952 → 2007)',\n    labels={'gain': 'Years gained', 'country': ''},\n    color_discrete_sequence=px.colors.qualitative.Bold,\n    template='plotly_white'\n)\nfig.update_layout(height=500)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: Top 15 countries by absolute gain in life expectancy, 1952 to 2007\n\n\n\n\nOman leads the table — a country that transformed its healthcare infrastructure dramatically over this period. Several Asian countries feature heavily, reflecting the rapid development seen in that region."
-  },
-  {
-    "objectID": "projects/list/gapminder.html#a-snapshot-2007",
-    "href": "projects/list/gapminder.html#a-snapshot-2007",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "A Snapshot: 2007",
-    "text": "A Snapshot: 2007\n\n\nShow the code\ndf_2007 = df[df['year'] == 2007]\n\nfig = px.scatter(\n    df_2007,\n    x='gdpPercap',\n    y='lifeExp',\n    size='pop',\n    color='continent',\n    hover_name='country',\n    log_x=True,\n    size_max=60,\n    title='The World in 2007',\n    labels={'gdpPercap': 'GDP per Capita (USD, log scale)', 'lifeExp': 'Life Expectancy (years)'},\n    template='plotly_white',\n    trendline='ols',\n    trendline_scope='overall',\n    trendline_color_override='gray'\n)\nfig.update_layout(height=500)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 4: GDP vs life expectancy in 2007, the most recent year in the dataset\n\n\n\n\nThe relationship is still clearly logarithmic — each additional unit of wealth buys less longevity than the last. A country at USD 1,000 per capita gains far more years from doubling to USD 2,000 than a country at USD 30,000 would from doubling to USD 60,000."
-  },
-  {
-    "objectID": "projects/list/gapminder.html#summary-statistics",
-    "href": "projects/list/gapminder.html#summary-statistics",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "Summary Statistics",
-    "text": "Summary Statistics\n\n\nShow the code\nsummary = df.groupby(['continent', 'year']).agg(\n    avg_life_exp=('lifeExp', 'mean'),\n    avg_gdp=('gdpPercap', 'mean'),\n    total_pop=('pop', 'sum')\n).reset_index()\n\nsummary_wide = summary.pivot(index='continent', columns='year', values='avg_life_exp').round(1)\nsummary_wide[[1952, 1977, 2007]].style.background_gradient(cmap='RdYlGn', axis=None)\n\n\n\n\n\n\n\nyear\n1952\n1977\n2007\n\n\ncontinent\n \n \n \n\n\n\n\nAfrica\n39.100000\n49.600000\n54.800000\n\n\nAmericas\n53.300000\n64.400000\n73.600000\n\n\nAsia\n46.300000\n59.600000\n70.700000\n\n\nEurope\n64.400000\n71.900000\n77.600000\n\n\nOceania\n69.300000\n72.900000\n80.700000"
-  },
-  {
-    "objectID": "projects/list/gapminder.html#key-takeaways",
-    "href": "projects/list/gapminder.html#key-takeaways",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\n\n\n\n\n\nTipWhat the data shows\n\n\n\n\nThe world has become dramatically healthier over 55 years.\nThe link between income and longevity remains strong but follows a logarithmic curve.\nAsia has seen the fastest sustained gains.\nAfrica’s progress was disrupted by the HIV/AIDS epidemic."
-  },
-  {
-    "objectID": "projects/list/gapminder.html#references",
-    "href": "projects/list/gapminder.html#references",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "References",
-    "text": "References\nData source: plotly.express.data.gapminder(), sourced from the Gapminder Foundation. Originally compiled by Hans Rosling and colleagues."
-  },
-  {
-    "objectID": "projects/list/gapminder.html#footnotes",
-    "href": "projects/list/gapminder.html#footnotes",
-    "title": "Global Development Trends: A Gapminder Analysis",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nRosling, H. (2006). The best stats you’ve ever seen. TED Talk. The Gapminder foundation maintains the underlying data.↩︎"
+    "objectID": "contact.html#a-note-on-privacy",
+    "href": "contact.html#a-note-on-privacy",
+    "title": "Contact & References",
+    "section": "A Note on Privacy",
+    "text": "A Note on Privacy\nContact details for references are provided on request rather than listed publicly, to respect their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
   },
   {
     "objectID": "reflection.html",
@@ -271,41 +236,6 @@
     "title": "Reflection",
     "section": "A Closing Thought",
     "text": "A Closing Thought\n\n\n\n\n\n\nNote\n\n\n\nThe best thing about this project was that it forced me to use a lot of small skills together. Any one of them alone is trivial; stitching them into something that works is where the difficulty — and the learning — lives."
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best ways to reach me are below.\n\n\n\n\nPrimary channel: LinkedIn (see right)\nLocation: [Your City, Country]\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor anything work-related, LinkedIn is the most reliable way to contact me. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#professional-references",
-    "href": "contact.html#professional-references",
-    "title": "Contact & References",
-    "section": "Professional References",
-    "text": "Professional References\nThe following individuals can speak to my work, character, and technical ability. Please contact me first via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nReference 1\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Academic supervisor / Line manager / Project collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship — what we collaborated on, over what period.\n\n\n\n\nReference 2\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Module leader / Mentor] Contact: Available on request\nA brief sentence or two on the context of our working relationship.\n\n\n\n\nReference 3\n\n\n\n\n\n\nNote[Name, Title]\n\n\n\nOrganisation: [Where they work] Relationship: [e.g. Internship supervisor / Peer collaborator] Contact: Available on request\nA brief sentence or two on the context of our working relationship."
-  },
-  {
-    "objectID": "contact.html#a-note-on-privacy",
-    "href": "contact.html#a-note-on-privacy",
-    "title": "Contact & References",
-    "section": "A Note on Privacy",
-    "text": "A Note on Privacy\nContact details for references are provided on request rather than listed publicly, to respect their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nExploring the Palmer Penguins Dataset\n\n\n\npython\n\ndata-viz\n\neda\n\nplotly\n\n\n\nAn interactive visual analysis of 344 penguins across three species, exploring morphological differences and species separability.\n\n\n\nLilian Elizabeth Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nGlobal Development Trends: A Gapminder Analysis\n\n\n\npython\n\nplotly\n\ntime-series\n\nvisualisation\n\n\n\nAn interactive look at how life expectancy, income, and population have evolved across continents over five decades.\n\n\n\nLilian Elizabeth Cordova Hernandez\n\n\nApr 10, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/list/penguins.html",
