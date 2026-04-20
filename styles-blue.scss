@@ -1,0 +1,650 @@
+/*-- scss:defaults --*/
+
+// ═══════════════════════════════════════════════════════════════
+// Google Fonts: Instrument Serif + Inter + JetBrains Mono
+// ═══════════════════════════════════════════════════════════════
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ═══════════════════════════════════════════════════════════════
+// Paleta editorial (azul profundo + crema)
+// ═══════════════════════════════════════════════════════════════
+
+// Azules
+$blue-50:   #eef4ff;
+$blue-100:  #dbe7ff;
+$blue-200:  #b9d0ff;
+$blue-400:  #6a94f0;
+$blue-500:  #4a7be0;
+$blue-600:  #2f5dcc;
+$blue-700:  #1e3d99;
+$sky:       #bcd4f7;
+
+// Neutros
+$cream:     #f6f8ff;
+$paper:     #ffffff;
+$ink:       #0e1830;
+$ink-soft:  #2a3656;
+$muted:     #6b7590;
+$line:      #dfe5f2;
+$accent:    $blue-600;
+
+// Bootstrap / Quarto
+$primary:   $blue-600;
+$secondary: $ink-soft;
+$success:   #10b981;
+$info:      $blue-500;
+$warning:   #f59e0b;
+$danger:    #e53e3e;
+$light:     $cream;
+$dark:      $ink;
+
+// Body
+$body-bg:    $cream;
+$body-color: $ink;
+
+// Links
+$link-color:       $blue-600;
+$link-hover-color: $blue-700;
+$link-decoration:  none;
+
+// Typography stacks
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-monospace:  'JetBrains Mono', Menlo, monospace;
+$headings-font-family:   'Instrument Serif', Georgia, serif;
+$headings-font-weight:   400;
+$headings-color:         $ink;
+$headings-line-height:   1.1;
+
+$font-size-base:   1rem;
+$line-height-base: 1.6;
+
+// Navbar (claro, minimal)
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+$navbar-hl: $blue-600;
+
+// Code
+$code-bg:    $blue-50;
+$code-color: $blue-700;
+
+// Footer
+$footer-bg: $ink;
+$footer-fg: $cream;
+
+
+/*-- scss:rules --*/
+
+// ═══════════════════════════════════════════════════════════════
+// CSS Custom Properties — editorial design system
+// ═══════════════════════════════════════════════════════════════
+:root {
+  --accent: #{$blue-600};
+  --blue-50: #{$blue-50};
+  --blue-100: #{$blue-100};
+  --blue-200: #{$blue-200};
+  --blue-400: #{$blue-400};
+  --blue-500: #{$blue-500};
+  --blue-600: #{$blue-600};
+  --blue-700: #{$blue-700};
+  --cream: #{$cream};
+  --ink: #{$ink};
+  --ink-soft: #{$ink-soft};
+  --line: #{$line};
+  --mono: "JetBrains Mono", Menlo, monospace;
+  --muted: #{$muted};
+  --paper: #{$paper};
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sky: #{$sky};
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Page slide transitions (horizontal)
+// ═══════════════════════════════════════════════════════════════
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main.content,
+.quarto-about-jolla,
+.quarto-title-block,
+#quarto-content > * {
+  animation: slideInFromRight 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+// Stagger: navbar first, then content
+.navbar {
+  animation: slideInFromBottom 0.4s ease-out both;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Base
+// ═══════════════════════════════════════════════════════════════
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--accent);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--blue-700);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Typography — serif elegante para títulos
+// ═══════════════════════════════════════════════════════════════
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.65rem;
+  color: var(--ink-soft);
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+// Italic emphasis in serif
+em {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Navbar — minimal, claro
+// ═══════════════════════════════════════════════════════════════
+.navbar {
+  background-color: var(--paper) !important;
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+  padding: 1rem 1.5rem;
+
+  .navbar-brand {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--ink) !important;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-link {
+    color: var(--ink-soft) !important;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--accent) !important;
+  }
+
+  .navbar-brand img {
+    max-height: 36px;
+  }
+}
+
+// Search icon in navbar
+.navbar .aa-DetachedSearchButton {
+  background: var(--blue-50);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Landing page (jolla template)
+// ═══════════════════════════════════════════════════════════════
+.quarto-about-jolla {
+  padding: 5rem 1rem 3rem;
+  background: var(--cream);
+
+  .about-image {
+    border: none;
+    box-shadow: 0 20px 50px rgba(14, 24, 48, 0.15);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .about-image:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  h1.title {
+    font-family: var(--serif);
+    color: var(--ink);
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin-top: 2rem;
+  }
+
+  .about-links a {
+    color: var(--ink) !important;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    margin: 0.3rem;
+    transition: all 0.25s ease;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  .about-links a:hover {
+    background: var(--ink);
+    color: var(--paper) !important;
+    border-color: var(--ink);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(14, 24, 48, 0.15);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Project cards (grid listing)
+// ═══════════════════════════════════════════════════════════════
+.quarto-grid-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(14, 24, 48, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(14, 24, 48, 0.12);
+  border-color: var(--blue-200);
+}
+
+.quarto-grid-item h5.title,
+.quarto-grid-item .listing-title {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+}
+
+.quarto-grid-item .listing-description {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.quarto-grid-item .listing-categories .listing-category {
+  background: var(--blue-50);
+  color: var(--blue-700);
+  border: 1px solid var(--blue-100);
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-family: var(--sans);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.quarto-grid-item .listing-date,
+.quarto-grid-item .listing-author {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-family: var(--mono);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Callouts — editorial minimal
+// ═══════════════════════════════════════════════════════════════
+.callout {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+  background: var(--paper);
+  box-shadow: 0 1px 3px rgba(14, 24, 48, 0.03);
+  margin: 2rem 0;
+}
+
+.callout.callout-style-default > .callout-header {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.15rem;
+  background: transparent;
+  color: var(--ink);
+}
+
+.callout-note {
+  border-left-color: var(--blue-500);
+  background: var(--blue-50);
+}
+
+.callout-tip {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+
+.callout-warning {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.callout-important {
+  border-left-color: #e53e3e;
+  background: #fef2f2;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Code blocks
+// ═══════════════════════════════════════════════════════════════
+pre.sourceCode {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--paper) !important;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(14, 24, 48, 0.04);
+  font-size: 0.88rem;
+}
+
+code {
+  background: var(--blue-50);
+  color: var(--blue-700);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--ink);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Tables — editorial
+// ═══════════════════════════════════════════════════════════════
+table {
+  border-collapse: collapse;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 1px 3px rgba(14, 24, 48, 0.04);
+}
+
+table thead {
+  background: var(--cream);
+  border-bottom: 2px solid var(--line);
+}
+
+table thead th {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 1rem 1.2rem;
+}
+
+table tbody tr {
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s ease;
+}
+
+table tbody tr:last-child {
+  border-bottom: none;
+}
+
+table tbody tr:hover {
+  background: var(--blue-50);
+}
+
+table tbody td {
+  padding: 0.85rem 1.2rem;
+  color: var(--ink-soft);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Buttons
+// ═══════════════════════════════════════════════════════════════
+.btn-primary,
+a.btn {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover,
+a.btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(47, 93, 204, 0.25);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Footer — oscuro, minimal
+// ═══════════════════════════════════════════════════════════════
+.page-footer,
+.nav-footer {
+  background-color: var(--ink);
+  color: var(--cream);
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--ink-soft);
+
+  a {
+    color: var(--blue-200);
+  }
+
+  a:hover {
+    color: var(--paper);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Title banner (listing pages like Projects)
+// ═══════════════════════════════════════════════════════════════
+.quarto-title-block.default .quarto-title-banner {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%);
+  color: var(--paper);
+  padding: 5rem 1rem;
+}
+
+.quarto-title-block.default .quarto-title-banner h1.title {
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.quarto-title-block.default .quarto-title-banner .subtitle {
+  color: var(--blue-200);
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TOC (Table of Contents lateral)
+// ═══════════════════════════════════════════════════════════════
+#TOC {
+  border-left: 1px solid var(--line);
+  padding-left: 1.25rem;
+  font-size: 0.88rem;
+
+  > ul > li > a {
+    color: var(--ink);
+    font-weight: 500;
+    font-family: var(--sans);
+  }
+
+  a {
+    color: var(--muted);
+    transition: color 0.2s ease;
+  }
+
+  a:hover,
+  a.active {
+    color: var(--accent);
+    font-weight: 500;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Extras
+// ═══════════════════════════════════════════════════════════════
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Horizontal rules — elegant
+hr {
+  border: none;
+  height: 1px;
+  background: var(--line);
+  margin: 3rem auto;
+  max-width: 300px;
+}
+
+// Images with subtle shadows
+img.img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(14, 24, 48, 0.08);
+}
+
+// Blockquotes — editorial
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.5rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+// Date formatting
+.quarto-title-meta {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Section numbers (for .section-number class if used)
+.section-number {
+  font-family: var(--serif);
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--blue-200);
+  line-height: 1;
+  font-style: italic;
+}
+
+// Lists
+ul li, ol li {
+  margin-bottom: 0.5rem;
+  color: var(--ink-soft);
+}
+
+// Inline code in paragraphs
+p code {
+  background: var(--blue-50);
+  color: var(--blue-700);
+}
+
+// Selection color
+::selection {
+  background: var(--blue-200);
+  color: var(--ink);
+}
+
+// Reduce motion accessibility
+@media (prefers-reduced-motion: reduce) {
+  main.content,
+  .quarto-about-jolla,
+  .quarto-title-block,
+  #quarto-content > *,
+  .navbar {
+    animation: none !important;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
