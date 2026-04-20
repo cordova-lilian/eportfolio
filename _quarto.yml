@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Lilian Cordova Hernandez"
+  title: ""
   description: "ePortfolio — MSc Business Analytics, Dublin City University."
   favicon: images/favicon.svg
   site-url: "https://cordova-lilian.github.io/eportfolio"
