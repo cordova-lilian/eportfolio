@@ -1,0 +1,525 @@
+---
+title: "Fraud Detection: A Statistical Exploration of Consumer Transaction Data"
+description: "An exploratory statistical analysis of 500 consumer banking transactions using descriptive statistics, correlation analysis, outlier detection, and classification modelling."
+author: "Lilian Cordova Hernandez"
+date: "2026-04-15"
+categories: [python, statistics, eda, machine-learning, fraud]
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    code-summary: "Show the code"
+    fig-cap-location: bottom
+    highlight-style: github
+    toc-depth: 3
+execute:
+  warning: false
+  message: false
+---
+
+## Overview
+
+Fraud detection is one of the most pressing challenges facing the banking sector today. Financial institutions must balance the operational cost of reviewing transactions against the financial and reputational cost of missing fraudulent ones. This project was developed as part of the **Statistical Models and Methods for Business Analytics** module, and applies the statistical techniques covered in class to a real-sized transaction dataset.
+
+::: {.callout-note}
+## What this project covers
+1. Descriptive statistics and outlier detection using IQR and Z-scores
+2. Correlation analysis between demographic, financial, and behavioural variables
+3. Exploratory segmentation by age, gender, education, and marital status
+4. Classification modelling with Decision Trees and Random Forest
+5. Honest reflection on model limitations and what the data can — and cannot — tell us
+:::
+
+## The Dataset
+
+The dataset consists of **500 transactions** and **23 original variables** including demographic features (age, gender, education, marital status, region), financial features (personal and family income, credit score, loan amount), and behavioural features (transaction amount, device type, mobile and internet usage). The two key target variables are `is_fraud` (binary indicator) and `fraud_amount` (total monetary loss).
+
+```{python}
+#| label: load-data
+#| code-summary: "Show loading and feature reconstruction"
+
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+df = pd.read_csv('fraud_detect.csv')
+
+# Reconstruct categorical columns from one-hot for readability in EDA
+df['gender'] = df['gender_Female'].map({1: 'Female', 0: 'Male'})
+
+def get_first_match(row, prefix):
+    for col in df.columns:
+        if col.startswith(prefix) and row[col] == 1:
+            return col.replace(prefix, '')
+    return 'Unknown'
+
+df['education']        = df.apply(lambda r: get_first_match(r, 'education_'), axis=1)
+df['marital_status']   = df.apply(lambda r: get_first_match(r, 'marital_status_'), axis=1)
+df['Age Group']        = df.apply(lambda r: get_first_match(r, 'Age Group_'), axis=1)
+df['transaction_type'] = df.apply(lambda r: get_first_match(r, 'transaction_type_'), axis=1)
+df['device_type']      = df.apply(lambda r: get_first_match(r, 'device_type_'), axis=1)
+
+print(f"Records: {len(df)}")
+print(f"Columns: {len(df.columns)}")
+print(f"\nFraud distribution:")
+print(df['is_fraud'].value_counts())
+```
+
+The dataset is **well balanced** between fraud (246) and non-fraud (254) cases — a favourable starting point for classification, since class imbalance is one of the most common challenges in fraud modelling.
+
+## Descriptive Statistics
+
+```{python}
+#| label: tbl-descriptive
+#| tbl-cap: "Descriptive statistics for the most important numerical variables"
+
+key_vars = ['age', 'personal_income', 'credit_score', 'loan_amount',
+            'transaction_amount', 'fraud_amount', 'mobile_usage_hrs', 'internet_usage_hrs']
+
+df[key_vars].describe().round(2)
+```
+
+An important initial finding: **there are no missing values** in the dataset. This is unusual for real-world banking data and means no imputation is required.
+
+## Outlier Detection
+
+Outliers are particularly relevant in fraud detection, since fraudulent transactions often appear as extreme values in one or more dimensions. I used two complementary approaches: Z-scores and the IQR method.
+
+### Z-Score analysis
+
+```{python}
+#| label: fig-zscore
+#| fig-cap: "Maximum Z-score per numerical variable. Values above 3 indicate a notable outlier."
+
+df_fraud = df[df['is_fraud'] == 1].copy()
+numeric_cols = ['age', 'personal_income', 'family_income', 'credit_score',
+                'loan_amount', 'transaction_amount', 'fraud_amount',
+                'account_age_days', 'num_prev_transactions',
+                'avg_transaction_value', 'internet_usage_hrs', 'mobile_usage_hrs']
+
+z_scores_max = {}
+for col in numeric_cols:
+    z = np.abs((df[col] - df[col].mean()) / df[col].std())
+    z_scores_max[col] = z.max()
+
+z_df = pd.DataFrame(list(z_scores_max.items()), columns=['Variable', 'Max Z-Score']).sort_values('Max Z-Score', ascending=True)
+
+fig = px.bar(
+    z_df,
+    x='Max Z-Score', y='Variable',
+    orientation='h',
+    title='Maximum Absolute Z-Score per Variable',
+    color='Max Z-Score',
+    color_continuous_scale='Blues',
+    template='plotly_white'
+)
+fig.add_vline(x=3, line_dash='dash', line_color='red',
+              annotation_text="Outlier threshold (Z=3)", annotation_position='top')
+fig.update_layout(height=480, font_family='Inter, sans-serif', showlegend=False)
+fig.show()
+```
+
+Four variables contain notable outliers (Z > 3): **fraud_amount** reaches over 7 standard deviations above the mean, followed by **transaction_amount** (~6), **loan_amount** (~4.8), and **mobile_usage_hrs** (~3.5). This concentration of extremes in the monetary variables confirms the intuition that fraud is a heavy-tailed phenomenon — most cases are small, but a few are very large.
+
+### IQR analysis
+
+```{python}
+#| label: fig-iqr
+#| fig-cap: "Number of outliers detected per variable using the 1.5 × IQR rule."
+
+def count_outliers_iqr(df, cols, multiplier=1.5):
+    counts = {}
+    for col in cols:
+        Q1 = df[col].quantile(0.25)
+        Q3 = df[col].quantile(0.75)
+        IQR = Q3 - Q1
+        lower = Q1 - multiplier * IQR
+        upper = Q3 + multiplier * IQR
+        counts[col] = len(df[(df[col] < lower) | (df[col] > upper)])
+    return pd.Series(counts).sort_values(ascending=True)
+
+outliers = count_outliers_iqr(df, numeric_cols)
+outliers_df = outliers.reset_index()
+outliers_df.columns = ['Variable', 'Outlier Count']
+
+fig = px.bar(
+    outliers_df,
+    x='Outlier Count', y='Variable',
+    orientation='h',
+    title='Outliers Detected (1.5 × IQR method)',
+    color='Outlier Count',
+    color_continuous_scale='Blues',
+    template='plotly_white'
+)
+fig.update_layout(height=480, font_family='Inter, sans-serif', showlegend=False)
+fig.show()
+```
+
+The IQR method confirms the Z-score findings for `fraud_amount`, `transaction_amount`, and `loan_amount`, and additionally highlights `age` and `personal_income` as having notable outliers. These will be important when interpreting segmentation results.
+
+## Correlation Analysis
+
+```{python}
+#| label: fig-correlation
+#| fig-cap: "Correlation matrix for quantitative features (fraud cases only)."
+
+corr_vars = ['age', 'personal_income', 'family_income', 'credit_score',
+             'loan_amount', 'transaction_amount', 'account_age_days',
+             'num_prev_transactions', 'avg_transaction_value', 'fraud_amount']
+
+corr = df_fraud[corr_vars].corr().round(2)
+
+fig = go.Figure(data=go.Heatmap(
+    z=corr.values,
+    x=corr.columns, y=corr.columns,
+    text=corr.values,
+    texttemplate='%{text}',
+    textfont={"size": 10, "family": "Inter, sans-serif"},
+    colorscale='RdBu_r', zmin=-1, zmax=1,
+    showscale=True, colorbar=dict(title='Correlation')
+))
+fig.update_layout(
+    title='Correlation Matrix — Fraud Cases Only',
+    height=600, width=700,
+    font_family='Inter, sans-serif',
+    yaxis=dict(autorange='reversed')
+)
+fig.show()
+```
+
+Most variables show **weak correlations** with `fraud_amount`. The clearest exceptions are **transaction_amount** (r = 0.96), **family_income**, and **personal_income**. The strong relationship between transaction amount and fraud amount is expected — larger transactions can produce larger losses — but the correlation is not 1:1, because some frauds are partial (not the entire transaction is lost).
+
+## Exploratory Segmentation
+
+Where the dataset gives its clearest signal is in the **demographic breakdown of fraud cases**. This is the part of the analysis I find most actionable from a business perspective.
+
+### Fraud amount by age group
+
+```{python}
+#| label: fig-fraud-by-age
+#| fig-cap: "Total fraud amount by age group. The 34–42 group accounts for the highest monetary losses."
+
+age_order = ['18–26', '26–34', '34–42', '42–50', '50–58', '58–66', '66–74', '74–82', '82–90']
+fraud_by_age = df_fraud.groupby('Age Group', observed=True)['fraud_amount'].sum().reindex(age_order).fillna(0).reset_index()
+
+fig = px.bar(
+    fraud_by_age,
+    x='Age Group', y='fraud_amount',
+    title='Total Fraud Amount by Age Group',
+    color='fraud_amount',
+    color_continuous_scale='Blues',
+    labels={'fraud_amount': 'Total Fraud Amount ($)'},
+    template='plotly_white',
+    text=fraud_by_age['fraud_amount'].apply(lambda x: f'${x:,.0f}')
+)
+fig.update_traces(textposition='outside')
+fig.update_layout(height=450, font_family='Inter, sans-serif', showlegend=False)
+fig.show()
+```
+
+Customers aged **34 to 42** account for the highest monetary losses (~$71,700 in total), closely followed by the **42–50** group. This is the most commercially relevant finding — mid-career customers tend to have access to higher-value accounts and therefore represent larger losses per incident.
+
+### Fraud frequency by age group
+
+```{python}
+#| label: fig-fraud-count-age
+#| fig-cap: "Number of fraud incidents per age group."
+
+fraud_count_age = df_fraud['Age Group'].value_counts().reindex(age_order).fillna(0).reset_index()
+fraud_count_age.columns = ['Age Group', 'Count']
+
+fig = px.bar(
+    fraud_count_age,
+    x='Age Group', y='Count',
+    title='Fraud Frequency by Age Group',
+    color='Count',
+    color_continuous_scale='Blues',
+    template='plotly_white',
+    text='Count'
+)
+fig.update_traces(textposition='outside')
+fig.update_layout(height=450, font_family='Inter, sans-serif', showlegend=False)
+fig.show()
+```
+
+Counting cases rather than amounts gives a different picture: the **50–58** group has the highest number of incidents (54), but each one is typically smaller in value. In other words, the two age bands display different patterns:
+
+- **34–42:** fewer incidents, larger losses per case
+- **50–58:** more incidents, smaller losses per case
+
+Both patterns matter for prevention strategy, but they call for different interventions.
+
+### Fraud by gender
+
+```{python}
+#| label: fig-fraud-gender-age
+#| fig-cap: "Fraud cases by age group and gender."
+
+gender_age = df_fraud.groupby(['Age Group', 'gender'], observed=True).size().reset_index(name='Count')
+gender_age['Age Group'] = pd.Categorical(gender_age['Age Group'], categories=age_order, ordered=True)
+gender_age = gender_age.sort_values('Age Group')
+
+fig = px.bar(
+    gender_age,
+    x='Age Group', y='Count', color='gender',
+    barmode='group',
+    title='Fraud Cases by Age Group and Gender',
+    color_discrete_map={'Female': '#2f5dcc', 'Male': '#93c5fd'},
+    template='plotly_white'
+)
+fig.update_layout(height=450, font_family='Inter, sans-serif')
+fig.show()
+```
+
+**Female customers are more frequently affected by fraud** across nearly every age band, with the peak occurring in the 50–58 group (29 cases). This pattern is consistent with research on targeted scam techniques, though I would want a larger dataset before making strong causal claims.
+
+### Fraud by education level
+
+```{python}
+#| label: fig-fraud-education
+#| fig-cap: "Fraud cases by education level and age group."
+
+edu_age = df_fraud.groupby(['Age Group', 'education'], observed=True).size().reset_index(name='Count')
+edu_age['Age Group'] = pd.Categorical(edu_age['Age Group'], categories=age_order, ordered=True)
+edu_age = edu_age.sort_values('Age Group')
+
+fig = px.bar(
+    edu_age,
+    x='Age Group', y='Count', color='education',
+    barmode='group',
+    title='Fraud Cases by Age Group and Education',
+    color_discrete_sequence=['#1e3d99', '#2f5dcc', '#6a94f0', '#9db7f4', '#c9d9ff'],
+    template='plotly_white'
+)
+fig.update_layout(height=480, font_family='Inter, sans-serif')
+fig.show()
+```
+
+**Master's degree holders** show the highest fraud frequency in the 34–42 band (27 cases), while **High School** is the dominant education level among older victims (17 cases in the 50–58 group). This may reflect different lifestyles and digital-engagement patterns — higher-educated, mid-career professionals are highly digital, which exposes them to different fraud vectors.
+
+### Fraud percentage by transaction type
+
+```{python}
+#| label: fig-fraud-pct-type
+#| fig-cap: "Fraud amount as a percentage of total transaction amount, per transaction type."
+
+totals_type = df_fraud.groupby('transaction_type')[['transaction_amount', 'fraud_amount']].sum()
+totals_type['Fraud_Pct'] = (totals_type['fraud_amount'] / totals_type['transaction_amount']) * 100
+totals_type = totals_type.sort_values('Fraud_Pct', ascending=True).reset_index()
+
+fig = px.bar(
+    totals_type,
+    x='Fraud_Pct', y='transaction_type',
+    orientation='h',
+    title='Fraud % of Total Transaction Amount — by Transaction Type',
+    color='Fraud_Pct',
+    color_continuous_scale='Blues',
+    labels={'Fraud_Pct': 'Fraud %', 'transaction_type': 'Transaction type'},
+    template='plotly_white',
+    text=totals_type['Fraud_Pct'].apply(lambda x: f'{x:.1f}%')
+)
+fig.update_traces(textposition='outside')
+fig.update_layout(height=380, font_family='Inter, sans-serif', showlegend=False)
+fig.show()
+```
+
+**ATM transactions** show the highest proportion of monetary loss relative to transaction volume (81%), followed by **Online** transactions (77%). This is operationally useful — it points to where monitoring and controls might have the highest marginal impact.
+
+## Predictive Modelling
+
+After the exploratory analysis, I trained two classification models: a **Decision Tree** and a **Random Forest**. The goal was to see whether the demographic and behavioural features in this dataset could, on their own, predict whether a transaction is fraudulent.
+
+::: {.callout-important}
+## A note on the modelling results
+I want to be transparent: the models I trained delivered **modest performance** (accuracy around 57–58%). Rather than dismiss this, I treat it as a legitimate finding — the dataset, while clean and balanced, is only 500 rows, and the features available (demographics and transaction metadata) do not carry enough signal to achieve strong classification on their own. The analysis below shows what the models *can* tell us, and where they fall short.
+:::
+
+### Train / Test split
+
+```{python}
+#| label: train-test-split
+
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import (accuracy_score, precision_score, recall_score,
+                             f1_score, confusion_matrix)
+
+y = df['is_fraud']
+X = df.drop(columns=['is_fraud', 'transaction_amount', 'fraud_amount',
+                     'customer_id', 'gender', 'education', 'marital_status',
+                     'Age Group', 'transaction_type', 'device_type'])
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
+
+print(f"Train set: {len(X_train)} rows")
+print(f"Test set:  {len(X_test)} rows")
+print(f"\nTrain class balance:")
+print(y_train.value_counts(normalize=True).round(3))
+```
+
+I dropped `transaction_amount` and `fraud_amount` from the feature set to avoid target leakage — these columns directly encode the fraud outcome and would inflate accuracy artificially.
+
+### Model comparison
+
+```{python}
+#| label: fig-model-compare
+#| fig-cap: "Performance comparison between Decision Tree and Random Forest."
+
+dt = DecisionTreeClassifier(max_depth=11, random_state=42)
+dt.fit(X_train, y_train)
+dt_pred = dt.predict(X_test)
+
+rf = RandomForestClassifier(n_estimators=100, max_features=None, random_state=42)
+rf.fit(X_train, y_train)
+rf_pred = rf.predict(X_test)
+
+results = pd.DataFrame({
+    'Model':     ['Decision Tree', 'Random Forest'],
+    'Accuracy':  [accuracy_score(y_test, dt_pred), accuracy_score(y_test, rf_pred)],
+    'Precision': [precision_score(y_test, dt_pred), precision_score(y_test, rf_pred)],
+    'Recall':    [recall_score(y_test, dt_pred), recall_score(y_test, rf_pred)],
+    'F1':        [f1_score(y_test, dt_pred), f1_score(y_test, rf_pred)],
+}).round(3)
+
+results_long = results.melt(id_vars='Model', var_name='Metric', value_name='Score')
+
+fig = px.bar(
+    results_long,
+    x='Model', y='Score', color='Metric',
+    barmode='group',
+    title='Model Performance Comparison',
+    color_discrete_sequence=['#1e3d99', '#2f5dcc', '#6a94f0', '#b9d0ff'],
+    template='plotly_white',
+    text=results_long['Score'].apply(lambda x: f'{x:.2f}')
+)
+fig.update_traces(textposition='outside', textfont_size=10)
+fig.update_layout(
+    height=450,
+    yaxis=dict(range=[0, 0.8], title='Score'),
+    font_family='Inter, sans-serif'
+)
+fig.show()
+
+results
+```
+
+The Random Forest performs marginally better than the single Decision Tree, but both hover near 55–58%. A model at this level is better than random guessing, but not strong enough for a production deployment.
+
+### Random Forest confusion matrix
+
+```{python}
+#| label: fig-confusion-rf
+#| fig-cap: "Random Forest confusion matrix. The diagonal is acceptable but the model is still missing many fraud cases."
+
+cm = confusion_matrix(y_test, rf_pred)
+
+fig = go.Figure(data=go.Heatmap(
+    z=cm,
+    x=['Not Fraud', 'Fraud'],
+    y=['Not Fraud', 'Fraud'],
+    text=cm, texttemplate='%{text}',
+    textfont={"size": 18, "family": "Inter, sans-serif"},
+    colorscale='Blues',
+    showscale=True, colorbar=dict(title='Count')
+))
+fig.update_layout(
+    title='Random Forest — Confusion Matrix',
+    xaxis_title='Predicted', yaxis_title='Actual',
+    height=460, width=560,
+    font_family='Inter, sans-serif',
+    yaxis=dict(autorange='reversed')
+)
+fig.show()
+```
+
+The Random Forest correctly identifies many non-fraud transactions but misses a substantial proportion of real fraud cases (high false negative rate). In a real banking setting, **missing fraud is far more costly than over-flagging**, so this model in its current form would not be appropriate for deployment.
+
+### Feature importance
+
+```{python}
+#| label: fig-feature-importance
+#| fig-cap: "Top 15 features by Random Forest importance. Income-related variables dominate."
+
+feat_imp = pd.DataFrame({
+    'Feature': X_train.columns,
+    'Importance': rf.feature_importances_
+}).sort_values('Importance', ascending=False).head(15).sort_values('Importance', ascending=True)
+
+fig = px.bar(
+    feat_imp,
+    x='Importance', y='Feature',
+    orientation='h',
+    title='Top 15 Features by Importance (Random Forest)',
+    color='Importance',
+    color_continuous_scale='Blues',
+    template='plotly_white'
+)
+fig.update_layout(height=500, font_family='Inter, sans-serif', showlegend=False)
+fig.show()
+```
+
+**Family income, personal income, and credit score** emerge as the most informative features — consistent with what the correlation analysis and the segmentation exploration already suggested. This gives us a consistent story across three different analytical methods, which is more valuable than the raw accuracy number.
+
+## Key Findings
+
+::: {.callout-tip icon=false}
+## Finding 01 — Age-based fraud patterns are bimodal
+The 34–42 age group has **fewer fraud incidents but higher losses per case**, while the 50–58 group has **more incidents but smaller average loss**. These represent two distinct fraud profiles that warrant different prevention strategies.
+:::
+
+::: {.callout-tip icon=false}
+## Finding 02 — Female customers are affected more frequently
+Across nearly every age band, female customers represent a larger share of fraud cases. The pattern is robust in the data, though causation is beyond what this dataset can establish.
+:::
+
+::: {.callout-tip icon=false}
+## Finding 03 — ATM and Online channels carry the highest relative loss
+ATM transactions showed fraud amounts equal to 81% of their total transaction volume, and Online close behind at 77%. These are the channels where monitoring investment is likely to have the highest return.
+:::
+
+::: {.callout-tip icon=false}
+## Finding 04 — Income is the most predictive signal
+Across correlation analysis and Random Forest feature importance, income variables (personal and family) consistently emerge as the strongest predictors. Credit score is a close second.
+:::
+
+## Limitations and Reflection
+
+::: {.callout-warning}
+## What this project cannot tell us
+
+**Dataset size.** With only 500 rows, any model is operating in a low-data regime. Classification accuracy around 57% is a direct reflection of this: there simply isn't enough signal in the available features to separate classes more cleanly. A production system would need tens or hundreds of thousands of transactions to train on.
+
+**Feature coverage.** The dataset lacks features that are typically the most predictive in real fraud detection: transaction timestamps, merchant categories, geolocation, device fingerprints, and historical behavioural patterns. The demographic features available here are useful for segmentation, but insufficient for accurate prediction.
+
+**Causation vs correlation.** The gender, age, and education patterns observed are correlations within this sample, not causal claims. Interpreting them as "female customers are more at risk" without additional evidence would be premature.
+
+**Model selection.** I focused on Decision Tree and Random Forest because they handle mixed-type data well and are interpretable. Gradient boosting (XGBoost, LightGBM) would likely improve the numerical results, but the fundamental constraints of dataset size and feature coverage would remain.
+:::
+
+## Recommendations
+
+Based on the findings, and explicitly acknowledging the limitations above, I would recommend:
+
+1. **Focus fraud-prevention outreach on the 34–42 and 50–58 age groups** — these concentrate the highest monetary losses and highest incident counts respectively.
+2. **Prioritise monitoring investment in ATM and Online channels** where the fraud-to-transaction ratio is highest.
+3. **Extend the dataset before re-training models** — adding transaction timestamps, merchant categories, and behavioural history would substantially improve classification performance.
+4. **Use this dataset for descriptive insight, not predictive deployment.** The EDA findings are actionable; the models are not.
+
+## Conclusion
+
+This project was an exercise in applying the full range of statistical techniques learned throughout the module — from descriptive statistics and outlier detection, through correlation analysis and segmentation, to classification modelling. The most valuable lesson I take from it is that **a modest model result is still a meaningful outcome when interpreted honestly**. The EDA findings are genuinely useful for a business stakeholder; the model is not production-ready, and saying so is more professional than claiming otherwise.
+
+Being rigorous about what the data can and cannot support is, I think, the core skill of a Business Analyst — and this project gave me a clear opportunity to practise it.
+
+## References
+
+Consumer Financial Protection Bureau. (2024). *Consumer complaint database*. https://www.consumerfinance.gov/
+
+Pedregosa, F., et al. (2011). *Scikit-learn: Machine learning in Python*. Journal of Machine Learning Research, 12, 2825–2830.
+
+Chen, T., & Guestrin, C. (2016). *XGBoost: A scalable tree boosting system*. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.

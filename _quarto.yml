@@ -29,8 +29,8 @@ website:
             text: All projects
           - href: projects/list/sentiment_analysis.qmd
             text: "Financial Sentiment Analysis"
-          - href: projects/list/penguins.qmd
-            text: "Palmer Penguins"
+          - href: projects/list/fraud_detection.qmd
+            text: "Fraud Detection"
       - href: reflection.qmd
         text: Reflection
         icon: journal-text
