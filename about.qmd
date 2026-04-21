@@ -60,11 +60,55 @@ In this role I managed inventory and logistics for a retail environment, improvi
 3. **Long term:** Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence.
 :::
 
-## Additional Information
+## Continuous Professional Development
 
-- **Certifications:** IELTS Academic Band 7
-- **Training:** Certified in Irish Manual Handling Legislation and Food Safety Standards
-- **Interests:** Technology-driven venture development and Virtual Reality (VR) applications for skill-building
+In addition to my formal programme at DCU, I have completed a structured set of online courses to strengthen my technical foundation in data analytics and AI. Selected highlights below, organised by area.
+
+### Data & AI
+
+| Area | Course |
+|------|--------|
+| **AI Fundamentals** | Introduction to Generative AI |
+| **AI Fundamentals** | Large Language Models |
+| **AI Fundamentals** | Prompt Engineering |
+| **AI Fundamentals** | Advanced Prompt Concepts |
+| **AI Fundamentals** | Exploring ChatGPT |
+
+### SQL & Python
+
+| Area | Course |
+|------|--------|
+| **Python Fundamentals** | Python Fundamentals |
+| **SQL** | Understanding SQL Databases |
+| **SQL** | Selecting and Filtering Data with SQL |
+| **SQL** | Joining Data with SQL |
+
+### Data Ethics, Security & Communication
+
+| Area | Course |
+|------|--------|
+| **Data Ethics & Risk** | Introduction to Data Ethics |
+| **Data Ethics & Risk** | Applying Ethical Thinking in Data Ethics |
+| **Data Security** | Keeping Your Information Safe |
+| **Data Security** | Handling Data Securely and Responsibly |
+| **Data Presentation Skills** | Communicating Data Effectively |
+| **Data Presentation Skills** | Telling Stories with Data |
+| **Data Presentation Skills** | Presenting Your Data |
+
+### Research Integrity
+
+- **Good Research Conduct Certificate** — Epigeum / Dublin City University. Comprehensive training covering research ethics, data management, authorship, and responsible conduct in academic research.
+
+### Language Certifications
+
+- **IELTS Academic** — Band 7 (Advanced / C1 English proficiency)
+
+## Interests
+
+- Applications of **Natural Language Processing** in financial and commercial contexts
+- **Large Language Models** for business automation and workflow optimisation
+- **Data storytelling** and effective communication of analytical results to non-technical audiences
+- Cross-cultural and bilingual analytical contexts
 
 ## A Note on This Site
 
