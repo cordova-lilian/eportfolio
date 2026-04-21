@@ -16,7 +16,7 @@ about:
       target: _blank
     - icon: file-earmark-pdf
       text: CV
-      href: cv/cv.pdf
+      href: https://cordova-lilian.github.io/eportfolio/cv/cv.pdf
       target: _blank
 ---
 
