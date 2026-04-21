@@ -40,7 +40,7 @@ website:
     right:
       - text: "CV"
         icon: file-earmark-pdf
-        href: /cv/cv.pdf
+        href: cv/cv.pdf
         target: _blank
       - icon: linkedin
         href: "https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232/"
