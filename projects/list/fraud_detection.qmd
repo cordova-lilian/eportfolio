@@ -4,6 +4,8 @@ description: "An exploratory statistical analysis of 500 consumer banking transa
 author: "Lilian Cordova Hernandez"
 date: "2026-04-15"
 categories: [python, statistics, eda, machine-learning, fraud]
+image: fraud-thumb.jpg
+image-alt: "Fraud detection analysis visualization"
 format:
   html:
     code-fold: true

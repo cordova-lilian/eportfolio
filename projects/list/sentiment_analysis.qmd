@@ -4,7 +4,7 @@ description: "Benchmarking three NLP architectures on sentence-level financial s
 author: "Lilian Cordova Hernandez"
 date: "2026-04-18"
 categories: [python, nlp, machine-learning, transformers, sentiment-analysis]
-image: thumbnail.jpg
+image: sentiment-thumb.jpg
 image-alt: "Comparison of BERT, FinBERT and LLaMA 3.2 on financial sentiment"
 format:
   html:
