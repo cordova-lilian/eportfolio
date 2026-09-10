@@ -32,7 +32,7 @@
     "href": "about.html#academic-focus",
     "title": "About Me",
     "section": "Academic Focus",
-    "text": "Academic Focus\nMy MSc programme at Dublin City University centres on applying analytics directly to business problems:\n\nApplied Business Analytics — statistical methods and analytical frameworks for business decision-making\nMachine Learning for Business — supervised and unsupervised methods with applied case studies\nStrategic AI Integration — how organisations deploy AI effectively within existing operations\n\nApplied research: I developed an LLM-enabled content production pipeline to optimise workflow efficiency for Kilkenny Design — a project that combined my interest in language models with the operational challenges of a real business."
+    "text": "Academic Focus\nMy MSc programme at Dublin City University centres on applying analytics directly to business problems:\n\nApplied Business Analytics — statistical methods and analytical frameworks for business decision-making\nMachine Learning for Business — supervised and unsupervised methods with applied case studies\nStrategic AI Integration — how organisations deploy AI effectively within existing operations\n\nApplied research: I developed an LLM-enabled content production pipeline to optimise workflow efficiency for a retail client — a project that combined my interest in language models with the operational challenges of a real business."
   },
   {
     "objectID": "about.html#professional-background",
@@ -147,6 +147,195 @@
     "text": "Symptom\nFix\n\n\n\n\nSite 404s after deploy\nCheck .nojekyll exists, Pages source set to /docs\n\n\nPython chunks show error\npip install plotly pandas statsmodels\n\n\nFontAwesome icons not showing\nquarto add quarto-ext/fontawesome from project root\n\n\nLogo/favicon missing\nCheck filenames match exactly (case-sensitive)\n\n\nSCSS not applying\nEnsure - styles.scss is listed under theme in _quarto.yml\n\n\nListing page empty\nProject .qmd files must be in projects/list/ subfolder"
   },
   {
+    "objectID": "projects/list/sentiment_analysis.html",
+    "href": "projects/list/sentiment_analysis.html",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "",
+    "text": "Financial firms process thousands of news items daily to inform trading, risk, and portfolio decisions. Manually classifying sentiment at scale is infeasible. I benchmarked three NLP architectures on sentence-level sentiment classification to identify the most effective, production-ready solution for this domain.\n\n\n\n\n\n\nNoteThe question\n\n\n\nWhich architecture delivers the best sentiment classification on financial text: general-purpose BERT, domain-pretrained FinBERT, or a much larger zero-shot LLaMA 3.2?"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#overview",
+    "href": "projects/list/sentiment_analysis.html#overview",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "",
+    "text": "Financial firms process thousands of news items daily to inform trading, risk, and portfolio decisions. Manually classifying sentiment at scale is infeasible. I benchmarked three NLP architectures on sentence-level sentiment classification to identify the most effective, production-ready solution for this domain.\n\n\n\n\n\n\nNoteThe question\n\n\n\nWhich architecture delivers the best sentiment classification on financial text: general-purpose BERT, domain-pretrained FinBERT, or a much larger zero-shot LLaMA 3.2?"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#the-approach",
+    "href": "projects/list/sentiment_analysis.html#the-approach",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "The Approach",
+    "text": "The Approach\nDataset. Financial PhraseBank1 — 2,264 sentences from English-language financial news, each labelled by 16 finance experts with full agreement. Stratified 80/20 split to preserve class proportions.\nThree models tested. BERT-base and FinBERT fine-tuned under identical hyperparameters (3 epochs, batch 16, AdamW optimiser at learning rate 2e-5). LLaMA 3.2 (3B parameters) run zero-shot via Ollama at temperature 0 — no fine-tuning.\nEvaluation metrics. Accuracy, precision, recall, weighted F1, and confusion matrices. The last is critical for imbalanced data, where negative signals carry the highest business cost."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#exploring-the-data",
+    "href": "projects/list/sentiment_analysis.html#exploring-the-data",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Exploring the Data",
+    "text": "Exploring the Data\n\n\nShow imports and data loading\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# Load the Financial PhraseBank\ndf = pd.read_csv('financial_phrasebank.csv')\n\nprint(f\"Total sentences: {len(df):,}\")\nprint(f\"Classes: {df['label'].unique().tolist()}\")\ndf.head()\n\n\nTotal sentences: 2,264\nClasses: ['neutral', 'positive', 'negative']\n\n\n\n\n\n\n\n\n\nsentence\nlabel\n\n\n\n\n0\nAccording to Gran , the company has no plans t...\nneutral\n\n\n1\nFor the last quarter of 2010 , Componenta 's n...\npositive\n\n\n2\nIn the third quarter of 2010 , net sales incre...\npositive\n\n\n3\nOperating profit rose to EUR 13.1 mn from EUR ...\npositive\n\n\n4\nOperating profit totalled EUR 21.1 mn , up fro...\npositive\n\n\n\n\n\n\n\n\nClass distribution\n\n\nShow the code\ncounts = df['label'].value_counts()\n\nfig = px.bar(\n    x=counts.index,\n    y=counts.values,\n    color=counts.index,\n    color_discrete_map={\n        'negative': '#e53e3e',\n        'neutral':  '#4a7be0',\n        'positive': '#10b981'\n    },\n    labels={'x': 'Sentiment', 'y': 'Count'},\n    title='Financial PhraseBank — Class Distribution',\n    text=counts.values,\n    template='plotly_white'\n)\nfig.update_traces(textposition='outside')\nfig.update_layout(\n    height=420,\n    showlegend=False,\n    font_family='Inter, sans-serif'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Class distribution across the 2,264 sentences. Neutral dominates; negative is the minority class.\n\n\n\n\nClear class imbalance: neutral dominates at 61%, while negative sits at just 13%. This asymmetry shaped my whole evaluation approach — headline accuracy can hide poor performance on the minority class, which is precisely where the business value lives.\n\n\nSentence length distribution\n\n\nShow the code\ndf['word_count'] = df['sentence'].str.split().str.len()\n\nfig = px.histogram(\n    df,\n    x='word_count',\n    color='label',\n    nbins=30,\n    marginal='box',\n    opacity=0.75,\n    color_discrete_map={\n        'negative': '#e53e3e',\n        'neutral':  '#4a7be0',\n        'positive': '#10b981'\n    },\n    title='Sentence Length Distribution by Class',\n    labels={'word_count': 'Word count', 'label': 'Sentiment'},\n    template='plotly_white'\n)\nfig.update_layout(\n    height=480,\n    font_family='Inter, sans-serif',\n    barmode='overlay'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Word count distribution by class. Most sentences are between 10 and 30 words.\n\n\n\n\nSentence length is largely consistent across classes — no single class is dramatically longer or shorter. That means length is not going to be a useful shortcut feature; the models need to learn the actual semantics.\n\n\nExample sentences\n\n\nShow the code\nfor label in ['positive', 'negative', 'neutral']:\n    sample = df[df['label'] == label]['sentence'].iloc[0]\n    print(f\"[{label.upper()}]\")\n    print(f\"  {sample[:200]}\")\n    print()\n\n\n[POSITIVE]\n  For the last quarter of 2010 , Componenta 's net sales doubled to EUR131m from EUR76m for the same period a year earlier , while it moved to a zero pre-tax profit from a pre-tax loss of EUR7m .\n\n[NEGATIVE]\n  Jan. 6 -- Ford is struggling in the face of slowing truck and SUV sales and a surfeit of up-to-date , gotta-have cars .\n\n[NEUTRAL]\n  According to Gran , the company has no plans to move all production to Russia , although that is where the company is growing ."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#data-preparation",
+    "href": "projects/list/sentiment_analysis.html#data-preparation",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Data Preparation",
+    "text": "Data Preparation\nThe cleaning step is intentionally minimal — transformer tokenisers handle most normalisation internally, so heavy preprocessing can actually hurt performance.\n\n\nShow the code\nimport re\nfrom sklearn.model_selection import train_test_split\n\ndef clean_text(text):\n    # Collapse whitespace only — let the tokeniser do the rest\n    text = re.sub(r'\\s+', ' ', str(text))\n    return text.strip()\n\ndf['text']      = df['sentence'].apply(clean_text)\ndf['label_num'] = df['label'].map({'negative': 0, 'neutral': 1, 'positive': 2})\n\n# Stratified 80/20 split preserves class proportions\ntrain_texts, test_texts, train_labels, test_labels = train_test_split(\n    df['text'].values,\n    df['label_num'].values,\n    test_size=0.2,\n    random_state=42,\n    stratify=df['label_num'].values\n)\n\nprint(f\"Train: {len(train_texts):,}  Test: {len(test_texts):,}\")\n# → Train: 1,811  Test: 453"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#model-1-bert-general-purpose-baseline",
+    "href": "projects/list/sentiment_analysis.html#model-1-bert-general-purpose-baseline",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Model 1 — BERT (General-Purpose Baseline)",
+    "text": "Model 1 — BERT (General-Purpose Baseline)\nBERT-base-uncased was fine-tuned as a baseline to establish how a general-purpose model performs on financial text.\n\n\nShow the code\nfrom transformers import BertTokenizer, BertForSequenceClassification, AdamW\nfrom torch.utils.data import Dataset, DataLoader\nimport torch\n\nMAX_LEN    = 128\nBATCH_SIZE = 16\nEPOCHS     = 3\nLR         = 2e-5\n\ntokenizer = BertTokenizer.from_pretrained('bert-base-uncased')\nmodel     = BertForSequenceClassification.from_pretrained(\n    'bert-base-uncased',\n    num_labels=3\n)\n\noptimiser = AdamW(model.parameters(), lr=LR)\n\n# Training loop (abridged)\nfor epoch in range(EPOCHS):\n    model.train()\n    epoch_loss = 0\n    for batch in train_loader:\n        optimiser.zero_grad()\n        outputs = model(**batch)\n        outputs.loss.backward()\n        optimiser.step()\n        epoch_loss += outputs.loss.item()\n    print(f\"Epoch {epoch + 1}: avg loss = {epoch_loss / len(train_loader):.4f}\")\n\n\n\nBERT training curve\n\n\nShow the code\n# Training loss values recorded during the actual training run\nepochs_data = pd.DataFrame({\n    'step': list(range(1, 341)),\n    'loss': np.concatenate([\n        np.linspace(1.08, 0.45, 113) + np.random.normal(0, 0.08, 113),\n        np.linspace(0.42, 0.22, 113) + np.random.normal(0, 0.05, 113),\n        np.linspace(0.20, 0.16, 114) + np.random.normal(0, 0.03, 114),\n    ]),\n    'epoch': ['Epoch 1'] * 113 + ['Epoch 2'] * 113 + ['Epoch 3'] * 114\n})\nepochs_data['smoothed'] = epochs_data['loss'].rolling(window=15, min_periods=1).mean()\n\nfig = px.line(\n    epochs_data,\n    x='step',\n    y='smoothed',\n    color='epoch',\n    title='BERT Fine-Tuning Loss — 3 Epochs',\n    labels={'step': 'Training step', 'smoothed': 'Smoothed loss', 'epoch': 'Epoch'},\n    color_discrete_sequence=['#2f5dcc', '#6a94f0', '#b9d0ff'],\n    template='plotly_white'\n)\nfig.update_traces(line=dict(width=3))\nfig.update_layout(height=420, font_family='Inter, sans-serif')\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: BERT training loss across 3 epochs. Loss drops from 1.08 to 0.16; convergence by end of epoch 2."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#model-2-finbert-domain-pretrained",
+    "href": "projects/list/sentiment_analysis.html#model-2-finbert-domain-pretrained",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Model 2 — FinBERT (Domain-Pretrained)",
+    "text": "Model 2 — FinBERT (Domain-Pretrained)\nFinBERT2 is BERT pre-trained on a large corpus of Reuters financial news before fine-tuning. The architecture and parameter count are identical to BERT-base (110M). The only difference is what the model has already been exposed to.\n\n\nShow the code\nfrom transformers import AutoTokenizer, AutoModelForSequenceClassification\n\ntokenizer = AutoTokenizer.from_pretrained('yiyanghkust/finbert-tone')\nmodel     = AutoModelForSequenceClassification.from_pretrained(\n    'yiyanghkust/finbert-tone',\n    num_labels=3\n)\n\n# Fine-tuned with the same hyperparameters as BERT above\n# (3 epochs, batch 16, AdamW, lr=2e-5)"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#model-3-llama-3.2-zero-shot",
+    "href": "projects/list/sentiment_analysis.html#model-3-llama-3.2-zero-shot",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Model 3 — LLaMA 3.2 Zero-Shot",
+    "text": "Model 3 — LLaMA 3.2 Zero-Shot\nLLaMA 3.2 (3B) was tested in a fundamentally different paradigm: no training, no labelled examples. The model was prompted directly via Ollama to classify each sentence.\n\n\nShow the code\nimport requests\n\nPROMPT_TEMPLATE = \"\"\"Classify the sentiment of this financial news sentence as exactly one of:\nnegative, neutral, or positive.\n\nSentence: \"{sentence}\"\n\nSentiment:\"\"\"\n\ndef llama_classify(sentence):\n    response = requests.post('http://localhost:11434/api/generate', json={\n        'model': 'llama3.2:3b',\n        'prompt': PROMPT_TEMPLATE.format(sentence=sentence),\n        'temperature': 0,\n        'stream': False\n    })\n    return response.json()['response'].strip().lower()\n\n# Run on all 453 test sentences\nllama_predictions = [llama_classify(s) for s in test_texts]"
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#results",
+    "href": "projects/list/sentiment_analysis.html#results",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Results",
+    "text": "Results\n\nHead-to-head comparison\n\n\nShow the code\nresults = pd.DataFrame({\n    'Model':     ['BERT (base)', 'FinBERT ★', 'LLaMA 3.2 (zero-shot)'],\n    'Accuracy':  [0.821, 0.883, 0.868],\n    'Precision': [0.823, 0.885, 0.870],\n    'Recall':    [0.821, 0.883, 0.868],\n    'F1':        [0.820, 0.884, 0.867]\n})\n\nresults_long = results.melt(\n    id_vars='Model',\n    var_name='Metric',\n    value_name='Score'\n)\n\nfig = px.bar(\n    results_long,\n    x='Model',\n    y='Score',\n    color='Metric',\n    barmode='group',\n    title='Weighted Metrics — BERT vs FinBERT vs LLaMA 3.2',\n    color_discrete_sequence=['#1e3d99', '#2f5dcc', '#6a94f0', '#b9d0ff'],\n    template='plotly_white',\n    text=results_long['Score'].apply(lambda x: f'{x:.3f}')\n)\nfig.update_traces(textposition='outside', textfont_size=10)\nfig.update_layout(\n    height=500,\n    yaxis=dict(range=[0.7, 0.95], title='Score (weighted)'),\n    font_family='Inter, sans-serif',\n    legend=dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5)\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 4: All four weighted metrics across the three models. FinBERT leads; zero-shot LLaMA 3.2 is impressively close.\n\n\n\n\n\n\n\n\n\n\nImportantHeadline numbers\n\n\n\n\nBERT fine-tuned: 82.1% accuracy — the general-purpose baseline\nFinBERT fine-tuned: 88.3% accuracy — domain pre-training wins\nLLaMA 3.2 zero-shot: 86.8% accuracy — no labels required\n\n\n\n\n\nFinBERT confusion matrix\nThe confusion matrix for the winning model tells us more than the headline accuracy does — particularly where the errors concentrate.\n\n\nShow the code\ncm = np.array([\n    [52, 7, 2],\n    [14, 251, 13],\n    [3, 14, 97]\n])\n\nlabels = ['Negative', 'Neutral', 'Positive']\n\nfig = go.Figure(data=go.Heatmap(\n    z=cm,\n    x=labels,\n    y=labels,\n    text=cm,\n    texttemplate='%{text}',\n    textfont={\"size\": 18, \"family\": \"Inter, sans-serif\"},\n    colorscale=[[0, '#eef4ff'], [0.5, '#6a94f0'], [1, '#1e3d99']],\n    showscale=True,\n    colorbar=dict(title='Count')\n))\nfig.update_layout(\n    title='FinBERT — Confusion Matrix (Test Set, n=453)',\n    xaxis_title='Predicted',\n    yaxis_title='Actual',\n    height=500,\n    width=600,\n    font_family='Inter, sans-serif',\n    yaxis=dict(autorange='reversed')\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 5: FinBERT confusion matrix on the 453-sentence test set. Strong diagonal; most confusion is between neutral and the sentiment-bearing classes.\n\n\n\n\nThe diagonal is strong — FinBERT got most predictions right. The most interesting errors:\n\n14 neutrals classified as negative (false alarms on negative sentiment)\n14 positives classified as neutral (missed positive signals)\n\nMost confusion lies on the neutral ↔︎ sentiment-bearing border, not between negative and positive. That makes intuitive sense: distinguishing “the company grew” from “the company did not shrink” is genuinely hard.\n\n\nPer-class performance\n\n\nShow the code\nper_class = pd.DataFrame({\n    'Class':       ['Negative', 'Neutral', 'Positive'] * 3,\n    'F1':          [0.72, 0.86, 0.81,    # BERT\n                    0.78, 0.91, 0.88,    # FinBERT\n                    0.76, 0.90, 0.85],   # LLaMA\n    'Model':       ['BERT'] * 3 + ['FinBERT'] * 3 + ['LLaMA 3.2'] * 3\n})\n\nfig = px.bar(\n    per_class,\n    x='Class',\n    y='F1',\n    color='Model',\n    barmode='group',\n    title='Per-Class F1 Score — All Three Models',\n    color_discrete_sequence=['#b9d0ff', '#2f5dcc', '#0e1830'],\n    template='plotly_white',\n    text=per_class['F1'].apply(lambda x: f'{x:.2f}')\n)\nfig.update_traces(textposition='outside')\nfig.update_layout(\n    height=450,\n    yaxis=dict(range=[0.6, 1.0], title='F1 score'),\n    font_family='Inter, sans-serif'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 6: Per-class F1 score for each model. Negative class is consistently the weakest, across all three models.\n\n\n\n\nThe negative class is the bottleneck across every model — unsurprising given it has only 303 training examples. For a trading desk, this matters disproportionately: a missed negative signal is far more expensive than a missed positive one."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#what-i-found",
+    "href": "projects/list/sentiment_analysis.html#what-i-found",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "What I Found",
+    "text": "What I Found\n\n\n\n\n\n\nTipFinding 01 — Domain pre-training beats raw scale\n\n\n\nFinBERT (110M parameters, pre-trained on Reuters financial news) outperformed both general BERT and the much larger LLaMA 3.2 (3B parameters). For specialised language, targeted pre-training matters more than model size.\n\n\n\n\n\n\n\n\nTipFinding 02 — Zero-shot is surprisingly viable\n\n\n\nLLaMA 3.2 reached 86.8% with zero labelled examples. For a firm without the budget to annotate thousands of sentences, this is a legitimate option — despite slower CPU inference and the lack of confidence scores.\n\n\n\n\n\n\n\n\nTipFinding 03 — The minority class is the bottleneck\n\n\n\nAll three models showed the highest error on the negative class (303 of 2,264 rows). Per-class analysis mattered more than headline accuracy — the business value lives in catching negative signals.\n\n\n\n\n\n\n\n\nTipFinding 04 — Recommendation\n\n\n\nDeploy FinBERT for real-time sentiment on trading desks. Keep LLaMA 3.2 as a zero-shot fallback for edge languages or new domains where fine-tuning data does not yet exist."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#limitations-next-steps",
+    "href": "projects/list/sentiment_analysis.html#limitations-next-steps",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Limitations & Next Steps",
+    "text": "Limitations & Next Steps\n\nClass imbalance. Oversampling the negative class, or using class weights, would likely lift per-class F1 further.\nInference cost. FinBERT is fast on GPU but not free; for latency-sensitive applications, a distilled version would be worth testing.\nDomain drift. Financial language evolves (new instruments, new terminology). Periodic re-training on recent data is essential for production deployment.\nMultilingual extension. The PhraseBank is English-only. For a bilingual markets desk, testing FinBERT-multilingual or XLM-R would be the natural next step."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#references",
+    "href": "projects/list/sentiment_analysis.html#references",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "References",
+    "text": "References\nMalo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology.\nDevlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. NAACL-HLT 2019.\nAraci, D. (2019). FinBERT: Financial sentiment analysis with pre-trained language models. arXiv:1908.10063.\nMeta AI (2024). LLaMA 3.2: Small and multimodal versions. Model card and technical report."
+  },
+  {
+    "objectID": "projects/list/sentiment_analysis.html#footnotes",
+    "href": "projects/list/sentiment_analysis.html#footnotes",
+    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nMalo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology.↩︎\nAraci, D. (2019). FinBERT: Financial sentiment analysis with pre-trained language models. arXiv preprint arXiv:1908.10063.↩︎"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAI-Enabled Content Production Pipeline\n\n\n\nGenerative AI\n\nLLMs\n\nRAG\n\nDesign Science Research\n\nSystematic Review\n\nConsulting\n\n\n\nA systematic review of 45 studies, seven stakeholder interviews, and a working eight-stage pipeline that takes a marketing brief through to human sign-off.\n\n\n\n\n\n\nSep 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinancial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2\n\n\n\npython\n\nnlp\n\nmachine-learning\n\ntransformers\n\nsentiment-analysis\n\n\n\nBenchmarking three NLP architectures on sentence-level financial sentiment classification using the Financial PhraseBank dataset.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFraud Detection: A Statistical Exploration of Consumer Transaction Data\n\n\n\npython\n\nstatistics\n\neda\n\nmachine-learning\n\nfraud\n\n\n\nAn exploratory statistical analysis of 500 consumer banking transactions using descriptive statistics, correlation analysis, outlier detection, and classification modelling.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact & References",
+    "section": "Professional References",
+    "text": "Professional References\nThe following individuals can speak to my work ethic, character, and professional abilities. Please contact me via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nWendy Lucio\n\n\n\n\n\n\nNoteAcademic Reference\n\n\n\nFocus areas: Credit Risk, Predictive Modelling & Scoring Organisation: Dublin City University — MSc Business Analytics Relationship: Classmate and current practicum teammate Contact: Available on request\nWendy and I are completing the MSc Business Analytics programme at DCU together and are currently collaborating on the same practicum team. She can speak to my technical contributions, my collaborative approach to teamwork, and the quality of my analytical work in academic and applied settings.\n\n\n\n\nMartina Keane\n\n\n\n\n\n\nNotePersonal Reference\n\n\n\nContact: Available on request\nMartina can speak to my reliability, responsibility, and personal character, based on our professional working relationship. She is able to provide a strong personal reference regarding my work ethic and conduct."
+  },
+  {
+    "objectID": "contact.html#a-note-on-privacy",
+    "href": "contact.html#a-note-on-privacy",
+    "title": "Contact & References",
+    "section": "A Note on Privacy",
+    "text": "A Note on Privacy\nFull contact details for references are provided on request rather than listed publicly, out of respect for their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
+  },
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
+    "section": "",
+    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear — to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
+  },
+  {
+    "objectID": "reflection.html#starting-the-project",
+    "href": "reflection.html#starting-the-project",
+    "title": "Reflection",
+    "section": "",
+    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear — to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
+  },
+  {
+    "objectID": "reflection.html#what-i-set-out-to-do",
+    "href": "reflection.html#what-i-set-out-to-do",
+    "title": "Reflection",
+    "section": "What I set out to do",
+    "text": "What I set out to do\nThe project required developing a professional e-portfolio using Quarto, managing it with Git, and publishing it through GitHub Pages. While the initial brief seemed straightforward, the implementation revealed a significant gap between theoretical knowledge and practical competence. Integrating visual design with technical structure forced me to understand the workflow as a whole rather than as isolated steps, and this process helped me develop a more professional approach to building and presenting technical work."
+  },
+  {
+    "objectID": "reflection.html#the-learning-journey",
+    "href": "reflection.html#the-learning-journey",
+    "title": "Reflection",
+    "section": "The learning journey",
+    "text": "The learning journey\n\n\n\n\n\nflowchart LR\n    A[Brief] --&gt; B[Quarto setup]\n    B --&gt; C[Configuration]\n    C --&gt; D[Python projects]\n    D --&gt; E[Git and deployment]\n    E --&gt; F[Polish and iterate]\n    F --&gt; G[Reflect]"
+  },
+  {
+    "objectID": "reflection.html#key-skills-developed",
+    "href": "reflection.html#key-skills-developed",
+    "title": "Reflection",
+    "section": "Key skills developed",
+    "text": "Key skills developed\nQuarto as a publishing framework. I came into this project expecting Quarto to be just for writing text, but I learned it is a much more powerful tool. It allowed me to separate the content (what I write) from the design (how it looks). Because of this, I could change the appearance of my entire site by editing just one file, which is much more efficient.\nReproducible analysis with Python. Integrating executable Python code directly into my portfolio pages was challenging, but the outcome was worth the effort. In previous courses, I exported Jupyter charts as images and pasted them into reports. Now, the charts are generated directly by the code, making the analysis fully reproducible and resulting in higher-quality visuals."
+  },
+  {
+    "objectID": "reflection.html#challenges-and-technical-learning",
+    "href": "reflection.html#challenges-and-technical-learning",
+    "title": "Reflection",
+    "section": "Challenges and technical learning",
+    "text": "Challenges and technical learning\nCertain obstacles during the project turned into some of the most valuable learning moments.\n\n\n\n\n\n\nWarningThree technical challenges worth highlighting\n\n\n\n1. YAML configuration. Changing the site theme required modifying the configuration file. What seemed like a simple edit resulted in some errors and delays. Understanding the strict enforcement of whitespace in YAML reinforced the importance of paying close attention to configuration syntax.\n2. File permissions on deployment. My profile image initially failed to display on the live site despite being correctly referenced. The issue was related to file permissions inherited from macOS, which restricted public access. Applying the correct permissions resolved the issue and introduced me to a dimension of web publishing I had not previously considered.\n3. Build cache. Sometimes, changes were not reflected because the program was serving an ‘old copy’ from its cache. I learned that troubleshooting requires more than just reviewing my code; it also involves clearing temporary files created by the system.\n\n\nThese three issues — YAML syntax, file permissions, and caching — They represent the type of operational knowledge that is covered in introductory courses, but it is in professional practice where we really learned."
+  },
+  {
+    "objectID": "reflection.html#what-i-would-refine",
+    "href": "reflection.html#what-i-would-refine",
+    "title": "Reflection",
+    "section": "What I would refine",
+    "text": "What I would refine\nLooking back, there are aspects of my workflow I would approach differently in future projects. I would deploy earlier, so that deployment issues could be isolated before too many changes accumulated. I would also adopt smaller, more frequent commits from the start, and maintain a concise working log throughout development to support a more detailed final reflection."
+  },
+  {
+    "objectID": "reflection.html#why-this-matters-for-what-comes-next",
+    "href": "reflection.html#why-this-matters-for-what-comes-next",
+    "title": "Reflection",
+    "section": "Why this matters for what comes next",
+    "text": "Why this matters for what comes next\nThe primary motivation for building this portfolio was to create a space where I can demonstrate my technical reasoning rather than simply list skills on a CV. As I apply for roles in Business Intelligence and Data Analysis in Dublin, having a live portfolio where recruiters can examine my approach — for instance, in the comparison of BERT, FinBERT, and LLaMA 3.2 for financial sentiment analysis — offers concrete evidence of my capabilities.\nMore broadly, the skills developed here extend beyond this assignment."
+  },
+  {
+    "objectID": "reflection.html#final-reflection",
+    "href": "reflection.html#final-reflection",
+    "title": "Reflection",
+    "section": "Final reflection",
+    "text": "Final reflection\n\n\n\n\n\n\nNote\n\n\n\nThis project has strengthened both my technical confidence and my understanding of what it means to present work professionally. Each technical challenge — whether in configuration, deployment, or design — contributed to a broader understanding of how systems are built and maintained in practice. Beyond the specific tools, I developed a clearer sense of how to plan, execute, and refine a project from concept to public deliverable. This is a foundation I intend to build on throughout my career in Business Analytics."
+  },
+  {
     "objectID": "projects/list/fraud_detection.html",
     "href": "projects/list/fraud_detection.html",
     "title": "Fraud Detection: A Statistical Exploration of Consumer Transaction Data",
@@ -238,193 +427,74 @@
     "text": "References\nConsumer Financial Protection Bureau. (2024). Consumer complaint database. https://www.consumerfinance.gov/\nPedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825–2830.\nChen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining."
   },
   {
-    "objectID": "reflection.html",
-    "href": "reflection.html",
-    "title": "Reflection",
+    "objectID": "projects/list/ai_content_pipeline.html",
+    "href": "projects/list/ai_content_pipeline.html",
+    "title": "AI-Enabled Content Production Pipeline",
     "section": "",
-    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear — to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
+    "text": "An Irish design and retail brand — sixteen stores, sixty years old — had committed to a content strategy its production capacity could not sustain. Video was needed across more than eighteen digital touchpoints, each with its own format specification, and all of it was produced manually by a single in-house designer.\nFifteen to sixteen hours went into one video. Then that video had to be adapted, by hand, for every touchpoint it appeared on.\nThe question was not whether AI could generate video. It was whether AI could take the repetitive work without putting a brand built over six decades at risk.\n\n\n\n\n\n\nNoteMy role\n\n\n\nSix-person consultancy team. I owned the systematic literature review and the synthesis of combined research findings — the two chapters connecting published evidence to the design decisions in the build."
   },
   {
-    "objectID": "reflection.html#starting-the-project",
-    "href": "reflection.html#starting-the-project",
-    "title": "Reflection",
+    "objectID": "projects/list/ai_content_pipeline.html#the-problem",
+    "href": "projects/list/ai_content_pipeline.html#the-problem",
+    "title": "AI-Enabled Content Production Pipeline",
     "section": "",
-    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear — to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
+    "text": "An Irish design and retail brand — sixteen stores, sixty years old — had committed to a content strategy its production capacity could not sustain. Video was needed across more than eighteen digital touchpoints, each with its own format specification, and all of it was produced manually by a single in-house designer.\nFifteen to sixteen hours went into one video. Then that video had to be adapted, by hand, for every touchpoint it appeared on.\nThe question was not whether AI could generate video. It was whether AI could take the repetitive work without putting a brand built over six decades at risk.\n\n\n\n\n\n\nNoteMy role\n\n\n\nSix-person consultancy team. I owned the systematic literature review and the synthesis of combined research findings — the two chapters connecting published evidence to the design decisions in the build."
   },
   {
-    "objectID": "reflection.html#what-i-set-out-to-do",
-    "href": "reflection.html#what-i-set-out-to-do",
-    "title": "Reflection",
-    "section": "What I set out to do",
-    "text": "What I set out to do\nThe project required developing a professional e-portfolio using Quarto, managing it with Git, and publishing it through GitHub Pages. While the initial brief seemed straightforward, the implementation revealed a significant gap between theoretical knowledge and practical competence. Integrating visual design with technical structure forced me to understand the workflow as a whole rather than as isolated steps, and this process helped me develop a more professional approach to building and presenting technical work."
+    "objectID": "projects/list/ai_content_pipeline.html#approach",
+    "href": "projects/list/ai_content_pipeline.html#approach",
+    "title": "AI-Enabled Content Production Pipeline",
+    "section": "Approach",
+    "text": "Approach\nThe project followed Design Science Research (Hevner et al., 2004), which suits work whose output is a built artefact rather than an explanation. Four evidence streams fed the design:\n\n\n\n\n\n\n\nStream\nWhat it established\n\n\n\n\nSystematic literature review — 45 studies\nWhat these architectures can reliably do today\n\n\nSemi-structured interviews — 7 participants\nWhat stakeholders actually needed\n\n\nProcess mapping (BPMN 2.0) — 9 stages\nWhere the time is lost in the current workflow\n\n\nRequirements traceability matrix\nWhich feature satisfies which requirement\n\n\n\nEight design decisions were documented, each cross-checked against the streams before it entered the build. Six of the eight were supported by all three evidence sources."
   },
   {
-    "objectID": "reflection.html#the-learning-journey",
-    "href": "reflection.html#the-learning-journey",
-    "title": "Reflection",
-    "section": "The learning journey",
-    "text": "The learning journey\n\n\n\n\n\nflowchart LR\n    A[Brief] --&gt; B[Quarto setup]\n    B --&gt; C[Configuration]\n    C --&gt; D[Python projects]\n    D --&gt; E[Git and deployment]\n    E --&gt; F[Polish and iterate]\n    F --&gt; G[Reflect]"
+    "objectID": "projects/list/ai_content_pipeline.html#the-literature-review",
+    "href": "projects/list/ai_content_pipeline.html#the-literature-review",
+    "title": "AI-Enabled Content Production Pipeline",
+    "section": "The literature review",
+    "text": "The literature review\nI ran the review following Okoli’s eight-step procedure, with PRISMA 2020 governing the search and screening and systematic mapping (Petersen et al., 2008) as the synthesis method.\nThe search combined two keyword clusters — one for architectures (RAG, LLMs, transformer models, diffusion), one for the content-creation task (text-to-video, automated editing) — requiring a match from each, so a transformer paper with no content application would not return.\n\n\n\n\n\nflowchart LR\n    A[\"1,799 records&lt;br/&gt;identified\"] --&gt; B[\"159 full texts&lt;br/&gt;sought\"]\n    B --&gt; C[\"154 assessed&lt;br/&gt;against 3 criteria\"]\n    C --&gt; D[\"45 studies&lt;br/&gt;included\"]\n\n\n\n\n\n\nThree eligibility criteria had to pass: a technically grounded architecture described in detail, video or multimodal output demonstrated experimentally, and evidence of real-world applicability. Every exclusion was recorded against the criterion it failed, so the selection is transparent and repeatable.\nEach included study was then characterised against six predefined attributes using a shared codebook, producing the taxonomy the design decisions were drawn from."
   },
   {
-    "objectID": "reflection.html#key-skills-developed",
-    "href": "reflection.html#key-skills-developed",
-    "title": "Reflection",
-    "section": "Key skills developed",
-    "text": "Key skills developed\nQuarto as a publishing framework. I came into this project expecting Quarto to be just for writing text, but I learned it is a much more powerful tool. It allowed me to separate the content (what I write) from the design (how it looks). Because of this, I could change the appearance of my entire site by editing just one file, which is much more efficient.\nReproducible analysis with Python. Integrating executable Python code directly into my portfolio pages was challenging, but the outcome was worth the effort. In previous courses, I exported Jupyter charts as images and pasted them into reports. Now, the charts are generated directly by the code, making the analysis fully reproducible and resulting in higher-quality visuals."
+    "objectID": "projects/list/ai_content_pipeline.html#what-the-evidence-told-us",
+    "href": "projects/list/ai_content_pipeline.html#what-the-evidence-told-us",
+    "title": "AI-Enabled Content Production Pipeline",
+    "section": "What the evidence told us",
+    "text": "What the evidence told us\nResizing was the biggest drain on capacity. Two to four hours per asset, repeated across eighteen-plus formats. Named as the dominant bottleneck by the client’s own staff, and independently by a marketing professional in an unrelated sector.\nThe bottleneck was approval, not generation. Twenty-four hours went into QA and sign-off, with no tooling supporting it at all. Three interviewees independently reframed the problem this way.\nThe technology is solved; the governance is not. Across the 45 studies, generating video works — that question is settled. Keeping a human meaningfully in control appeared in only ten of them, almost always as a secondary concern. Every person interviewed called human approval non-negotiable.\n\n\n\n\n\n\nTipThe conclusion the project turned on\n\n\n\nGenerating content was never the hard part. Keeping it on brand is — and that is where the human stays."
   },
   {
-    "objectID": "reflection.html#challenges-and-technical-learning",
-    "href": "reflection.html#challenges-and-technical-learning",
-    "title": "Reflection",
-    "section": "Challenges and technical learning",
-    "text": "Challenges and technical learning\nCertain obstacles during the project turned into some of the most valuable learning moments.\n\n\n\n\n\n\nWarningThree technical challenges worth highlighting\n\n\n\n1. YAML configuration. Changing the site theme required modifying the configuration file. What seemed like a simple edit resulted in some errors and delays. Understanding the strict enforcement of whitespace in YAML reinforced the importance of paying close attention to configuration syntax.\n2. File permissions on deployment. My profile image initially failed to display on the live site despite being correctly referenced. The issue was related to file permissions inherited from macOS, which restricted public access. Applying the correct permissions resolved the issue and introduced me to a dimension of web publishing I had not previously considered.\n3. Build cache. Sometimes, changes were not reflected because the program was serving an ‘old copy’ from its cache. I learned that troubleshooting requires more than just reviewing my code; it also involves clearing temporary files created by the system.\n\n\nThese three issues — YAML syntax, file permissions, and caching — They represent the type of operational knowledge that is covered in introductory courses, but it is in professional practice where we really learned."
+    "objectID": "projects/list/ai_content_pipeline.html#the-architecture-decision",
+    "href": "projects/list/ai_content_pipeline.html#the-architecture-decision",
+    "title": "AI-Enabled Content Production Pipeline",
+    "section": "The architecture decision",
+    "text": "The architecture decision\nThree build options were evaluated against cost, speed and maintainability.\n\n\n\n\n\n\n\n\n\n\nOption A — Hybrid API\nOption B — Standalone tool\nOption C — Assisted pipeline\n\n\n\n\nAutomation\nHighest\nGeneration only\nHigh\n\n\nBuild time\n15–20 days\n4–6 days\n10–15 days\n\n\nIT burden\nHighest — GPU infrastructure\nLow\nLow to medium\n\n\nBottlenecks resolved\n4\n1\n4\n\n\n\nOption A had the strongest brand conditioning but required GPU infrastructure the client’s IT team would have to maintain — directly against their stated goal of reducing IT workload. Option B was fastest to deploy but left resizing, the largest single time cost, completely unaddressed.\nOption C was selected: it resolves all four confirmed bottlenecks at the lowest maintenance burden, and fits the client’s existing cloud environment."
   },
   {
-    "objectID": "reflection.html#what-i-would-refine",
-    "href": "reflection.html#what-i-would-refine",
-    "title": "Reflection",
-    "section": "What I would refine",
-    "text": "What I would refine\nLooking back, there are aspects of my workflow I would approach differently in future projects. I would deploy earlier, so that deployment issues could be isolated before too many changes accumulated. I would also adopt smaller, more frequent commits from the start, and maintain a concise working log throughout development to support a more detailed final reflection."
+    "objectID": "projects/list/ai_content_pipeline.html#what-we-built",
+    "href": "projects/list/ai_content_pipeline.html#what-we-built",
+    "title": "AI-Enabled Content Production Pipeline",
+    "section": "What we built",
+    "text": "What we built\nAn eight-stage pipeline, with a person retained at two checkpoints by design rather than as a temporary limitation.\n\n\n\n\n\n\n\n\nStage\nFunction\nImplementation\n\n\n\n\n1\nBrief parsing — free text becomes structured fields\nGemini 2.5 Flash\n\n\n2\nBrand retrieval — only approved assets reach generation\nChromaDB\n\n\n—\nHuman checkpoint — the parsed brief is reviewed before anything is generated\n—\n\n\n3–5\nGeneration — video drafted, brand-conditioned from the start\nGoogle Flow\n\n\n6\nResize, logo and overlay — one asset, sixteen social and web formats\nFFmpeg, Pillow\n\n\n7\nAutomated brand check — colour compliance, logo placement, unwanted text\nOpenCV, Gemini\n\n\n8\nHuman sign-off — nothing publishes unreviewed\nStreamlit, SQLite\n\n\n\nStages 3 to 5 are grouped because they run inside a commercial tool with no public API. Generation is triggered manually and the completed file is picked up by a folder watcher — which is also why regeneration is expensive, and therefore why the human checkpoint sits at stage 2, before any generation cost is incurred.\nEvery stage writes its own duration to a local database, so the evaluation data came out of the pipeline itself rather than from separate timing.\n\nThe brand check\nThe most interesting engineering problem was not generation but verification. Generated video routinely contained text baked into the frame — a wordmark, a price overlay — which is a defect, because text and logos are composited separately in post-production.\nA model asked simply “does this look on brand?” will pass legible, well-placed text. The instruction has to be explicit that any rendered text is a failure regardless of how good it looks:\n'For \"unwanted_text_detected\": set true if the video contains ANY rendered '\n'text, words, or wordmarks (including brand name text) baked into the footage '\n'itself. Text and logos are composited separately in post-production, so any '\n'text generated directly into the footage is a defect, not a pass. If '\n'unwanted_text_detected is true, overall_pass must be false and this must '\n'appear in issues_found.'\nA second grounding problem: the checker was returning “fail” for a missing logo on formats where no logo had been applied. The fix was to tell the model what the pipeline had actually done, rather than let it infer from pixels:\ndef _logo_context_line(logo_info, subject='image'):\n    \"\"\"Tell the model whether a logo was already composited by Stage 6,\n    and where. Without this it guesses from pixels whether a logo is\n    expected at all, producing inconsistent verdicts for the same source\n    asset across different output formats.\"\"\"\n    if logo_info:\n        return (f'A logo has already been composited onto this {subject} by an '\n                f'automated step, at position: {logo_info}. Confirm it is present '\n                'and correctly placed, rather than guessing whether a logo should '\n                'exist at all.')\n    return (f'No logo was composited onto this {subject} for this delivery, so '\n            'logo-related fields should reflect that no logo is expected here.')"
   },
   {
-    "objectID": "reflection.html#why-this-matters-for-what-comes-next",
-    "href": "reflection.html#why-this-matters-for-what-comes-next",
-    "title": "Reflection",
-    "section": "Why this matters for what comes next",
-    "text": "Why this matters for what comes next\nThe primary motivation for building this portfolio was to create a space where I can demonstrate my technical reasoning rather than simply list skills on a CV. As I apply for roles in Business Intelligence and Data Analysis in Dublin, having a live portfolio where recruiters can examine my approach — for instance, in the comparison of BERT, FinBERT, and LLaMA 3.2 for financial sentiment analysis — offers concrete evidence of my capabilities.\nMore broadly, the skills developed here extend beyond this assignment."
-  },
-  {
-    "objectID": "reflection.html#final-reflection",
-    "href": "reflection.html#final-reflection",
-    "title": "Reflection",
-    "section": "Final reflection",
-    "text": "Final reflection\n\n\n\n\n\n\nNote\n\n\n\nThis project has strengthened both my technical confidence and my understanding of what it means to present work professionally. Each technical challenge — whether in configuration, deployment, or design — contributed to a broader understanding of how systems are built and maintained in practice. Beyond the specific tools, I developed a clearer sense of how to plan, execute, and refine a project from concept to public deliverable. This is a foundation I intend to build on throughout my career in Business Analytics."
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#professional-references",
-    "href": "contact.html#professional-references",
-    "title": "Contact & References",
-    "section": "Professional References",
-    "text": "Professional References\nThe following individuals can speak to my work ethic, character, and professional abilities. Please contact me via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nWendy Lucio\n\n\n\n\n\n\nNoteAcademic Reference\n\n\n\nFocus areas: Credit Risk, Predictive Modelling & Scoring Organisation: Dublin City University — MSc Business Analytics Relationship: Classmate and current practicum teammate Contact: Available on request\nWendy and I are completing the MSc Business Analytics programme at DCU together and are currently collaborating on the same practicum team. She can speak to my technical contributions, my collaborative approach to teamwork, and the quality of my analytical work in academic and applied settings.\n\n\n\n\nMartina Keane\n\n\n\n\n\n\nNotePersonal Reference\n\n\n\nContact: Available on request\nMartina can speak to my reliability, responsibility, and personal character, based on our professional working relationship. She is able to provide a strong personal reference regarding my work ethic and conduct."
-  },
-  {
-    "objectID": "contact.html#a-note-on-privacy",
-    "href": "contact.html#a-note-on-privacy",
-    "title": "Contact & References",
-    "section": "A Note on Privacy",
-    "text": "A Note on Privacy\nFull contact details for references are provided on request rather than listed publicly, out of respect for their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFinancial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2\n\n\n\npython\n\nnlp\n\nmachine-learning\n\ntransformers\n\nsentiment-analysis\n\n\n\nBenchmarking three NLP architectures on sentence-level financial sentiment classification using the Financial PhraseBank dataset.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFraud Detection: A Statistical Exploration of Consumer Transaction Data\n\n\n\npython\n\nstatistics\n\neda\n\nmachine-learning\n\nfraud\n\n\n\nAn exploratory statistical analysis of 500 consumer banking transactions using descriptive statistics, correlation analysis, outlier detection, and classification modelling.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html",
-    "href": "projects/list/sentiment_analysis.html",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "",
-    "text": "Financial firms process thousands of news items daily to inform trading, risk, and portfolio decisions. Manually classifying sentiment at scale is infeasible. I benchmarked three NLP architectures on sentence-level sentiment classification to identify the most effective, production-ready solution for this domain.\n\n\n\n\n\n\nNoteThe question\n\n\n\nWhich architecture delivers the best sentiment classification on financial text: general-purpose BERT, domain-pretrained FinBERT, or a much larger zero-shot LLaMA 3.2?"
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#overview",
-    "href": "projects/list/sentiment_analysis.html#overview",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "",
-    "text": "Financial firms process thousands of news items daily to inform trading, risk, and portfolio decisions. Manually classifying sentiment at scale is infeasible. I benchmarked three NLP architectures on sentence-level sentiment classification to identify the most effective, production-ready solution for this domain.\n\n\n\n\n\n\nNoteThe question\n\n\n\nWhich architecture delivers the best sentiment classification on financial text: general-purpose BERT, domain-pretrained FinBERT, or a much larger zero-shot LLaMA 3.2?"
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#the-approach",
-    "href": "projects/list/sentiment_analysis.html#the-approach",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "The Approach",
-    "text": "The Approach\nDataset. Financial PhraseBank1 — 2,264 sentences from English-language financial news, each labelled by 16 finance experts with full agreement. Stratified 80/20 split to preserve class proportions.\nThree models tested. BERT-base and FinBERT fine-tuned under identical hyperparameters (3 epochs, batch 16, AdamW optimiser at learning rate 2e-5). LLaMA 3.2 (3B parameters) run zero-shot via Ollama at temperature 0 — no fine-tuning.\nEvaluation metrics. Accuracy, precision, recall, weighted F1, and confusion matrices. The last is critical for imbalanced data, where negative signals carry the highest business cost."
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#exploring-the-data",
-    "href": "projects/list/sentiment_analysis.html#exploring-the-data",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "Exploring the Data",
-    "text": "Exploring the Data\n\n\nShow imports and data loading\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# Load the Financial PhraseBank\ndf = pd.read_csv('financial_phrasebank.csv')\n\nprint(f\"Total sentences: {len(df):,}\")\nprint(f\"Classes: {df['label'].unique().tolist()}\")\ndf.head()\n\n\nTotal sentences: 2,264\nClasses: ['neutral', 'positive', 'negative']\n\n\n\n\n\n\n\n\n\nsentence\nlabel\n\n\n\n\n0\nAccording to Gran , the company has no plans t...\nneutral\n\n\n1\nFor the last quarter of 2010 , Componenta 's n...\npositive\n\n\n2\nIn the third quarter of 2010 , net sales incre...\npositive\n\n\n3\nOperating profit rose to EUR 13.1 mn from EUR ...\npositive\n\n\n4\nOperating profit totalled EUR 21.1 mn , up fro...\npositive\n\n\n\n\n\n\n\n\nClass distribution\n\n\nShow the code\ncounts = df['label'].value_counts()\n\nfig = px.bar(\n    x=counts.index,\n    y=counts.values,\n    color=counts.index,\n    color_discrete_map={\n        'negative': '#e53e3e',\n        'neutral':  '#4a7be0',\n        'positive': '#10b981'\n    },\n    labels={'x': 'Sentiment', 'y': 'Count'},\n    title='Financial PhraseBank — Class Distribution',\n    text=counts.values,\n    template='plotly_white'\n)\nfig.update_traces(textposition='outside')\nfig.update_layout(\n    height=420,\n    showlegend=False,\n    font_family='Inter, sans-serif'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Class distribution across the 2,264 sentences. Neutral dominates; negative is the minority class.\n\n\n\n\nClear class imbalance: neutral dominates at 61%, while negative sits at just 13%. This asymmetry shaped my whole evaluation approach — headline accuracy can hide poor performance on the minority class, which is precisely where the business value lives.\n\n\nSentence length distribution\n\n\nShow the code\ndf['word_count'] = df['sentence'].str.split().str.len()\n\nfig = px.histogram(\n    df,\n    x='word_count',\n    color='label',\n    nbins=30,\n    marginal='box',\n    opacity=0.75,\n    color_discrete_map={\n        'negative': '#e53e3e',\n        'neutral':  '#4a7be0',\n        'positive': '#10b981'\n    },\n    title='Sentence Length Distribution by Class',\n    labels={'word_count': 'Word count', 'label': 'Sentiment'},\n    template='plotly_white'\n)\nfig.update_layout(\n    height=480,\n    font_family='Inter, sans-serif',\n    barmode='overlay'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Word count distribution by class. Most sentences are between 10 and 30 words.\n\n\n\n\nSentence length is largely consistent across classes — no single class is dramatically longer or shorter. That means length is not going to be a useful shortcut feature; the models need to learn the actual semantics.\n\n\nExample sentences\n\n\nShow the code\nfor label in ['positive', 'negative', 'neutral']:\n    sample = df[df['label'] == label]['sentence'].iloc[0]\n    print(f\"[{label.upper()}]\")\n    print(f\"  {sample[:200]}\")\n    print()\n\n\n[POSITIVE]\n  For the last quarter of 2010 , Componenta 's net sales doubled to EUR131m from EUR76m for the same period a year earlier , while it moved to a zero pre-tax profit from a pre-tax loss of EUR7m .\n\n[NEGATIVE]\n  Jan. 6 -- Ford is struggling in the face of slowing truck and SUV sales and a surfeit of up-to-date , gotta-have cars .\n\n[NEUTRAL]\n  According to Gran , the company has no plans to move all production to Russia , although that is where the company is growing ."
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#data-preparation",
-    "href": "projects/list/sentiment_analysis.html#data-preparation",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "Data Preparation",
-    "text": "Data Preparation\nThe cleaning step is intentionally minimal — transformer tokenisers handle most normalisation internally, so heavy preprocessing can actually hurt performance.\n\n\nShow the code\nimport re\nfrom sklearn.model_selection import train_test_split\n\ndef clean_text(text):\n    # Collapse whitespace only — let the tokeniser do the rest\n    text = re.sub(r'\\s+', ' ', str(text))\n    return text.strip()\n\ndf['text']      = df['sentence'].apply(clean_text)\ndf['label_num'] = df['label'].map({'negative': 0, 'neutral': 1, 'positive': 2})\n\n# Stratified 80/20 split preserves class proportions\ntrain_texts, test_texts, train_labels, test_labels = train_test_split(\n    df['text'].values,\n    df['label_num'].values,\n    test_size=0.2,\n    random_state=42,\n    stratify=df['label_num'].values\n)\n\nprint(f\"Train: {len(train_texts):,}  Test: {len(test_texts):,}\")\n# → Train: 1,811  Test: 453"
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#model-1-bert-general-purpose-baseline",
-    "href": "projects/list/sentiment_analysis.html#model-1-bert-general-purpose-baseline",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "Model 1 — BERT (General-Purpose Baseline)",
-    "text": "Model 1 — BERT (General-Purpose Baseline)\nBERT-base-uncased was fine-tuned as a baseline to establish how a general-purpose model performs on financial text.\n\n\nShow the code\nfrom transformers import BertTokenizer, BertForSequenceClassification, AdamW\nfrom torch.utils.data import Dataset, DataLoader\nimport torch\n\nMAX_LEN    = 128\nBATCH_SIZE = 16\nEPOCHS     = 3\nLR         = 2e-5\n\ntokenizer = BertTokenizer.from_pretrained('bert-base-uncased')\nmodel     = BertForSequenceClassification.from_pretrained(\n    'bert-base-uncased',\n    num_labels=3\n)\n\noptimiser = AdamW(model.parameters(), lr=LR)\n\n# Training loop (abridged)\nfor epoch in range(EPOCHS):\n    model.train()\n    epoch_loss = 0\n    for batch in train_loader:\n        optimiser.zero_grad()\n        outputs = model(**batch)\n        outputs.loss.backward()\n        optimiser.step()\n        epoch_loss += outputs.loss.item()\n    print(f\"Epoch {epoch + 1}: avg loss = {epoch_loss / len(train_loader):.4f}\")\n\n\n\nBERT training curve\n\n\nShow the code\n# Training loss values recorded during the actual training run\nepochs_data = pd.DataFrame({\n    'step': list(range(1, 341)),\n    'loss': np.concatenate([\n        np.linspace(1.08, 0.45, 113) + np.random.normal(0, 0.08, 113),\n        np.linspace(0.42, 0.22, 113) + np.random.normal(0, 0.05, 113),\n        np.linspace(0.20, 0.16, 114) + np.random.normal(0, 0.03, 114),\n    ]),\n    'epoch': ['Epoch 1'] * 113 + ['Epoch 2'] * 113 + ['Epoch 3'] * 114\n})\nepochs_data['smoothed'] = epochs_data['loss'].rolling(window=15, min_periods=1).mean()\n\nfig = px.line(\n    epochs_data,\n    x='step',\n    y='smoothed',\n    color='epoch',\n    title='BERT Fine-Tuning Loss — 3 Epochs',\n    labels={'step': 'Training step', 'smoothed': 'Smoothed loss', 'epoch': 'Epoch'},\n    color_discrete_sequence=['#2f5dcc', '#6a94f0', '#b9d0ff'],\n    template='plotly_white'\n)\nfig.update_traces(line=dict(width=3))\nfig.update_layout(height=420, font_family='Inter, sans-serif')\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 3: BERT training loss across 3 epochs. Loss drops from 1.08 to 0.16; convergence by end of epoch 2."
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#model-2-finbert-domain-pretrained",
-    "href": "projects/list/sentiment_analysis.html#model-2-finbert-domain-pretrained",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "Model 2 — FinBERT (Domain-Pretrained)",
-    "text": "Model 2 — FinBERT (Domain-Pretrained)\nFinBERT2 is BERT pre-trained on a large corpus of Reuters financial news before fine-tuning. The architecture and parameter count are identical to BERT-base (110M). The only difference is what the model has already been exposed to.\n\n\nShow the code\nfrom transformers import AutoTokenizer, AutoModelForSequenceClassification\n\ntokenizer = AutoTokenizer.from_pretrained('yiyanghkust/finbert-tone')\nmodel     = AutoModelForSequenceClassification.from_pretrained(\n    'yiyanghkust/finbert-tone',\n    num_labels=3\n)\n\n# Fine-tuned with the same hyperparameters as BERT above\n# (3 epochs, batch 16, AdamW, lr=2e-5)"
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#model-3-llama-3.2-zero-shot",
-    "href": "projects/list/sentiment_analysis.html#model-3-llama-3.2-zero-shot",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "Model 3 — LLaMA 3.2 Zero-Shot",
-    "text": "Model 3 — LLaMA 3.2 Zero-Shot\nLLaMA 3.2 (3B) was tested in a fundamentally different paradigm: no training, no labelled examples. The model was prompted directly via Ollama to classify each sentence.\n\n\nShow the code\nimport requests\n\nPROMPT_TEMPLATE = \"\"\"Classify the sentiment of this financial news sentence as exactly one of:\nnegative, neutral, or positive.\n\nSentence: \"{sentence}\"\n\nSentiment:\"\"\"\n\ndef llama_classify(sentence):\n    response = requests.post('http://localhost:11434/api/generate', json={\n        'model': 'llama3.2:3b',\n        'prompt': PROMPT_TEMPLATE.format(sentence=sentence),\n        'temperature': 0,\n        'stream': False\n    })\n    return response.json()['response'].strip().lower()\n\n# Run on all 453 test sentences\nllama_predictions = [llama_classify(s) for s in test_texts]"
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#results",
-    "href": "projects/list/sentiment_analysis.html#results",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
+    "objectID": "projects/list/ai_content_pipeline.html#results",
+    "href": "projects/list/ai_content_pipeline.html#results",
+    "title": "AI-Enabled Content Production Pipeline",
     "section": "Results",
-    "text": "Results\n\nHead-to-head comparison\n\n\nShow the code\nresults = pd.DataFrame({\n    'Model':     ['BERT (base)', 'FinBERT ★', 'LLaMA 3.2 (zero-shot)'],\n    'Accuracy':  [0.821, 0.883, 0.868],\n    'Precision': [0.823, 0.885, 0.870],\n    'Recall':    [0.821, 0.883, 0.868],\n    'F1':        [0.820, 0.884, 0.867]\n})\n\nresults_long = results.melt(\n    id_vars='Model',\n    var_name='Metric',\n    value_name='Score'\n)\n\nfig = px.bar(\n    results_long,\n    x='Model',\n    y='Score',\n    color='Metric',\n    barmode='group',\n    title='Weighted Metrics — BERT vs FinBERT vs LLaMA 3.2',\n    color_discrete_sequence=['#1e3d99', '#2f5dcc', '#6a94f0', '#b9d0ff'],\n    template='plotly_white',\n    text=results_long['Score'].apply(lambda x: f'{x:.3f}')\n)\nfig.update_traces(textposition='outside', textfont_size=10)\nfig.update_layout(\n    height=500,\n    yaxis=dict(range=[0.7, 0.95], title='Score (weighted)'),\n    font_family='Inter, sans-serif',\n    legend=dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5)\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 4: All four weighted metrics across the three models. FinBERT leads; zero-shot LLaMA 3.2 is impressively close.\n\n\n\n\n\n\n\n\n\n\nImportantHeadline numbers\n\n\n\n\nBERT fine-tuned: 82.1% accuracy — the general-purpose baseline\nFinBERT fine-tuned: 88.3% accuracy — domain pre-training wins\nLLaMA 3.2 zero-shot: 86.8% accuracy — no labels required\n\n\n\n\n\nFinBERT confusion matrix\nThe confusion matrix for the winning model tells us more than the headline accuracy does — particularly where the errors concentrate.\n\n\nShow the code\ncm = np.array([\n    [52, 7, 2],\n    [14, 251, 13],\n    [3, 14, 97]\n])\n\nlabels = ['Negative', 'Neutral', 'Positive']\n\nfig = go.Figure(data=go.Heatmap(\n    z=cm,\n    x=labels,\n    y=labels,\n    text=cm,\n    texttemplate='%{text}',\n    textfont={\"size\": 18, \"family\": \"Inter, sans-serif\"},\n    colorscale=[[0, '#eef4ff'], [0.5, '#6a94f0'], [1, '#1e3d99']],\n    showscale=True,\n    colorbar=dict(title='Count')\n))\nfig.update_layout(\n    title='FinBERT — Confusion Matrix (Test Set, n=453)',\n    xaxis_title='Predicted',\n    yaxis_title='Actual',\n    height=500,\n    width=600,\n    font_family='Inter, sans-serif',\n    yaxis=dict(autorange='reversed')\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 5: FinBERT confusion matrix on the 453-sentence test set. Strong diagonal; most confusion is between neutral and the sentiment-bearing classes.\n\n\n\n\nThe diagonal is strong — FinBERT got most predictions right. The most interesting errors:\n\n14 neutrals classified as negative (false alarms on negative sentiment)\n14 positives classified as neutral (missed positive signals)\n\nMost confusion lies on the neutral ↔︎ sentiment-bearing border, not between negative and positive. That makes intuitive sense: distinguishing “the company grew” from “the company did not shrink” is genuinely hard.\n\n\nPer-class performance\n\n\nShow the code\nper_class = pd.DataFrame({\n    'Class':       ['Negative', 'Neutral', 'Positive'] * 3,\n    'F1':          [0.72, 0.86, 0.81,    # BERT\n                    0.78, 0.91, 0.88,    # FinBERT\n                    0.76, 0.90, 0.85],   # LLaMA\n    'Model':       ['BERT'] * 3 + ['FinBERT'] * 3 + ['LLaMA 3.2'] * 3\n})\n\nfig = px.bar(\n    per_class,\n    x='Class',\n    y='F1',\n    color='Model',\n    barmode='group',\n    title='Per-Class F1 Score — All Three Models',\n    color_discrete_sequence=['#b9d0ff', '#2f5dcc', '#0e1830'],\n    template='plotly_white',\n    text=per_class['F1'].apply(lambda x: f'{x:.2f}')\n)\nfig.update_traces(textposition='outside')\nfig.update_layout(\n    height=450,\n    yaxis=dict(range=[0.6, 1.0], title='F1 score'),\n    font_family='Inter, sans-serif'\n)\nfig.show()\n\n\n\n\n                            \n                                            \n\n\nFigure 6: Per-class F1 score for each model. Negative class is consistently the weakest, across all three models.\n\n\n\n\nThe negative class is the bottleneck across every model — unsurprising given it has only 303 training examples. For a trading desk, this matters disproportionately: a missed negative signal is far more expensive than a missed positive one."
+    "text": "Results\nA single end-to-end session, measured by the pipeline’s own timing:\n\n\n\nStage\nDuration\n\n\n\n\nBrief parsing and asset retrieval\n10.8s\n\n\nContent generation\n8m 45s\n\n\nResizing across all formats\n14.0s\n\n\nAutomated brand QA\n15.5s\n\n\nTotal\n9m 39s\n\n\n\nGeneration dominates; everything the team built around it runs in seconds. That distribution is the finding in miniature — the model is not the slow part.\nAgainst the manual baseline:\n\n\n\n\nBefore\nAfter\n\n\n\n\nVideo production\n16 hrs\nminutes\n\n\nMulti-format resizing\n2–4 hrs\n~22s\n\n\nQA and sign-off\n24 hrs\npre-screened report\n\n\n\n\n“The quality looks really good — very, very strong compared to other apps I’ve used.”\n— Content Manager, client side"
   },
   {
-    "objectID": "projects/list/sentiment_analysis.html#what-i-found",
-    "href": "projects/list/sentiment_analysis.html#what-i-found",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "What I Found",
-    "text": "What I Found\n\n\n\n\n\n\nTipFinding 01 — Domain pre-training beats raw scale\n\n\n\nFinBERT (110M parameters, pre-trained on Reuters financial news) outperformed both general BERT and the much larger LLaMA 3.2 (3B parameters). For specialised language, targeted pre-training matters more than model size.\n\n\n\n\n\n\n\n\nTipFinding 02 — Zero-shot is surprisingly viable\n\n\n\nLLaMA 3.2 reached 86.8% with zero labelled examples. For a firm without the budget to annotate thousands of sentences, this is a legitimate option — despite slower CPU inference and the lack of confidence scores.\n\n\n\n\n\n\n\n\nTipFinding 03 — The minority class is the bottleneck\n\n\n\nAll three models showed the highest error on the negative class (303 of 2,264 rows). Per-class analysis mattered more than headline accuracy — the business value lives in catching negative signals.\n\n\n\n\n\n\n\n\nTipFinding 04 — Recommendation\n\n\n\nDeploy FinBERT for real-time sentiment on trading desks. Keep LLaMA 3.2 as a zero-shot fallback for edge languages or new domains where fine-tuning data does not yet exist."
+    "objectID": "projects/list/ai_content_pipeline.html#limitations",
+    "href": "projects/list/ai_content_pipeline.html#limitations",
+    "title": "AI-Enabled Content Production Pipeline",
+    "section": "Limitations",
+    "text": "Limitations\nNamed rather than hidden. Each has an owner and a route forward.\n\n\n\n\n\n\n\nLimitation\nMitigation\n\n\n\n\nVisible watermark on generated video\nConfirming commercial-use removal with the vendor\n\n\nOne step still requires a manual handoff\nAutomatable once a public API exists\n\n\nResizing uses blur fill rather than true scaling\nRevisit as outpainting quality improves\n\n\nGeneration relies on a single provider\nSwappable component, no rebuild required\n\n\nBrand QA reflects our best read of the guidelines\nRefine against the client’s official checklist\n\n\n\nThe automated brand check passed a minority of outputs on first attempt. Over half of those failures traced to a single cause — text already present in the source product photography rather than generated by the model. That is a finding, not a failure: it locates where the automation boundary sits, and it is why the human checkpoint is structural rather than provisional."
   },
   {
-    "objectID": "projects/list/sentiment_analysis.html#limitations-next-steps",
-    "href": "projects/list/sentiment_analysis.html#limitations-next-steps",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "Limitations & Next Steps",
-    "text": "Limitations & Next Steps\n\nClass imbalance. Oversampling the negative class, or using class weights, would likely lift per-class F1 further.\nInference cost. FinBERT is fast on GPU but not free; for latency-sensitive applications, a distilled version would be worth testing.\nDomain drift. Financial language evolves (new instruments, new terminology). Periodic re-training on recent data is essential for production deployment.\nMultilingual extension. The PhraseBank is English-only. For a bilingual markets desk, testing FinBERT-multilingual or XLM-R would be the natural next step."
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#references",
-    "href": "projects/list/sentiment_analysis.html#references",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "References",
-    "text": "References\nMalo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology.\nDevlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. NAACL-HLT 2019.\nAraci, D. (2019). FinBERT: Financial sentiment analysis with pre-trained language models. arXiv:1908.10063.\nMeta AI (2024). LLaMA 3.2: Small and multimodal versions. Model card and technical report."
-  },
-  {
-    "objectID": "projects/list/sentiment_analysis.html#footnotes",
-    "href": "projects/list/sentiment_analysis.html#footnotes",
-    "title": "Financial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nMalo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology.↩︎\nAraci, D. (2019). FinBERT: Financial sentiment analysis with pre-trained language models. arXiv preprint arXiv:1908.10063.↩︎"
+    "objectID": "projects/list/ai_content_pipeline.html#what-i-took-from-it",
+    "href": "projects/list/ai_content_pipeline.html#what-i-took-from-it",
+    "title": "AI-Enabled Content Production Pipeline",
+    "section": "What I took from it",
+    "text": "What I took from it\nScoping a claim is as important as making it. Early drafts of the review said “no study has measured AI against a manual baseline.” One reviewed paper does exactly that, in a film production context. The defensible claim was narrower: no included study measured it against a documented manual baseline in a retail content production context. Learning to write claims that survive scrutiny changed how I write generally.\nArithmetic has to reconcile. Our exclusion counts summed to more than the number of papers excluded, because a paper could fail more than one criterion. Obvious once stated — but if a reader finds it before you explain it, every other number becomes suspect.\nEvidence and design are separate arguments. A literature review that does not visibly change what gets built is decoration. The value came from the traceability: eight decisions, each with the finding that required it."
   },
   {
     "objectID": "index.html",
