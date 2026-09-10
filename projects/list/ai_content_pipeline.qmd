@@ -1,41 +1,43 @@
 ---
 title: "AI-Enabled Content Production Pipeline"
 subtitle: "Design Science Research with an Irish retail client"
-description: "A systematic literature review of 45 studies and a working eight-stage pipeline, built to compress video production in a real retail marketing workflow."
+description: "A systematic review of 45 studies, seven stakeholder interviews, and a working eight-stage pipeline that takes a marketing brief through to human sign-off."
 date: last-modified
-categories: [Generative AI, LLMs, Design Science Research, Systematic Review, Consulting]
-image: images/pipeline-thumb.png
+categories: [Generative AI, LLMs, RAG, Design Science Research, Systematic Review, Consulting]
+image: pipeline-thumb.png
 ---
 
 ## The problem
 
-A retail marketing team had committed to a content strategy that its production capacity could not sustain. Video content was needed across more than eighteen digital touchpoints, each with its own format specification — and all of it was produced manually by a single in-house designer.
+An Irish design and retail brand — sixteen stores, sixty years old — had committed to a content strategy its production capacity could not sustain. Video was needed across more than eighteen digital touchpoints, each with its own format specification, and all of it was produced manually by a single in-house designer.
 
-The question was not simply whether AI could generate video. It was whether AI could take on the repetitive work without compromising a brand the company had spent decades building.
+Fifteen to sixteen hours went into one video. Then that video had to be adapted, by hand, for every touchpoint it appeared on.
+
+The question was not whether AI could generate video. It was whether AI could take the repetitive work without putting a brand built over six decades at risk.
 
 ::: {.callout-note}
 ## My role
-Six-person consultancy team. I owned the **systematic literature review** and the **synthesis of combined research findings** — the two chapters that connect published evidence to the design decisions in the build.
+Six-person consultancy team. I owned the **systematic literature review** and the **synthesis of combined research findings** — the two chapters connecting published evidence to the design decisions in the build.
 :::
 
 ## Approach
 
-The project followed **Design Science Research** (Hevner et al., 2004), which is designed for work whose output is a built artefact rather than an explanation. Four evidence streams fed the design:
+The project followed **Design Science Research** (Hevner et al., 2004), which suits work whose output is a built artefact rather than an explanation. Four evidence streams fed the design:
 
 | Stream | What it established |
 |--------|--------------------|
-| Systematic literature review | What these architectures can reliably do today |
-| Semi-structured interviews | What stakeholders actually needed |
-| Process mapping (BPMN 2.0) | Where time is lost in the current workflow |
+| Systematic literature review — 45 studies | What these architectures can reliably do today |
+| Semi-structured interviews — 7 participants | What stakeholders actually needed |
+| Process mapping (BPMN 2.0) — 9 stages | Where the time is lost in the current workflow |
 | Requirements traceability matrix | Which feature satisfies which requirement |
 
-No design decision rested on a single source. Eight decisions were documented, each cross-checked against all four streams before it entered the build.
+Eight design decisions were documented, each cross-checked against the streams before it entered the build. Six of the eight were supported by all three evidence sources.
 
 ## The literature review
 
-I ran the review following **Okoli's eight-step procedure**, with **PRISMA 2020** governing the search and screening, and **systematic mapping** (Petersen et al., 2008) as the synthesis method.
+I ran the review following **Okoli's eight-step procedure**, with **PRISMA 2020** governing the search and screening and **systematic mapping** (Petersen et al., 2008) as the synthesis method.
 
-The search combined two keyword clusters — one for architectures (RAG, LLMs, transformer models, diffusion), one for the content-creation task (text-to-video, automated editing) — requiring a match from each, so that a transformer paper without a content application would not return.
+The search combined two keyword clusters — one for architectures (RAG, LLMs, transformer models, diffusion), one for the content-creation task (text-to-video, automated editing) — requiring a match from each, so a transformer paper with no content application would not return.
 
 ```{mermaid}
 flowchart LR
@@ -48,15 +50,33 @@ Three eligibility criteria had to pass: a technically grounded architecture desc
 
 Each included study was then characterised against six predefined attributes using a shared codebook, producing the taxonomy the design decisions were drawn from.
 
-### What the review found
+## What the evidence told us
 
-**Compound pipelines are the state of the art.** Twenty-seven of the forty-five studies chain specialised components across planning, generation and quality control rather than relying on a single model. This directly shaped the eight-stage architecture.
+**Resizing was the biggest drain on capacity.** Two to four hours per asset, repeated across eighteen-plus formats. Named as the dominant bottleneck by the client's own staff, and independently by a marketing professional in an unrelated sector.
 
-**No single technique holds a brand.** The literature identifies four control mechanisms — LoRA fine-tuning, ControlNet spatial conditioning, IP-Adapter reference injection, and retrieval from a curated library — and finds that they have to be layered. Prompt conditioning alone is explicitly flagged as insufficient.
+**The bottleneck was approval, not generation.** Twenty-four hours went into QA and sign-off, with no tooling supporting it at all. Three interviewees independently reframed the problem this way.
 
-**Governance is the least studied part of the field.** Human oversight appeared in only ten of the forty-five studies, and almost always as a secondary concern rather than the contribution being made.
+**The technology is solved; the governance is not.** Across the 45 studies, generating video works — that question is settled. Keeping a human meaningfully in control appeared in only ten of them, almost always as a secondary concern. Every person interviewed called human approval non-negotiable.
 
-That last finding was the one that shaped the design most. Every stakeholder interviewed described human approval as non-negotiable — so the part the client cared about most was the part the literature had least to say about.
+::: {.callout-tip}
+## The conclusion the project turned on
+Generating content was never the hard part. Keeping it on brand is — and that is where the human stays.
+:::
+
+## The architecture decision
+
+Three build options were evaluated against cost, speed and maintainability.
+
+| | Option A — Hybrid API | Option B — Standalone tool | **Option C — Assisted pipeline** |
+|---|---|---|---|
+| Automation | Highest | Generation only | High |
+| Build time | 15–20 days | 4–6 days | **10–15 days** |
+| IT burden | Highest — GPU infrastructure | Low | **Low to medium** |
+| Bottlenecks resolved | 4 | 1 | **4** |
+
+Option A had the strongest brand conditioning but required GPU infrastructure the client's IT team would have to maintain — directly against their stated goal of reducing IT workload. Option B was fastest to deploy but left resizing, the largest single time cost, completely unaddressed.
+
+Option C was selected: it resolves all four confirmed bottlenecks at the lowest maintenance burden, and fits the client's existing cloud environment.
 
 ## What we built
 
@@ -72,20 +92,81 @@ An eight-stage pipeline, with a person retained at two checkpoints by design rat
 | 7 | Automated brand check — colour compliance, logo placement, unwanted text | OpenCV, Gemini |
 | 8 | **Human sign-off** — nothing publishes unreviewed | Streamlit, SQLite |
 
-Stages 3 to 5 are grouped because they run inside Google Flow, which exposes no public API. Generation is triggered manually and the completed file is picked up by a folder watcher, which is also what makes regeneration expensive — and therefore why the human checkpoint sits at stage 2, before any generation cost is incurred.
+Stages 3 to 5 are grouped because they run inside a commercial tool with no public API. Generation is triggered manually and the completed file is picked up by a folder watcher — which is also why regeneration is expensive, and therefore why the human checkpoint sits at stage 2, before any generation cost is incurred.
 
 Every stage writes its own duration to a local database, so the evaluation data came out of the pipeline itself rather than from separate timing.
 
+### The brand check
+
+The most interesting engineering problem was not generation but verification. Generated video routinely contained text baked into the frame — a wordmark, a price overlay — which is a defect, because text and logos are composited separately in post-production.
+
+A model asked simply "does this look on brand?" will pass legible, well-placed text. The instruction has to be explicit that any rendered text is a failure regardless of how good it looks:
+
+```python
+'For "unwanted_text_detected": set true if the video contains ANY rendered '
+'text, words, or wordmarks (including brand name text) baked into the footage '
+'itself. Text and logos are composited separately in post-production, so any '
+'text generated directly into the footage is a defect, not a pass. If '
+'unwanted_text_detected is true, overall_pass must be false and this must '
+'appear in issues_found.'
+```
+
+A second grounding problem: the checker was returning "fail" for a missing logo on formats where no logo had been applied. The fix was to tell the model what the pipeline had actually done, rather than let it infer from pixels:
+
+```python
+def _logo_context_line(logo_info, subject='image'):
+    """Tell the model whether a logo was already composited by Stage 6,
+    and where. Without this it guesses from pixels whether a logo is
+    expected at all, producing inconsistent verdicts for the same source
+    asset across different output formats."""
+    if logo_info:
+        return (f'A logo has already been composited onto this {subject} by an '
+                f'automated step, at position: {logo_info}. Confirm it is present '
+                'and correctly placed, rather than guessing whether a logo should '
+                'exist at all.')
+    return (f'No logo was composited onto this {subject} for this delivery, so '
+            'logo-related fields should reflect that no logo is expected here.')
+```
+
 ## Results
 
-Multi-format resizing was the clearest gain — the task that previously consumed hours per asset now completes in seconds, and is no longer dependent on anyone's availability.
+A single end-to-end session, measured by the pipeline's own timing:
 
-The more interesting result was the automated brand check, which passed a minority of outputs on first attempt. Over half of those failures traced to a single cause: text already present in the source product photography rather than generated by the model. That is a finding, not a failure — it locates precisely where the automation boundary sits, and it is why the human checkpoint is structural rather than provisional.
+| Stage | Duration |
+|-------|----------|
+| Brief parsing and asset retrieval | 10.8s |
+| Content generation | 8m 45s |
+| Resizing across all formats | 14.0s |
+| Automated brand QA | 15.5s |
+| **Total** | **9m 39s** |
 
-::: {.callout-tip}
-## The conclusion the project turned on
-Generating content was never the hard part. Keeping it on brand is — and that is where the human stays.
-:::
+Generation dominates; everything the team built around it runs in seconds. That distribution is the finding in miniature — the model is not the slow part.
+
+Against the manual baseline:
+
+| | Before | After |
+|---|--------|-------|
+| Video production | 16 hrs | minutes |
+| Multi-format resizing | 2–4 hrs | ~22s |
+| QA and sign-off | 24 hrs | pre-screened report |
+
+> "The quality looks really good — very, very strong compared to other apps I've used."
+>
+> — Content Manager, client side
+
+## Limitations
+
+Named rather than hidden. Each has an owner and a route forward.
+
+| Limitation | Mitigation |
+|------------|-----------|
+| Visible watermark on generated video | Confirming commercial-use removal with the vendor |
+| One step still requires a manual handoff | Automatable once a public API exists |
+| Resizing uses blur fill rather than true scaling | Revisit as outpainting quality improves |
+| Generation relies on a single provider | Swappable component, no rebuild required |
+| Brand QA reflects our best read of the guidelines | Refine against the client's official checklist |
+
+The automated brand check passed a minority of outputs on first attempt. Over half of those failures traced to a single cause — text already present in the source product photography rather than generated by the model. That is a finding, not a failure: it locates where the automation boundary sits, and it is why the human checkpoint is structural rather than provisional.
 
 ## What I took from it
 
