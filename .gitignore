@@ -38,3 +38,4 @@ credentials.json
 *.mov
 
 **/*.quarto_ipynb
+Untitled-*.ipynb
