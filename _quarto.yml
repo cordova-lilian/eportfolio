@@ -31,6 +31,8 @@ website:
             text: "Financial Sentiment Analysis"
           - href: projects/list/fraud_detection.qmd
             text: "Fraud Detection"
+          - href: projects/list/ai_content_pipeline.qmd
+            text: "AI Content Production Pipeline"
       - href: reflection.qmd
         text: Reflection
         icon: journal-text

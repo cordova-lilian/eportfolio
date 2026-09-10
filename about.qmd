@@ -43,7 +43,7 @@ My MSc programme at **Dublin City University** centres on applying analytics dir
 - **Machine Learning for Business** — supervised and unsupervised methods with applied case studies
 - **Strategic AI Integration** — how organisations deploy AI effectively within existing operations
 
-**Applied research:** I developed an LLM-enabled content production pipeline to optimise workflow efficiency for Kilkenny Design — a project that combined my interest in language models with the operational challenges of a real business.
+**Applied research:** I developed an [LLM-enabled content production pipeline](projects/list/ai_content_pipeline.qmd) to optimise workflow efficiency for a retail client — a project that combined my interest in language models with the operational challenges of a real business. 
 
 ## Professional Background
 
