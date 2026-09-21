@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-10">
-<meta name="description" content="A systematic review of 45 studies, seven stakeholder interviews, and a working eight-stage pipeline that takes a marketing brief through to human sign-off.">
+<meta name="dcterms.date" content="2026-09-19">
+<meta name="description" content="A working eight-stage pipeline that takes a marketing brief through to human sign-off, grounded in a systematic review of 45 studies and seven stakeholder interviews.">
 
 <title>AI-Enabled Content Production Pipeline</title>
 <style>
@@ -111,11 +111,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
+<meta property="og:title" content="AI-Enabled Content Production Pipeline">
+<meta property="og:description" content="A working eight-stage pipeline that takes a marketing brief through to human sign-off, grounded in a systematic review of 45 studies and seven stakeholder interviews.">
+<meta property="og:image" content="https://cordova-lilian.github.io/eportfolio/projects/list/pipeline-thumb.png">
+<meta property="og:image:height" content="1392">
+<meta property="og:image:width" content="2472">
+<meta name="twitter:title" content="AI-Enabled Content Production Pipeline">
+<meta name="twitter:description" content="A working eight-stage pipeline that takes a marketing brief through to human sign-off, grounded in a systematic review of 45 studies and seven stakeholder interviews.">
+<meta name="twitter:image" content="https://cordova-lilian.github.io/eportfolio/projects/list/pipeline-thumb.png">
+<meta name="twitter:image-height" content="1392">
+<meta name="twitter:image-width" content="2472">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -378,17 +386,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The problem</a></li>
-  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a></li>
-  <li><a href="#the-literature-review" id="toc-the-literature-review" class="nav-link" data-scroll-target="#the-literature-review">The literature review</a></li>
-  <li><a href="#what-the-evidence-told-us" id="toc-what-the-evidence-told-us" class="nav-link" data-scroll-target="#what-the-evidence-told-us">What the evidence told us</a></li>
-  <li><a href="#the-architecture-decision" id="toc-the-architecture-decision" class="nav-link" data-scroll-target="#the-architecture-decision">The architecture decision</a></li>
   <li><a href="#what-we-built" id="toc-what-we-built" class="nav-link" data-scroll-target="#what-we-built">What we built</a>
   <ul class="collapse">
   <li><a href="#the-brand-check" id="toc-the-brand-check" class="nav-link" data-scroll-target="#the-brand-check">The brand check</a></li>
   </ul></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#why-this-option" id="toc-why-this-option" class="nav-link" data-scroll-target="#why-this-option">Why this option</a></li>
+  <li><a href="#how-we-knew-what-to-build" id="toc-how-we-knew-what-to-build" class="nav-link" data-scroll-target="#how-we-knew-what-to-build">How we knew what to build</a>
+  <ul class="collapse">
+  <li><a href="#the-literature-review" id="toc-the-literature-review" class="nav-link" data-scroll-target="#the-literature-review">The literature review</a></li>
+  <li><a href="#what-the-evidence-told-us" id="toc-what-the-evidence-told-us" class="nav-link" data-scroll-target="#what-the-evidence-told-us">What the evidence told us</a></li>
+  </ul></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
-  <li><a href="#what-i-took-from-it" id="toc-what-i-took-from-it" class="nav-link" data-scroll-target="#what-i-took-from-it">What I took from it</a></li>
   </ul>
 </nav>
     </div>
@@ -412,7 +421,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    A systematic review of 45 studies, seven stakeholder interviews, and a working eight-stage pipeline that takes a marketing brief through to human sign-off.
+    A working eight-stage pipeline that takes a marketing brief through to human sign-off, grounded in a systematic review of 45 studies and seven stakeholder interviews.
   </div>
 </div>
 
@@ -423,7 +432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2026</p>
+      <p class="date">September 19, 2026</p>
     </div>
   </div>
   
@@ -437,7 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
-<p>An Irish design and retail brand — sixteen stores, sixty years old — had committed to a content strategy its production capacity could not sustain. Video was needed across more than eighteen digital touchpoints, each with its own format specification, and all of it was produced manually by a single in-house designer.</p>
+<p>An Irish design and retail brand - sixteen stores, sixty years old — had committed to a content strategy its production capacity could not sustain. Video was needed across more than eighteen digital touchpoints, each with its own format specification, and all of it was produced manually by a single in-house designer.</p>
 <p>Fifteen to sixteen hours went into one video. Then that video had to be adapted, by hand, for every touchpoint it appeared on.</p>
 <p>The question was not whether AI could generate video. It was whether AI could take the repetitive work without putting a brand built over six decades at risk.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -453,130 +462,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Six-person consultancy team. I owned the <strong>systematic literature review</strong> and the <strong>synthesis of combined research findings</strong> — the two chapters connecting published evidence to the design decisions in the build.</p>
 </div>
 </div>
-</section>
-<section id="approach" class="level2">
-<h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<p>The project followed <strong>Design Science Research</strong> (Hevner et al., 2004), which suits work whose output is a built artefact rather than an explanation. Four evidence streams fed the design:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 71%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Stream</th>
-<th>What it established</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Systematic literature review — 45 studies</td>
-<td>What these architectures can reliably do today</td>
-</tr>
-<tr class="even">
-<td>Semi-structured interviews — 7 participants</td>
-<td>What stakeholders actually needed</td>
-</tr>
-<tr class="odd">
-<td>Process mapping (BPMN 2.0) — 9 stages</td>
-<td>Where the time is lost in the current workflow</td>
-</tr>
-<tr class="even">
-<td>Requirements traceability matrix</td>
-<td>Which feature satisfies which requirement</td>
-</tr>
-</tbody>
-</table>
-<p>Eight design decisions were documented, each cross-checked against the streams before it entered the build. Six of the eight were supported by all three evidence sources.</p>
-</section>
-<section id="the-literature-review" class="level2">
-<h2 class="anchored" data-anchor-id="the-literature-review">The literature review</h2>
-<p>I ran the review following <strong>Okoli’s eight-step procedure</strong>, with <strong>PRISMA 2020</strong> governing the search and screening and <strong>systematic mapping</strong> (Petersen et al., 2008) as the synthesis method.</p>
-<p>The search combined two keyword clusters — one for architectures (RAG, LLMs, transformer models, diffusion), one for the content-creation task (text-to-video, automated editing) — requiring a match from each, so a transformer paper with no content application would not return.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A["1,799 records&lt;br/&gt;identified"] --&gt; B["159 full texts&lt;br/&gt;sought"]
-    B --&gt; C["154 assessed&lt;br/&gt;against 3 criteria"]
-    C --&gt; D["45 studies&lt;br/&gt;included"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>Three eligibility criteria had to pass: a technically grounded architecture described in detail, video or multimodal output demonstrated experimentally, and evidence of real-world applicability. Every exclusion was recorded against the criterion it failed, so the selection is transparent and repeatable.</p>
-<p>Each included study was then characterised against six predefined attributes using a shared codebook, producing the taxonomy the design decisions were drawn from.</p>
-</section>
-<section id="what-the-evidence-told-us" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-evidence-told-us">What the evidence told us</h2>
-<p><strong>Resizing was the biggest drain on capacity.</strong> Two to four hours per asset, repeated across eighteen-plus formats. Named as the dominant bottleneck by the client’s own staff, and independently by a marketing professional in an unrelated sector.</p>
-<p><strong>The bottleneck was approval, not generation.</strong> Twenty-four hours went into QA and sign-off, with no tooling supporting it at all. Three interviewees independently reframed the problem this way.</p>
-<p><strong>The technology is solved; the governance is not.</strong> Across the 45 studies, generating video works — that question is settled. Keeping a human meaningfully in control appeared in only ten of them, almost always as a secondary concern. Every person interviewed called human approval non-negotiable.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>The conclusion the project turned on
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Generating content was never the hard part. Keeping it on brand is — and that is where the human stays.</p>
-</div>
-</div>
-</section>
-<section id="the-architecture-decision" class="level2">
-<h2 class="anchored" data-anchor-id="the-architecture-decision">The architecture decision</h2>
-<p>Three build options were evaluated against cost, speed and maintainability.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Option A — Hybrid API</th>
-<th>Option B — Standalone tool</th>
-<th><strong>Option C — Assisted pipeline</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Automation</td>
-<td>Highest</td>
-<td>Generation only</td>
-<td>High</td>
-</tr>
-<tr class="even">
-<td>Build time</td>
-<td>15–20 days</td>
-<td>4–6 days</td>
-<td><strong>10–15 days</strong></td>
-</tr>
-<tr class="odd">
-<td>IT burden</td>
-<td>Highest — GPU infrastructure</td>
-<td>Low</td>
-<td><strong>Low to medium</strong></td>
-</tr>
-<tr class="even">
-<td>Bottlenecks resolved</td>
-<td>4</td>
-<td>1</td>
-<td><strong>4</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Option A had the strongest brand conditioning but required GPU infrastructure the client’s IT team would have to maintain — directly against their stated goal of reducing IT workload. Option B was fastest to deploy but left resizing, the largest single time cost, completely unaddressed.</p>
-<p>Option C was selected: it resolves all four confirmed bottlenecks at the lowest maintenance burden, and fits the client’s existing cloud environment.</p>
 </section>
 <section id="what-we-built" class="level2">
 <h2 class="anchored" data-anchor-id="what-we-built">What we built</h2>
@@ -632,7 +517,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+<div id="fig-briefparser" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Brief parser screen showing a structured JSON breakdown of a campaign brief alongside the brand rules retrieved for that campaign.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-briefparser-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="brief-parser.png" class="img-fluid figure-img" alt="Brief parser screen showing a structured JSON breakdown of a campaign brief alongside the brand rules retrieved for that campaign.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-briefparser-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Before anything is generated, a freeform brief is turned into structured fields (left) and matched against the brand guidance relevant to that specific campaign (right). Splitting brief parsing from brand retrieval, rather than folding both into one step, meant each could be tested and corrected on its own.
+</figcaption>
+</figure>
+</div>
 <p>Stages 3 to 5 are grouped because they run inside a commercial tool with no public API. Generation is triggered manually and the completed file is picked up by a folder watcher — which is also why regeneration is expensive, and therefore why the human checkpoint sits at stage 2, before any generation cost is incurred.</p>
+<div id="fig-resize" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Resize and overlay screen showing format selection, logo placement options, and a confirmation that output files were created.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-resize-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="resize-overlay.png" class="img-fluid figure-img" alt="Resize and overlay screen showing format selection, logo placement options, and a confirmation that output files were created.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resize-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Once an asset clears the human checkpoint, this stage produces the actual platform formats a brief asked for: cropping, resizing, and compositing the brand logo onto each output. It’s deterministic image and video processing, not generative, and it’s the stage that broke least often during testing.
+</figcaption>
+</figure>
+</div>
 <p>Every stage writes its own duration to a local database, so the evaluation data came out of the pipeline itself rather than from separate timing.</p>
 <section id="the-brand-check" class="level3">
 <h3 class="anchored" data-anchor-id="the-brand-check">The brand check</h3>
@@ -644,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">'text generated directly into the footage is a defect, not a pass. If '</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">'unwanted_text_detected is true, overall_pass must be false and this must '</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">'appear in issues_found.'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>A second grounding problem: the checker was returning “fail” for a missing logo on formats where no logo had been applied. The fix was to tell the model what the pipeline had actually done, rather than let it infer from pixels:</p>
+<p>A second grounding problem: the checker returned “fail” for a missing logo on formats where no logo had been applied. The fix was to tell the model what the pipeline had actually done, rather than let it infer from pixels:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _logo_context_line(logo_info, subject<span class="op">=</span><span class="st">'image'</span>):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Tell the model whether a logo was already composited by Stage 6,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">    and where. Without this it guesses from pixels whether a logo is</span></span>
@@ -657,11 +562,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                <span class="st">'exist at all.'</span>)</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="ss">f'No logo was composited onto this </span><span class="sc">{</span>subject<span class="sc">}</span><span class="ss"> for this delivery, so '</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">'logo-related fields should reflect that no logo is expected here.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-signoff" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Sign-off review screen showing a generated video thumbnail with approve and reject buttons, and a count of approved, rejected, and pending assets.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-signoff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sign-off-review.png" class="img-fluid figure-img" alt="Sign-off review screen showing a generated video thumbnail with approve and reject buttons, and a count of approved, rejected, and pending assets.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-signoff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Every generated asset stops here before it goes anywhere. The reviewer sees the finished output, not the prompt or the brief, and makes a binary call to approve or reject it. Moving the person to the end of the pipeline, checking outcomes rather than producing drafts by hand, is what let this stay a one- or two-person review step even as output volume increased.
+</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>A single end-to-end session, measured by the pipeline’s own timing:</p>
+<p>A single end-to-end session, measured by the pipeline’s own timing. Generation was the most variable stage: this run took 8m 45s, against a development-wide average of roughly 5 minutes.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -692,7 +607,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Generation dominates; everything the team built around it runs in seconds. That distribution is the finding in miniature — the model is not the slow part.</p>
+<div id="fig-analytics" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Analytics dashboard showing 64 total sessions, 124 assets, a 42.9% QA pass rate, 65 approved assets, and average time per pipeline stage.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-analytics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="analytics-dashboard.png" class="img-fluid figure-img" alt="Analytics dashboard showing 64 total sessions, 124 assets, a 42.9% QA pass rate, 65 approved assets, and average time per pipeline stage.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-analytics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: The pipeline logs its own performance on every run. Across 64 development sessions, generation is consistently the most variable stage and automated QA the most consistent, in line with the single run reported above.
+</figcaption>
+</figure>
+</div>
+<p>Generation dominates; everything built around it runs in seconds. That distribution is the finding in miniature — the model is not the slow part.</p>
 <p>Against the manual baseline:</p>
 <table class="caption-top table">
 <thead>
@@ -724,6 +649,125 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>“The quality looks really good — very, very strong compared to other apps I’ve used.”</p>
 <p>— Content Manager, client side</p>
 </blockquote>
+</section>
+<section id="why-this-option" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-option">Why this option</h2>
+<p>Three build options were evaluated against cost, speed and maintainability.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Option A — Hybrid API</th>
+<th>Option B — Standalone tool</th>
+<th><strong>Option C — Assisted pipeline</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Automation</td>
+<td>Highest</td>
+<td>Generation only</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Build time</td>
+<td>15–20 days</td>
+<td>4–6 days</td>
+<td><strong>10–15 days</strong></td>
+</tr>
+<tr class="odd">
+<td>IT burden</td>
+<td>Highest — GPU infrastructure</td>
+<td>Low</td>
+<td><strong>Low to medium</strong></td>
+</tr>
+<tr class="even">
+<td>Bottlenecks resolved</td>
+<td>4</td>
+<td>1</td>
+<td><strong>4</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Option A had the strongest brand conditioning but required GPU infrastructure the client’s IT team would have to maintain — directly against their stated goal of reducing IT workload. Option B was fastest to deploy but left resizing, the largest single time cost, completely unaddressed.</p>
+<p>Option C was selected: it resolves all four confirmed bottlenecks at the lowest maintenance burden, and fits the client’s existing cloud environment.</p>
+</section>
+<section id="how-we-knew-what-to-build" class="level2">
+<h2 class="anchored" data-anchor-id="how-we-knew-what-to-build">How we knew what to build</h2>
+<p>None of the design above was a preference. The project followed <strong>Design Science Research</strong> (Hevner et al., 2004), which suits work whose output is a built artefact rather than an explanation, and four evidence streams fed every decision in it:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 71%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stream</th>
+<th>What it established</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Systematic literature review — 45 studies</td>
+<td>What these architectures can reliably do today</td>
+</tr>
+<tr class="even">
+<td>Semi-structured interviews — 7 participants</td>
+<td>What stakeholders actually needed</td>
+</tr>
+<tr class="odd">
+<td>Process mapping (BPMN 2.0) — 9 stages</td>
+<td>Where the time is lost in the current workflow</td>
+</tr>
+<tr class="even">
+<td>Requirements traceability matrix</td>
+<td>Which feature satisfies which requirement</td>
+</tr>
+</tbody>
+</table>
+<p>Eight design decisions were documented, each cross-checked against the streams before it entered the build. Six of the eight were supported by all three evidence sources.</p>
+<section id="the-literature-review" class="level3">
+<h3 class="anchored" data-anchor-id="the-literature-review">The literature review</h3>
+<p>I ran the review following <strong>Okoli’s eight-step procedure</strong>, with <strong>PRISMA 2020</strong> governing the search and screening and <strong>systematic mapping</strong> (Petersen et al., 2008) as the synthesis method.</p>
+<p>The search combined two keyword clusters — one for architectures (RAG, LLMs, transformer models, diffusion), one for the content-creation task (text-to-video, automated editing) — requiring a match from each, so a transformer paper with no content application would not return.</p>
+<div id="fig-prisma" class="quarto-float quarto-figure quarto-figure-center anchored" alt="PRISMA-style flow diagram showing the study selection process from 1,799 records to 45 included studies, with exclusion counts and reasons at each stage.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-prisma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="prisma-flow.svg" class="img-fluid figure-img" alt="PRISMA-style flow diagram showing the study selection process from 1,799 records to 45 included studies, with exclusion counts and reasons at each stage.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prisma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Study selection flow: 1,799 records identified and screened, narrowing through 159 full texts sought and 154 assessed against three criteria, to 45 studies included. 109 excluded at eligibility break down as 31 for insufficient architectural detail, 69 for no video or multimodal output, and 90 for no real-world validation, reasons overlap, which is why they sum to more than 109.
+</figcaption>
+</figure>
+</div>
+<p>Three eligibility criteria had to pass: a technically grounded architecture described in detail, video or multimodal output demonstrated experimentally, and evidence of real-world applicability. Every exclusion was recorded against the criterion it failed, so the selection is transparent and repeatable.</p>
+<p>Each included study was then characterised against six predefined attributes using a shared codebook, producing the taxonomy the design decisions were drawn from.</p>
+</section>
+<section id="what-the-evidence-told-us" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-evidence-told-us">What the evidence told us</h3>
+<p><strong>Resizing was the biggest drain on capacity.</strong> Two to four hours per asset, repeated across eighteen-plus formats. Named as the dominant bottleneck by the client’s own staff, and independently by a marketing professional in an unrelated sector.</p>
+<p><strong>The bottleneck was approval, not generation.</strong> Twenty-four hours went into QA and sign-off, with no tooling supporting it at all. Three interviewees independently reframed the problem this way.</p>
+<p><strong>The technology is solved; the governance is not.</strong> Across the 45 studies, generating video works — that question is settled. Keeping a human meaningfully in control appeared in only ten of them, almost always as a secondary concern. Every person interviewed called human approval non-negotiable.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The conclusion the project turned on
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Generating content was never the hard part. Keeping it on brand is — and that is where the human stays.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="limitations" class="level2">
 <h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
@@ -763,12 +807,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>The automated brand check passed a minority of outputs on first attempt. Over half of those failures traced to a single cause — text already present in the source product photography rather than generated by the model. That is a finding, not a failure: it locates where the automation boundary sits, and it is why the human checkpoint is structural rather than provisional.</p>
-</section>
-<section id="what-i-took-from-it" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-took-from-it">What I took from it</h2>
-<p><strong>Scoping a claim is as important as making it.</strong> Early drafts of the review said “no study has measured AI against a manual baseline.” One reviewed paper does exactly that, in a film production context. The defensible claim was narrower: no <em>included</em> study measured it against a documented manual baseline <em>in a retail content production context</em>. Learning to write claims that survive scrutiny changed how I write generally.</p>
-<p><strong>Arithmetic has to reconcile.</strong> Our exclusion counts summed to more than the number of papers excluded, because a paper could fail more than one criterion. Obvious once stated — but if a reader finds it before you explain it, every other number becomes suspect.</p>
-<p><strong>Evidence and design are separate arguments.</strong> A literature review that does not visibly change what gets built is decoration. The value came from the traceability: eight decisions, each with the finding that required it.</p>
 
 
 </section>

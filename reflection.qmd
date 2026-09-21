@@ -8,7 +8,7 @@ date: last-modified
 
 Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.
 
-From the beginning, my goal was clear — to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics.
+From the beginning, my goal was clear - to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics.
 
 ## What I set out to do
 
@@ -48,7 +48,7 @@ Certain obstacles during the project turned into some of the most valuable learn
 **3. Build cache.** Sometimes, changes were not reflected because the program was serving an 'old copy' from its cache. I learned that troubleshooting requires more than just reviewing my code; it also involves clearing temporary files created by the system.
 :::
 
-These three issues — **YAML syntax, file permissions, and caching** — They represent the type of operational knowledge that is covered in introductory courses, but it is in professional practice where we really learned.
+These three issues - **YAML syntax, file permissions, and caching** - They represent the type of operational knowledge that is covered in introductory courses, but it is in professional practice where we really learned.
 
 ## What I would refine
 
@@ -56,12 +56,12 @@ Looking back, there are aspects of my workflow I would approach differently in f
 
 ## Why this matters for what comes next
 
-The primary motivation for building this portfolio was to create a space where I can demonstrate my technical reasoning rather than simply list skills on a CV. As I apply for roles in **Business Intelligence** and **Data Analysis** in Dublin, having a live portfolio where recruiters can examine my approach — for instance, in the comparison of **BERT, FinBERT, and LLaMA 3.2** for financial sentiment analysis — offers concrete evidence of my capabilities.
+The primary motivation for building this portfolio was to create a space where I can demonstrate my technical reasoning rather than simply list skills on a CV. As I apply for roles in **Business Intelligence** and **Data Analysis** in Dublin, having a live portfolio where recruiters can examine my approach - for instance, in the comparison of **BERT, FinBERT, and LLaMA 3.2** for financial sentiment analysis - offers concrete evidence of my capabilities.
 
 More broadly, the skills developed here extend beyond this assignment. 
 
 ## Final reflection
 
 ::: {.callout-note icon=false}
-This project has strengthened both my technical confidence and my understanding of what it means to present work professionally. Each technical challenge — whether in configuration, deployment, or design — contributed to a broader understanding of how systems are built and maintained in practice. Beyond the specific tools, I developed a clearer sense of how to plan, execute, and refine a project from concept to public deliverable. This is a foundation I intend to build on throughout my career in Business Analytics.
+This project has strengthened both my technical confidence and my understanding of what it means to present work professionally. Each technical challenge - whether in configuration, deployment, or design - contributed to a broader understanding of how systems are built and maintained in practice. Beyond the specific tools, I developed a clearer sense of how to plan, execute, and refine a project from concept to public deliverable. This is a foundation I intend to build on throughout my career in Business Analytics.
 :::

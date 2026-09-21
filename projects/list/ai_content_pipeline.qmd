@@ -1,7 +1,7 @@
 ---
 title: "AI-Enabled Content Production Pipeline"
 subtitle: "Design Science Research with an Irish retail client"
-description: "A systematic review of 45 studies, seven stakeholder interviews, and a working eight-stage pipeline that takes a marketing brief through to human sign-off."
+description: "A working eight-stage pipeline that takes a marketing brief through to human sign-off, grounded in a systematic review of 45 studies and seven stakeholder interviews."
 date: last-modified
 categories: [Generative AI, LLMs, RAG, Design Science Research, Systematic Review, Consulting]
 image: pipeline-thumb.png
@@ -9,7 +9,7 @@ image: pipeline-thumb.png
 
 ## The problem
 
-An Irish design and retail brand — sixteen stores, sixty years old — had committed to a content strategy its production capacity could not sustain. Video was needed across more than eighteen digital touchpoints, each with its own format specification, and all of it was produced manually by a single in-house designer.
+An Irish design and retail brand - sixteen stores, sixty years old — had committed to a content strategy its production capacity could not sustain. Video was needed across more than eighteen digital touchpoints, each with its own format specification, and all of it was produced manually by a single in-house designer.
 
 Fifteen to sixteen hours went into one video. Then that video had to be adapted, by hand, for every touchpoint it appeared on.
 
@@ -19,64 +19,6 @@ The question was not whether AI could generate video. It was whether AI could ta
 ## My role
 Six-person consultancy team. I owned the **systematic literature review** and the **synthesis of combined research findings** — the two chapters connecting published evidence to the design decisions in the build.
 :::
-
-## Approach
-
-The project followed **Design Science Research** (Hevner et al., 2004), which suits work whose output is a built artefact rather than an explanation. Four evidence streams fed the design:
-
-| Stream | What it established |
-|--------|--------------------|
-| Systematic literature review — 45 studies | What these architectures can reliably do today |
-| Semi-structured interviews — 7 participants | What stakeholders actually needed |
-| Process mapping (BPMN 2.0) — 9 stages | Where the time is lost in the current workflow |
-| Requirements traceability matrix | Which feature satisfies which requirement |
-
-Eight design decisions were documented, each cross-checked against the streams before it entered the build. Six of the eight were supported by all three evidence sources.
-
-## The literature review
-
-I ran the review following **Okoli's eight-step procedure**, with **PRISMA 2020** governing the search and screening and **systematic mapping** (Petersen et al., 2008) as the synthesis method.
-
-The search combined two keyword clusters — one for architectures (RAG, LLMs, transformer models, diffusion), one for the content-creation task (text-to-video, automated editing) — requiring a match from each, so a transformer paper with no content application would not return.
-
-```{mermaid}
-flowchart LR
-    A["1,799 records<br/>identified"] --> B["159 full texts<br/>sought"]
-    B --> C["154 assessed<br/>against 3 criteria"]
-    C --> D["45 studies<br/>included"]
-```
-
-Three eligibility criteria had to pass: a technically grounded architecture described in detail, video or multimodal output demonstrated experimentally, and evidence of real-world applicability. Every exclusion was recorded against the criterion it failed, so the selection is transparent and repeatable.
-
-Each included study was then characterised against six predefined attributes using a shared codebook, producing the taxonomy the design decisions were drawn from.
-
-## What the evidence told us
-
-**Resizing was the biggest drain on capacity.** Two to four hours per asset, repeated across eighteen-plus formats. Named as the dominant bottleneck by the client's own staff, and independently by a marketing professional in an unrelated sector.
-
-**The bottleneck was approval, not generation.** Twenty-four hours went into QA and sign-off, with no tooling supporting it at all. Three interviewees independently reframed the problem this way.
-
-**The technology is solved; the governance is not.** Across the 45 studies, generating video works — that question is settled. Keeping a human meaningfully in control appeared in only ten of them, almost always as a secondary concern. Every person interviewed called human approval non-negotiable.
-
-::: {.callout-tip}
-## The conclusion the project turned on
-Generating content was never the hard part. Keeping it on brand is — and that is where the human stays.
-:::
-
-## The architecture decision
-
-Three build options were evaluated against cost, speed and maintainability.
-
-| | Option A — Hybrid API | Option B — Standalone tool | **Option C — Assisted pipeline** |
-|---|---|---|---|
-| Automation | Highest | Generation only | High |
-| Build time | 15–20 days | 4–6 days | **10–15 days** |
-| IT burden | Highest — GPU infrastructure | Low | **Low to medium** |
-| Bottlenecks resolved | 4 | 1 | **4** |
-
-Option A had the strongest brand conditioning but required GPU infrastructure the client's IT team would have to maintain — directly against their stated goal of reducing IT workload. Option B was fastest to deploy but left resizing, the largest single time cost, completely unaddressed.
-
-Option C was selected: it resolves all four confirmed bottlenecks at the lowest maintenance burden, and fits the client's existing cloud environment.
 
 ## What we built
 
@@ -92,7 +34,12 @@ An eight-stage pipeline, with a person retained at two checkpoints by design rat
 | 7 | Automated brand check — colour compliance, logo placement, unwanted text | OpenCV, Gemini |
 | 8 | **Human sign-off** — nothing publishes unreviewed | Streamlit, SQLite |
 
+![Before anything is generated, a freeform brief is turned into structured fields (left) and matched against the brand guidance relevant to that specific campaign (right). Splitting brief parsing from brand retrieval, rather than folding both into one step, meant each could be tested and corrected on its own.](brief-parser.png){#fig-briefparser fig-alt="Brief parser screen showing a structured JSON breakdown of a campaign brief alongside the brand rules retrieved for that campaign."}
+
+
 Stages 3 to 5 are grouped because they run inside a commercial tool with no public API. Generation is triggered manually and the completed file is picked up by a folder watcher — which is also why regeneration is expensive, and therefore why the human checkpoint sits at stage 2, before any generation cost is incurred.
+
+![Once an asset clears the human checkpoint, this stage produces the actual platform formats a brief asked for: cropping, resizing, and compositing the brand logo onto each output. It's deterministic image and video processing, not generative, and it's the stage that broke least often during testing.](resize-overlay.png){#fig-resize fig-alt="Resize and overlay screen showing format selection, logo placement options, and a confirmation that output files were created."}
 
 Every stage writes its own duration to a local database, so the evaluation data came out of the pipeline itself rather than from separate timing.
 
@@ -111,7 +58,7 @@ A model asked simply "does this look on brand?" will pass legible, well-placed t
 'appear in issues_found.'
 ```
 
-A second grounding problem: the checker was returning "fail" for a missing logo on formats where no logo had been applied. The fix was to tell the model what the pipeline had actually done, rather than let it infer from pixels:
+A second grounding problem: the checker returned "fail" for a missing logo on formats where no logo had been applied. The fix was to tell the model what the pipeline had actually done, rather than let it infer from pixels:
 
 ```python
 def _logo_context_line(logo_info, subject='image'):
@@ -128,9 +75,11 @@ def _logo_context_line(logo_info, subject='image'):
             'logo-related fields should reflect that no logo is expected here.')
 ```
 
+![Every generated asset stops here before it goes anywhere. The reviewer sees the finished output, not the prompt or the brief, and makes a binary call to approve or reject it. Moving the person to the end of the pipeline, checking outcomes rather than producing drafts by hand, is what let this stay a one- or two-person review step even as output volume increased.](sign-off-review.png){#fig-signoff fig-alt="Sign-off review screen showing a generated video thumbnail with approve and reject buttons, and a count of approved, rejected, and pending assets."}
+
 ## Results
 
-A single end-to-end session, measured by the pipeline's own timing:
+A single end-to-end session, measured by the pipeline's own timing. Generation was the most variable stage: this run took 8m 45s, against a development-wide average of roughly 5 minutes.
 
 | Stage | Duration |
 |-------|----------|
@@ -140,7 +89,9 @@ A single end-to-end session, measured by the pipeline's own timing:
 | Automated brand QA | 15.5s |
 | **Total** | **9m 39s** |
 
-Generation dominates; everything the team built around it runs in seconds. That distribution is the finding in miniature — the model is not the slow part.
+![The pipeline logs its own performance on every run. Across 64 development sessions, generation is consistently the most variable stage and automated QA the most consistent, in line with the single run reported above.](analytics-dashboard.png){#fig-analytics fig-alt="Analytics dashboard showing 64 total sessions, 124 assets, a 42.9% QA pass rate, 65 approved assets, and average time per pipeline stage."}
+
+Generation dominates; everything built around it runs in seconds. That distribution is the finding in miniature — the model is not the slow part.
 
 Against the manual baseline:
 
@@ -153,6 +104,59 @@ Against the manual baseline:
 > "The quality looks really good — very, very strong compared to other apps I've used."
 >
 > — Content Manager, client side
+
+## Why this option
+
+Three build options were evaluated against cost, speed and maintainability.
+
+| | Option A — Hybrid API | Option B — Standalone tool | **Option C — Assisted pipeline** |
+|---|---|---|---|
+| Automation | Highest | Generation only | High |
+| Build time | 15–20 days | 4–6 days | **10–15 days** |
+| IT burden | Highest — GPU infrastructure | Low | **Low to medium** |
+| Bottlenecks resolved | 4 | 1 | **4** |
+
+Option A had the strongest brand conditioning but required GPU infrastructure the client's IT team would have to maintain — directly against their stated goal of reducing IT workload. Option B was fastest to deploy but left resizing, the largest single time cost, completely unaddressed.
+
+Option C was selected: it resolves all four confirmed bottlenecks at the lowest maintenance burden, and fits the client's existing cloud environment.
+
+## How we knew what to build
+
+None of the design above was a preference. The project followed **Design Science Research** (Hevner et al., 2004), which suits work whose output is a built artefact rather than an explanation, and four evidence streams fed every decision in it:
+
+| Stream | What it established |
+|--------|--------------------|
+| Systematic literature review — 45 studies | What these architectures can reliably do today |
+| Semi-structured interviews — 7 participants | What stakeholders actually needed |
+| Process mapping (BPMN 2.0) — 9 stages | Where the time is lost in the current workflow |
+| Requirements traceability matrix | Which feature satisfies which requirement |
+
+Eight design decisions were documented, each cross-checked against the streams before it entered the build. Six of the eight were supported by all three evidence sources.
+
+### The literature review
+
+I ran the review following **Okoli's eight-step procedure**, with **PRISMA 2020** governing the search and screening and **systematic mapping** (Petersen et al., 2008) as the synthesis method.
+
+The search combined two keyword clusters — one for architectures (RAG, LLMs, transformer models, diffusion), one for the content-creation task (text-to-video, automated editing) — requiring a match from each, so a transformer paper with no content application would not return.
+
+![Study selection flow: 1,799 records identified and screened, narrowing through 159 full texts sought and 154 assessed against three criteria, to 45 studies included. 109 excluded at eligibility break down as 31 for insufficient architectural detail, 69 for no video or multimodal output, and 90 for no real-world validation, reasons overlap, which is why they sum to more than 109.](prisma-flow.svg){#fig-prisma fig-alt="PRISMA-style flow diagram showing the study selection process from 1,799 records to 45 included studies, with exclusion counts and reasons at each stage."}
+
+Three eligibility criteria had to pass: a technically grounded architecture described in detail, video or multimodal output demonstrated experimentally, and evidence of real-world applicability. Every exclusion was recorded against the criterion it failed, so the selection is transparent and repeatable.
+
+Each included study was then characterised against six predefined attributes using a shared codebook, producing the taxonomy the design decisions were drawn from.
+
+### What the evidence told us
+
+**Resizing was the biggest drain on capacity.** Two to four hours per asset, repeated across eighteen-plus formats. Named as the dominant bottleneck by the client's own staff, and independently by a marketing professional in an unrelated sector.
+
+**The bottleneck was approval, not generation.** Twenty-four hours went into QA and sign-off, with no tooling supporting it at all. Three interviewees independently reframed the problem this way.
+
+**The technology is solved; the governance is not.** Across the 45 studies, generating video works — that question is settled. Keeping a human meaningfully in control appeared in only ten of them, almost always as a secondary concern. Every person interviewed called human approval non-negotiable.
+
+::: {.callout-tip}
+## The conclusion the project turned on
+Generating content was never the hard part. Keeping it on brand is — and that is where the human stays.
+:::
 
 ## Limitations
 
@@ -168,10 +172,3 @@ Named rather than hidden. Each has an owner and a route forward.
 
 The automated brand check passed a minority of outputs on first attempt. Over half of those failures traced to a single cause — text already present in the source product photography rather than generated by the model. That is a finding, not a failure: it locates where the automation boundary sits, and it is why the human checkpoint is structural rather than provisional.
 
-## What I took from it
-
-**Scoping a claim is as important as making it.** Early drafts of the review said "no study has measured AI against a manual baseline." One reviewed paper does exactly that, in a film production context. The defensible claim was narrower: no *included* study measured it against a documented manual baseline *in a retail content production context*. Learning to write claims that survive scrutiny changed how I write generally.
-
-**Arithmetic has to reconcile.** Our exclusion counts summed to more than the number of papers excluded, because a paper could fail more than one criterion. Obvious once stated — but if a reader finds it before you explain it, every other number becomes suspect.
-
-**Evidence and design are separate arguments.** A literature review that does not visibly change what gets built is decoration. The value came from the traceability: eight decisions, each with the finding that required it.

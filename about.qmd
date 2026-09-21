@@ -6,7 +6,7 @@ date: last-modified
 
 ## Who I Am
 
-I am a results-oriented Master's student in Ireland specialising in **Business Analytics and AI-driven business solutions**. My work sits at the intersection of international trade and advanced analytics — translating complex data into strategic insights that inform real decisions.
+I am a results-oriented Master's student in Ireland specialising in **Business Analytics and AI-driven business solutions**. My work sits at the intersection of international trade and advanced analytics - translating complex data into strategic insights that inform real decisions.
 
 My professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.
 
@@ -17,8 +17,9 @@ I am currently refining my technical proficiency in Python, SQL, and Business In
 - **Current programme:** MSc Business Analytics, **Dublin City University** (Expected 2026)
 - **Prior education:** BSc in International Trade and Business, Universidad de Sonora (Mexico)
 - **Target roles:** Business Intelligence, Data Analysis, NLP Applications
-- **Languages:** English (Advanced/C1 — IELTS Band 7), Spanish (Native)
+- **Languages:** English (Advanced/C1 - IELTS Band 7), Spanish (Native)
 - **Based in:** Dublin, Ireland
+- **LinkedIn:** [lilian-cordova-hernandez](https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232)
 :::
 
 ## What I Do
@@ -32,7 +33,6 @@ I apply data science techniques — particularly **Natural Language Processing (
 | **Programming** | Python (Scikit-learn, Pandas, NLTK), SQL |
 | **Machine Learning** | Random Forest, Gradient Boosting, Sentiment Analysis, TF-IDF Vectorisation |
 | **Business Intelligence** | Advanced Microsoft Excel (KPI tracking, reporting tools), Power BI, Tableau |
-| **Logistics & Strategy** | Materials Requirement Planning (MRP), VRIO Analysis, Cross-docking, Supply Chain Digitalisation |
 | **Web & Publishing** | Quarto, HTML/CSS, Git, GitHub Pages |
 
 ## Academic Focus
@@ -102,6 +102,14 @@ In addition to my formal programme at DCU, I have completed a structured set of 
 ### Language Certifications
 
 - **IELTS Academic** — Band 7 (Advanced / C1 English proficiency)
+
+## Outside of Work
+
+![Photo from the hike up Carrauntoohil, Ireland's highest peak.](carrauntoohil.jpg){width="35%" style="float:right; margin-left:1.5em; margin-bottom:0.5em; border-radius:6px;"} Most of my free time is spent hiking, and Carrauntoohil, Ireland's highest peak, is the climb that has stayed with me the most. I'm drawn to travel and the outdoors more broadly: I've cycled El Camino de la Muerte in Bolivia, spent time in the Andes, and stood on the salt flats of the Salar de Uyuni.
+
+I joined DCU's swimming club when I started the Masters, as a beginner rather than a competitor, and I've also taken ocean swimming lessons to keep learning. Running and yoga, the latter a practice I've maintained since I was 20, round out how I spend my time away from screens.
+
+<div style="clear: both;"></div>
 
 ## Interests
 

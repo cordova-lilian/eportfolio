@@ -8,6 +8,9 @@ website:
   favicon: images/favicon.svg
   site-url: "https://cordova-lilian.github.io/eportfolio"
   repo-url: "https://github.com/cordova-lilian/eportfolio"
+  image: images/preview.png
+  open-graph: true
+  twitter-card: true
 
   navbar:
     logo: images/logo.svg
