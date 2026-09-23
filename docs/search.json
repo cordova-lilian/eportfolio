@@ -4,14 +4,14 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "I am a results-oriented Master’s student in Ireland specialising in Business Analytics and AI-driven business solutions. My work sits at the intersection of international trade and advanced analytics - translating complex data into strategic insights that inform real decisions.\nMy professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.\nI am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University (Expected 2026)\nPrior education: BSc in International Trade and Business, Universidad de Sonora (Mexico)\nTarget roles: Business Intelligence, Data Analysis, NLP Applications\nLanguages: English (Advanced/C1 - IELTS Band 7), Spanish (Native)\nBased in: Dublin, Ireland\nLinkedIn: lilian-cordova-hernandez"
+    "text": "I am a results-oriented Business Analyst with an MSc in Business Analytics, based in Ireland and specialising in AI-driven business solutions.**. My work sits at the intersection of international trade and advanced analytics - translating complex data into strategic insights that inform real decisions.\nMy professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.\nI am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University (Expected 2026)\nPrior education: BSc in International Trade and Business, Universidad de Sonora (Mexico)\nTarget roles: Business Intelligence, Data Analysis, NLP Applications\nLanguages: English (Advanced/C1 - IELTS Band 7), Spanish (Native)\nBased in: Dublin, Ireland\nLinkedIn: lilian-cordova-hernandez"
   },
   {
     "objectID": "about.html#who-i-am",
     "href": "about.html#who-i-am",
     "title": "About Me",
     "section": "",
-    "text": "I am a results-oriented Master’s student in Ireland specialising in Business Analytics and AI-driven business solutions. My work sits at the intersection of international trade and advanced analytics - translating complex data into strategic insights that inform real decisions.\nMy professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.\nI am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University (Expected 2026)\nPrior education: BSc in International Trade and Business, Universidad de Sonora (Mexico)\nTarget roles: Business Intelligence, Data Analysis, NLP Applications\nLanguages: English (Advanced/C1 - IELTS Band 7), Spanish (Native)\nBased in: Dublin, Ireland\nLinkedIn: lilian-cordova-hernandez"
+    "text": "I am a results-oriented Business Analyst with an MSc in Business Analytics, based in Ireland and specialising in AI-driven business solutions.**. My work sits at the intersection of international trade and advanced analytics - translating complex data into strategic insights that inform real decisions.\nMy professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.\nI am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.\n\n\n\n\n\n\nNoteAt a glance\n\n\n\n\nCurrent programme: MSc Business Analytics, Dublin City University (Expected 2026)\nPrior education: BSc in International Trade and Business, Universidad de Sonora (Mexico)\nTarget roles: Business Intelligence, Data Analysis, NLP Applications\nLanguages: English (Advanced/C1 - IELTS Band 7), Spanish (Native)\nBased in: Dublin, Ireland\nLinkedIn: lilian-cordova-hernandez"
   },
   {
     "objectID": "about.html#what-i-do",
@@ -245,104 +245,6 @@
     "text": "Footnotes\n\n\nMalo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology.↩︎\nAraci, D. (2019). FinBERT: Financial sentiment analysis with pre-trained language models. arXiv preprint arXiv:1908.10063.↩︎"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAI-Enabled Content Production Pipeline\n\n\n\nGenerative AI\n\nLLMs\n\nRAG\n\nDesign Science Research\n\nSystematic Review\n\nConsulting\n\n\n\nA working eight-stage pipeline that takes a marketing brief through to human sign-off, grounded in a systematic review of 45 studies and seven stakeholder interviews.\n\n\n\n\n\n\nSep 19, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinancial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2\n\n\n\npython\n\nnlp\n\nmachine-learning\n\ntransformers\n\nsentiment-analysis\n\n\n\nBenchmarking three NLP architectures on sentence-level financial sentiment classification using the Financial PhraseBank dataset.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFraud Detection: A Statistical Exploration of Consumer Transaction Data\n\n\n\npython\n\nstatistics\n\neda\n\nmachine-learning\n\nfraud\n\n\n\nAn exploratory statistical analysis of 500 consumer banking transactions using descriptive statistics, correlation analysis, outlier detection, and classification modelling.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Contact & References",
-    "section": "",
-    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
-  },
-  {
-    "objectID": "contact.html#professional-references",
-    "href": "contact.html#professional-references",
-    "title": "Contact & References",
-    "section": "Professional References",
-    "text": "Professional References\nThe following individuals can speak to my work ethic, character, and professional abilities. Please contact me via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nWendy Lucio\n\n\n\n\n\n\nNoteAcademic Reference\n\n\n\nFocus areas: Credit Risk, Predictive Modelling & Scoring Organisation: Dublin City University — MSc Business Analytics Relationship: Classmate and current practicum teammate Contact: Available on request\nWendy and I are completing the MSc Business Analytics programme at DCU together and are currently collaborating on the same practicum team. She can speak to my technical contributions, my collaborative approach to teamwork, and the quality of my analytical work in academic and applied settings.\n\n\n\n\nMartina Keane\n\n\n\n\n\n\nNotePersonal Reference\n\n\n\nContact: Available on request\nMartina can speak to my reliability, responsibility, and personal character, based on our professional working relationship. She is able to provide a strong personal reference regarding my work ethic and conduct."
-  },
-  {
-    "objectID": "contact.html#a-note-on-privacy",
-    "href": "contact.html#a-note-on-privacy",
-    "title": "Contact & References",
-    "section": "A Note on Privacy",
-    "text": "A Note on Privacy\nFull contact details for references are provided on request rather than listed publicly, out of respect for their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
-  },
-  {
-    "objectID": "reflection.html",
-    "href": "reflection.html",
-    "title": "Reflection",
-    "section": "",
-    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear - to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
-  },
-  {
-    "objectID": "reflection.html#starting-the-project",
-    "href": "reflection.html#starting-the-project",
-    "title": "Reflection",
-    "section": "",
-    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear - to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
-  },
-  {
-    "objectID": "reflection.html#what-i-set-out-to-do",
-    "href": "reflection.html#what-i-set-out-to-do",
-    "title": "Reflection",
-    "section": "What I set out to do",
-    "text": "What I set out to do\nThe project required developing a professional e-portfolio using Quarto, managing it with Git, and publishing it through GitHub Pages. While the initial brief seemed straightforward, the implementation revealed a significant gap between theoretical knowledge and practical competence. Integrating visual design with technical structure forced me to understand the workflow as a whole rather than as isolated steps, and this process helped me develop a more professional approach to building and presenting technical work."
-  },
-  {
-    "objectID": "reflection.html#the-learning-journey",
-    "href": "reflection.html#the-learning-journey",
-    "title": "Reflection",
-    "section": "The learning journey",
-    "text": "The learning journey\n\n\n\n\n\nflowchart LR\n    A[Brief] --&gt; B[Quarto setup]\n    B --&gt; C[Configuration]\n    C --&gt; D[Python projects]\n    D --&gt; E[Git and deployment]\n    E --&gt; F[Polish and iterate]\n    F --&gt; G[Reflect]"
-  },
-  {
-    "objectID": "reflection.html#key-skills-developed",
-    "href": "reflection.html#key-skills-developed",
-    "title": "Reflection",
-    "section": "Key skills developed",
-    "text": "Key skills developed\nQuarto as a publishing framework. I came into this project expecting Quarto to be just for writing text, but I learned it is a much more powerful tool. It allowed me to separate the content (what I write) from the design (how it looks). Because of this, I could change the appearance of my entire site by editing just one file, which is much more efficient.\nReproducible analysis with Python. Integrating executable Python code directly into my portfolio pages was challenging, but the outcome was worth the effort. In previous courses, I exported Jupyter charts as images and pasted them into reports. Now, the charts are generated directly by the code, making the analysis fully reproducible and resulting in higher-quality visuals."
-  },
-  {
-    "objectID": "reflection.html#challenges-and-technical-learning",
-    "href": "reflection.html#challenges-and-technical-learning",
-    "title": "Reflection",
-    "section": "Challenges and technical learning",
-    "text": "Challenges and technical learning\nCertain obstacles during the project turned into some of the most valuable learning moments.\n\n\n\n\n\n\nWarningThree technical challenges worth highlighting\n\n\n\n1. YAML configuration. Changing the site theme required modifying the configuration file. What seemed like a simple edit resulted in some errors and delays. Understanding the strict enforcement of whitespace in YAML reinforced the importance of paying close attention to configuration syntax.\n2. File permissions on deployment. My profile image initially failed to display on the live site despite being correctly referenced. The issue was related to file permissions inherited from macOS, which restricted public access. Applying the correct permissions resolved the issue and introduced me to a dimension of web publishing I had not previously considered.\n3. Build cache. Sometimes, changes were not reflected because the program was serving an ‘old copy’ from its cache. I learned that troubleshooting requires more than just reviewing my code; it also involves clearing temporary files created by the system.\n\n\nThese three issues - YAML syntax, file permissions, and caching - They represent the type of operational knowledge that is covered in introductory courses, but it is in professional practice where we really learned."
-  },
-  {
-    "objectID": "reflection.html#what-i-would-refine",
-    "href": "reflection.html#what-i-would-refine",
-    "title": "Reflection",
-    "section": "What I would refine",
-    "text": "What I would refine\nLooking back, there are aspects of my workflow I would approach differently in future projects. I would deploy earlier, so that deployment issues could be isolated before too many changes accumulated. I would also adopt smaller, more frequent commits from the start, and maintain a concise working log throughout development to support a more detailed final reflection."
-  },
-  {
-    "objectID": "reflection.html#why-this-matters-for-what-comes-next",
-    "href": "reflection.html#why-this-matters-for-what-comes-next",
-    "title": "Reflection",
-    "section": "Why this matters for what comes next",
-    "text": "Why this matters for what comes next\nThe primary motivation for building this portfolio was to create a space where I can demonstrate my technical reasoning rather than simply list skills on a CV. As I apply for roles in Business Intelligence and Data Analysis in Dublin, having a live portfolio where recruiters can examine my approach - for instance, in the comparison of BERT, FinBERT, and LLaMA 3.2 for financial sentiment analysis - offers concrete evidence of my capabilities.\nMore broadly, the skills developed here extend beyond this assignment."
-  },
-  {
-    "objectID": "reflection.html#final-reflection",
-    "href": "reflection.html#final-reflection",
-    "title": "Reflection",
-    "section": "Final reflection",
-    "text": "Final reflection\n\n\n\n\n\n\nNote\n\n\n\nThis project has strengthened both my technical confidence and my understanding of what it means to present work professionally. Each technical challenge - whether in configuration, deployment, or design - contributed to a broader understanding of how systems are built and maintained in practice. Beyond the specific tools, I developed a clearer sense of how to plan, execute, and refine a project from concept to public deliverable. This is a foundation I intend to build on throughout my career in Business Analytics."
-  },
-  {
     "objectID": "projects/list/fraud_detection.html",
     "href": "projects/list/fraud_detection.html",
     "title": "Fraud Detection: A Statistical Exploration of Consumer Transaction Data",
@@ -432,6 +334,153 @@
     "title": "Fraud Detection: A Statistical Exploration of Consumer Transaction Data",
     "section": "References",
     "text": "References\nConsumer Financial Protection Bureau. (2024). Consumer complaint database. https://www.consumerfinance.gov/\nPedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825–2830.\nChen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining."
+  },
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
+    "section": "",
+    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear - to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
+  },
+  {
+    "objectID": "reflection.html#starting-the-project",
+    "href": "reflection.html#starting-the-project",
+    "title": "Reflection",
+    "section": "",
+    "text": "Developing this e-portfolio was both a technical and a reflective exercise. Although I was already familiar with Git, Python, and Markdown from previous coursework, integrating these tools into a single professional website required a different kind of skill: thinking about the project as a product, not only as a collection of code.\nFrom the beginning, my goal was clear - to build a portfolio polished enough to share with recruiters, and structured enough to demonstrate my approach to problem-solving in Business Analytics."
+  },
+  {
+    "objectID": "reflection.html#what-i-set-out-to-do",
+    "href": "reflection.html#what-i-set-out-to-do",
+    "title": "Reflection",
+    "section": "What I set out to do",
+    "text": "What I set out to do\nThe project required developing a professional e-portfolio using Quarto, managing it with Git, and publishing it through GitHub Pages. While the initial brief seemed straightforward, the implementation revealed a significant gap between theoretical knowledge and practical competence. Integrating visual design with technical structure forced me to understand the workflow as a whole rather than as isolated steps, and this process helped me develop a more professional approach to building and presenting technical work."
+  },
+  {
+    "objectID": "reflection.html#the-learning-journey",
+    "href": "reflection.html#the-learning-journey",
+    "title": "Reflection",
+    "section": "The learning journey",
+    "text": "The learning journey\n\n\n\n\n\nflowchart LR\n    A[Brief] --&gt; B[Quarto setup]\n    B --&gt; C[Configuration]\n    C --&gt; D[Python projects]\n    D --&gt; E[Git and deployment]\n    E --&gt; F[Polish and iterate]\n    F --&gt; G[Reflect]"
+  },
+  {
+    "objectID": "reflection.html#key-skills-developed",
+    "href": "reflection.html#key-skills-developed",
+    "title": "Reflection",
+    "section": "Key skills developed",
+    "text": "Key skills developed\nQuarto as a publishing framework. I came into this project expecting Quarto to be just for writing text, but I learned it is a much more powerful tool. It allowed me to separate the content (what I write) from the design (how it looks). Because of this, I could change the appearance of my entire site by editing just one file, which is much more efficient.\nReproducible analysis with Python. Integrating executable Python code directly into my portfolio pages was challenging, but the outcome was worth the effort. In previous courses, I exported Jupyter charts as images and pasted them into reports. Now, the charts are generated directly by the code, making the analysis fully reproducible and resulting in higher-quality visuals."
+  },
+  {
+    "objectID": "reflection.html#challenges-and-technical-learning",
+    "href": "reflection.html#challenges-and-technical-learning",
+    "title": "Reflection",
+    "section": "Challenges and technical learning",
+    "text": "Challenges and technical learning\nCertain obstacles during the project turned into some of the most valuable learning moments.\n\n\n\n\n\n\nWarningThree technical challenges worth highlighting\n\n\n\n1. YAML configuration. Changing the site theme required modifying the configuration file. What seemed like a simple edit resulted in some errors and delays. Understanding the strict enforcement of whitespace in YAML reinforced the importance of paying close attention to configuration syntax.\n2. File permissions on deployment. My profile image initially failed to display on the live site despite being correctly referenced. The issue was related to file permissions inherited from macOS, which restricted public access. Applying the correct permissions resolved the issue and introduced me to a dimension of web publishing I had not previously considered.\n3. Build cache. Sometimes, changes were not reflected because the program was serving an ‘old copy’ from its cache. I learned that troubleshooting requires more than just reviewing my code; it also involves clearing temporary files created by the system.\n\n\nThese three issues - YAML syntax, file permissions, and caching - They represent the type of operational knowledge that is covered in introductory courses, but it is in professional practice where we really learned."
+  },
+  {
+    "objectID": "reflection.html#what-i-would-refine",
+    "href": "reflection.html#what-i-would-refine",
+    "title": "Reflection",
+    "section": "What I would refine",
+    "text": "What I would refine\nLooking back, there are aspects of my workflow I would approach differently in future projects. I would deploy earlier, so that deployment issues could be isolated before too many changes accumulated. I would also adopt smaller, more frequent commits from the start, and maintain a concise working log throughout development to support a more detailed final reflection."
+  },
+  {
+    "objectID": "reflection.html#why-this-matters-for-what-comes-next",
+    "href": "reflection.html#why-this-matters-for-what-comes-next",
+    "title": "Reflection",
+    "section": "Why this matters for what comes next",
+    "text": "Why this matters for what comes next\nThe primary motivation for building this portfolio was to create a space where I can demonstrate my technical reasoning rather than simply list skills on a CV. As I apply for roles in Business Intelligence and Data Analysis in Dublin, having a live portfolio where recruiters can examine my approach - for instance, in the comparison of BERT, FinBERT, and LLaMA 3.2 for financial sentiment analysis - offers concrete evidence of my capabilities.\nMore broadly, the skills developed here extend beyond this assignment."
+  },
+  {
+    "objectID": "reflection.html#final-reflection",
+    "href": "reflection.html#final-reflection",
+    "title": "Reflection",
+    "section": "Final reflection",
+    "text": "Final reflection\n\n\n\n\n\n\nNote\n\n\n\nThis project has strengthened both my technical confidence and my understanding of what it means to present work professionally. Each technical challenge - whether in configuration, deployment, or design - contributed to a broader understanding of how systems are built and maintained in practice. Beyond the specific tools, I developed a clearer sense of how to plan, execute, and refine a project from concept to public deliverable. This is a foundation I intend to build on throughout my career in Business Analytics."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I am always happy to hear from people interested in similar work, or in collaboration. The best way to reach me is through LinkedIn.\n\n\n\n\nPrimary channel: LinkedIn\nLocation: Dublin, Ireland\nResponse time: Usually within 48 hours\n\n\n\n\n\n LinkedIn\n GitHub\n CV (PDF)\n\n\n\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nFor work-related enquiries, LinkedIn is the most reliable channel. For technical questions about the projects on this site, feel free to open an issue on the GitHub repository."
+  },
+  {
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact & References",
+    "section": "Professional References",
+    "text": "Professional References\nThe following individuals can speak to my work ethic, character, and professional abilities. Please contact me via LinkedIn before reaching out to them so I can let them know to expect your message.\n\nWendy Lucio\n\n\n\n\n\n\nNoteAcademic Reference\n\n\n\nFocus areas: Credit Risk, Predictive Modelling & Scoring Organisation: Dublin City University — MSc Business Analytics Relationship: Classmate and current practicum teammate Contact: Available on request\nWendy and I are completing the MSc Business Analytics programme at DCU together and are currently collaborating on the same practicum team. She can speak to my technical contributions, my collaborative approach to teamwork, and the quality of my analytical work in academic and applied settings.\n\n\n\n\nMartina Keane\n\n\n\n\n\n\nNotePersonal Reference\n\n\n\nContact: Available on request\nMartina can speak to my reliability, responsibility, and personal character, based on our professional working relationship. She is able to provide a strong personal reference regarding my work ethic and conduct."
+  },
+  {
+    "objectID": "contact.html#a-note-on-privacy",
+    "href": "contact.html#a-note-on-privacy",
+    "title": "Contact & References",
+    "section": "A Note on Privacy",
+    "text": "A Note on Privacy\nFull contact details for references are provided on request rather than listed publicly, out of respect for their privacy. If you are recruiting or evaluating, please reach out via LinkedIn and I will share their details directly.\n\nThis site is the source of truth for my professional contact information. If you have found my details elsewhere and they appear out of date, please refer to this page."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Below is a curated selection of projects spanning data analysis, visualisation, and exploratory work. Each project includes executable Python code and the reasoning behind the approach. Click any card to read the full write-up.\n\n\n\n\n\n\nNoteHow to read these projects\n\n\n\nEvery project on this page runs live. The code you see is the code that produced the output — no screenshots, no pre-rendered images. Use the Code toggle on each page to expand or hide source.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nProduct Performance Analysis with Power BI\n\n\n\nPower BI\n\nData Analysis\n\nStatistics\n\nBusiness Intelligence\n\n\n\nPower BI analysis of nine years of product-level financial data for AutoMotion Co., identifying which products drive losses and why.\n\n\n\n\n\n\nSep 23, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI-Enabled Content Production Pipeline\n\n\n\nGenerative AI\n\nLLMs\n\nRAG\n\nDesign Science Research\n\nSystematic Review\n\nConsulting\n\n\n\nA working eight-stage pipeline that takes a marketing brief through to human sign-off, grounded in a systematic review of 45 studies and seven stakeholder interviews.\n\n\n\n\n\n\nSep 19, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinancial News Sentiment Analysis: BERT vs FinBERT vs LLaMA 3.2\n\n\n\npython\n\nnlp\n\nmachine-learning\n\ntransformers\n\nsentiment-analysis\n\n\n\nBenchmarking three NLP architectures on sentence-level financial sentiment classification using the Financial PhraseBank dataset.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 18, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFraud Detection: A Statistical Exploration of Consumer Transaction Data\n\n\n\npython\n\nstatistics\n\neda\n\nmachine-learning\n\nfraud\n\n\n\nAn exploratory statistical analysis of 500 consumer banking transactions using descriptive statistics, correlation analysis, outlier detection, and classification modelling.\n\n\n\nLilian Cordova Hernandez\n\n\nApr 15, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/list/product_performance_analysis.html",
+    "href": "projects/list/product_performance_analysis.html",
+    "title": "Product Performance Analysis with Power BI",
+    "section": "",
+    "text": "AutoMotion Co.’s dataset covers nine years of transactions (January 2015 – July 2024): 500 rows across 19 variables, spanning five regions (Africa, Asia, Europe, North America, South America) and ten product lines. Over that period the company’s average net margin was -12.8%, and the team was asked to work out why, using the statistical and analytical methods from the BAA1089 module.\n\n\n\n\n\n\nNoteMy role\n\n\n\nFour-person team project for BAA1089 – Statistical Models and Methods for Business Analytics. I was responsible for the product-level analysis: net profit by product, year-over-year profit trends, and unit cost vs. unit price behaviour across all ten products, built in Power BI."
+  },
+  {
+    "objectID": "projects/list/product_performance_analysis.html#the-problem",
+    "href": "projects/list/product_performance_analysis.html#the-problem",
+    "title": "Product Performance Analysis with Power BI",
+    "section": "",
+    "text": "AutoMotion Co.’s dataset covers nine years of transactions (January 2015 – July 2024): 500 rows across 19 variables, spanning five regions (Africa, Asia, Europe, North America, South America) and ten product lines. Over that period the company’s average net margin was -12.8%, and the team was asked to work out why, using the statistical and analytical methods from the BAA1089 module.\n\n\n\n\n\n\nNoteMy role\n\n\n\nFour-person team project for BAA1089 – Statistical Models and Methods for Business Analytics. I was responsible for the product-level analysis: net profit by product, year-over-year profit trends, and unit cost vs. unit price behaviour across all ten products, built in Power BI."
+  },
+  {
+    "objectID": "projects/list/product_performance_analysis.html#which-products-actually-made-money",
+    "href": "projects/list/product_performance_analysis.html#which-products-actually-made-money",
+    "title": "Product Performance Analysis with Power BI",
+    "section": "Which products actually made money",
+    "text": "Which products actually made money\n\n\n\n\n\n\nFigure 1: Net profit by product, 2015–2024. Printer and Building Material were the only two products with a positive net profit over the period ($0.7M and $0.4M); Car (-$4.0M) and Smartphone (-$3.1M) were the biggest drags.\n\n\n\nPrinter and Building Material were the only two products with a positive net profit over the full period, at $0.7M and $0.4M respectively. Car and Smartphone were the worst performers, at -$4.0M and -$3.1M."
+  },
+  {
+    "objectID": "projects/list/product_performance_analysis.html#how-that-played-out-year-by-year",
+    "href": "projects/list/product_performance_analysis.html#how-that-played-out-year-by-year",
+    "title": "Product Performance Analysis with Power BI",
+    "section": "How that played out year by year",
+    "text": "How that played out year by year\n\n\n\n\n\n\nFigure 2: Net profit trends by product, 2016–2022. Only two years in the window, 2016 and 2021, show a positive net profit; most products show a negative trend in the other years.\n\n\n\nNet profit margin fluctuated between roughly +3.1% and -32.9% across the period, and only two years, 2016 and 2021, came out positive. Building Material had the fewest fluctuations and performed the most consistently. Car and Smartphone underperformed in most years, with losses reaching -$766k (-25.61% of 2022 net profit) and -$960k (-25.20% of 2019 net profit) respectively."
+  },
+  {
+    "objectID": "projects/list/product_performance_analysis.html#pricing-vs.-cost-product-by-product",
+    "href": "projects/list/product_performance_analysis.html#pricing-vs.-cost-product-by-product",
+    "title": "Product Performance Analysis with Power BI",
+    "section": "Pricing vs. cost, product by product",
+    "text": "Pricing vs. cost, product by product\nIndividual sales showed extreme outliers in unit price and unit cost, so I used the median rather than the mean to keep the year-by-year comparison meaningful.\n\n\n\n\n\n\nFigure 3: Unit cost vs. unit price by year, Building Material and Car. Gross margin swings sharply negative in specific years, most severely for Car in 2019.\n\n\n\nThe pattern repeats across products: prices regularly fell below cost. The worst cases were Car in 2019 (-367.13% gross margin), Laptop in 2015 (-382.86%), and Building Material in 2018 (-261.68%). Three products, Printer, Tablet, and Insurance Plan, held a mostly positive gross margin trend across the period, with only isolated dips (Printer and Tablet in 2017, Insurance Plan in 2024)."
+  },
+  {
+    "objectID": "projects/list/product_performance_analysis.html#what-this-pointed-to",
+    "href": "projects/list/product_performance_analysis.html#what-this-pointed-to",
+    "title": "Product Performance Analysis with Power BI",
+    "section": "What this pointed to",
+    "text": "What this pointed to\nReading the three views together: it isn’t that AutoMotion Co.’s costs were out of control, it’s that pricing wasn’t tracking cost closely enough, on specific products, in specific years. That distinction matters for what you’d actually recommend: an across-the-board price increase would overcorrect for the products that were already healthy, while a blanket cost-cutting push would miss that the real exposure sits in a handful of products and years, not the business as a whole.\nThe team’s recommendation, based on this and the parallel regional analysis, was a differentiated pricing strategy by product and region, reviewed against these indicators on a regular cycle, rather than a single company-wide price or cost adjustment."
+  },
+  {
+    "objectID": "projects/list/product_performance_analysis.html#tools",
+    "href": "projects/list/product_performance_analysis.html#tools",
+    "title": "Product Performance Analysis with Power BI",
+    "section": "Tools",
+    "text": "Tools\nPower BI for all visualisation (waterfall, stacked column with trend overlay, paired small-multiple bar charts with dual axes), working from a 500-row, 19-column dataset. Median-based comparison was used throughout the product analysis to keep outliers in individual transactions from skewing the year-by-year picture."
   },
   {
     "objectID": "projects/list/ai_content_pipeline.html",

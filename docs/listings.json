@@ -2,6 +2,7 @@
   {
     "listing": "/projects/index.html",
     "items": [
+      "/projects/list/product_performance_analysis.html",
       "/projects/list/ai_content_pipeline.html",
       "/projects/list/sentiment_analysis.html",
       "/projects/list/fraud_detection.html"

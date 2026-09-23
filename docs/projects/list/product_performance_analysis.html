@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-09-23">
+<meta name="description" content="Power BI analysis of nine years of product-level financial data for AutoMotion Co., identifying which products drive losses and why.">
 
-<title>About Me</title>
+<title>Product Performance Analysis with Power BI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,29 +25,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-57df612ce7d31eb042a4162ec1190c32.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9ce02ba9bf05f77acce06f7d436c50a3.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-57df612ce7d31eb042a4162ec1190c32.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cafbf74504e8c92494feddbc5e3c4bea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-274662e6b3faa38f8d456ecc8a73bcf7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-cafbf74504e8c92494feddbc5e3c4bea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-57df612ce7d31eb042a4162ec1190c32.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-9ce02ba9bf05f77acce06f7d436c50a3.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-57df612ce7d31eb042a4162ec1190c32.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cafbf74504e8c92494feddbc5e3c4bea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-274662e6b3faa38f8d456ecc8a73bcf7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-cafbf74504e8c92494feddbc5e3c4bea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,14 +78,16 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="About Me">
-<meta property="og:description" content="Background, skills, and goals">
-<meta property="og:image" content="https://cordova-lilian.github.io/eportfolio/carrauntoohil.jpg">
-<meta property="og:image:alt" content="Photo from the hike up Carrauntoohil, Ireland’s highest peak.">
-<meta name="twitter:title" content="About Me">
-<meta name="twitter:description" content="Background, skills, and goals">
-<meta name="twitter:image" content="https://cordova-lilian.github.io/eportfolio/carrauntoohil.jpg">
-<meta name="twitter:image:alt" content="Photo from the hike up Carrauntoohil, Ireland’s highest peak.">
+<meta property="og:title" content="Product Performance Analysis with Power BI">
+<meta property="og:description" content="Power BI analysis of nine years of product-level financial data for AutoMotion Co., identifying which products drive losses and why.">
+<meta property="og:image" content="https://cordova-lilian.github.io/eportfolio/projects/list/product-performance-thumb.png">
+<meta property="og:image:height" content="347">
+<meta property="og:image:width" content="454">
+<meta name="twitter:title" content="Product Performance Analysis with Power BI">
+<meta name="twitter:description" content="Power BI analysis of nine years of product-level financial data for AutoMotion Co., identifying which products drive losses and why.">
+<meta name="twitter:image" content="https://cordova-lilian.github.io/eportfolio/projects/list/product-performance-thumb.png">
+<meta name="twitter:image-height" content="347">
+<meta name="twitter:image-width" content="454">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -257,9 +260,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.svg" alt="Lilian Cordova Hernandez" class="navbar-logo light-content">
-    <img src="./images/logo.svg" alt="Lilian Cordova Hernandez" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.svg" alt="Lilian Cordova Hernandez" class="navbar-logo light-content">
+    <img src="../../images/logo.svg" alt="Lilian Cordova Hernandez" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -269,12 +272,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> <i class="bi bi-person" role="img">
+    <a class="nav-link" href="../../about.html"> <i class="bi bi-person" role="img">
 </i> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -286,41 +289,41 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="./projects/index.html">
+    <a class="dropdown-item" href="../../projects/index.html">
  <span class="dropdown-text">All projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects/list/sentiment_analysis.html">
+    <a class="dropdown-item" href="../../projects/list/sentiment_analysis.html">
  <span class="dropdown-text">Financial Sentiment Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects/list/fraud_detection.html">
+    <a class="dropdown-item" href="../../projects/list/fraud_detection.html">
  <span class="dropdown-text">Fraud Detection</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects/list/ai_content_pipeline.html">
+    <a class="dropdown-item" href="../../projects/list/ai_content_pipeline.html">
  <span class="dropdown-text">AI Content Production Pipeline</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects/list/product_performance_analysis.html">
+    <a class="dropdown-item" href="../../projects/list/product_performance_analysis.html">
  <span class="dropdown-text">Product Performance Analysis (Power BI)</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./reflection.html"> <i class="bi bi-journal-text" role="img">
+    <a class="nav-link" href="../../reflection.html"> <i class="bi bi-journal-text" role="img">
 </i> 
 <span class="menu-text">Reflection</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> <i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="../../contact.html"> <i class="bi bi-envelope" role="img">
 </i> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./cv/cv.pdf" target="_blank"> <i class="bi bi-file-earmark-pdf" role="img">
+    <a class="nav-link" href="../../cv/cv.pdf" target="_blank"> <i class="bi bi-file-earmark-pdf" role="img">
 </i> 
 <span class="menu-text">CV</span></a>
   </li>  
@@ -351,23 +354,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#who-i-am" id="toc-who-i-am" class="nav-link active" data-scroll-target="#who-i-am">Who I Am</a></li>
-  <li><a href="#what-i-do" id="toc-what-i-do" class="nav-link" data-scroll-target="#what-i-do">What I Do</a></li>
-  <li><a href="#technical-skills" id="toc-technical-skills" class="nav-link" data-scroll-target="#technical-skills">Technical Skills</a></li>
-  <li><a href="#academic-focus" id="toc-academic-focus" class="nav-link" data-scroll-target="#academic-focus">Academic Focus</a></li>
-  <li><a href="#professional-background" id="toc-professional-background" class="nav-link" data-scroll-target="#professional-background">Professional Background</a></li>
-  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
-  <li><a href="#continuous-professional-development" id="toc-continuous-professional-development" class="nav-link" data-scroll-target="#continuous-professional-development">Continuous Professional Development</a>
-  <ul class="collapse">
-  <li><a href="#data-ai" id="toc-data-ai" class="nav-link" data-scroll-target="#data-ai">Data &amp; AI</a></li>
-  <li><a href="#sql-python" id="toc-sql-python" class="nav-link" data-scroll-target="#sql-python">SQL &amp; Python</a></li>
-  <li><a href="#data-ethics-security-communication" id="toc-data-ethics-security-communication" class="nav-link" data-scroll-target="#data-ethics-security-communication">Data Ethics, Security &amp; Communication</a></li>
-  <li><a href="#research-integrity" id="toc-research-integrity" class="nav-link" data-scroll-target="#research-integrity">Research Integrity</a></li>
-  <li><a href="#language-certifications" id="toc-language-certifications" class="nav-link" data-scroll-target="#language-certifications">Language Certifications</a></li>
-  </ul></li>
-  <li><a href="#outside-of-work" id="toc-outside-of-work" class="nav-link" data-scroll-target="#outside-of-work">Outside of Work</a></li>
-  <li><a href="#interests" id="toc-interests" class="nav-link" data-scroll-target="#interests">Interests</a></li>
-  <li><a href="#a-note-on-this-site" id="toc-a-note-on-this-site" class="nav-link" data-scroll-target="#a-note-on-this-site">A Note on This Site</a></li>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The problem</a></li>
+  <li><a href="#which-products-actually-made-money" id="toc-which-products-actually-made-money" class="nav-link" data-scroll-target="#which-products-actually-made-money">Which products actually made money</a></li>
+  <li><a href="#how-that-played-out-year-by-year" id="toc-how-that-played-out-year-by-year" class="nav-link" data-scroll-target="#how-that-played-out-year-by-year">How that played out year by year</a></li>
+  <li><a href="#pricing-vs.-cost-product-by-product" id="toc-pricing-vs.-cost-product-by-product" class="nav-link" data-scroll-target="#pricing-vs.-cost-product-by-product">Pricing vs.&nbsp;cost, product by product</a></li>
+  <li><a href="#what-this-pointed-to" id="toc-what-this-pointed-to" class="nav-link" data-scroll-target="#what-this-pointed-to">What this pointed to</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
   </ul>
 </nav>
     </div>
@@ -377,10 +369,21 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
-<p class="subtitle lead">Background, skills, and goals</p>
-</div>
+<h1 class="title">Product Performance Analysis with Power BI</h1>
+<p class="subtitle lead">Statistical Models and Methods for Business Analytics — group project</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Power BI</div>
+    <div class="quarto-category">Data Analysis</div>
+    <div class="quarto-category">Statistics</div>
+    <div class="quarto-category">Business Intelligence</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Power BI analysis of nine years of product-level financial data for AutoMotion Co., identifying which products drive losses and why.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -401,243 +404,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="who-i-am" class="level2">
-<h2 class="anchored" data-anchor-id="who-i-am">Who I Am</h2>
-<p>I am a results-oriented Business Analyst with an MSc in Business Analytics, based in Ireland and specialising in AI-driven business solutions.**. My work sits at the intersection of international trade and advanced analytics - translating complex data into strategic insights that inform real decisions.</p>
-<p>My professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.</p>
-<p>I am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.</p>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
+<p>AutoMotion Co.’s dataset covers nine years of transactions (January 2015 – July 2024): 500 rows across 19 variables, spanning five regions (Africa, Asia, Europe, North America, South America) and ten product lines. Over that period the company’s average net margin was <strong>-12.8%</strong>, and the team was asked to work out why, using the statistical and analytical methods from the BAA1089 module.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>At a glance
+<span class="screen-reader-only">Note</span>My role
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li><strong>Current programme:</strong> MSc Business Analytics, <strong>Dublin City University</strong> (Expected 2026)</li>
-<li><strong>Prior education:</strong> BSc in International Trade and Business, Universidad de Sonora (Mexico)</li>
-<li><strong>Target roles:</strong> Business Intelligence, Data Analysis, NLP Applications</li>
-<li><strong>Languages:</strong> English (Advanced/C1 - IELTS Band 7), Spanish (Native)</li>
-<li><strong>Based in:</strong> Dublin, Ireland</li>
-<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232">lilian-cordova-hernandez</a></li>
-</ul>
+<p>Four-person team project for <strong>BAA1089 – Statistical Models and Methods for Business Analytics</strong>. I was responsible for the product-level analysis: net profit by product, year-over-year profit trends, and unit cost vs.&nbsp;unit price behaviour across all ten products, built in <strong>Power BI</strong>.</p>
 </div>
 </div>
 </section>
-<section id="what-i-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-do">What I Do</h2>
-<p>I apply data science techniques — particularly <strong>Natural Language Processing (NLP)</strong> and <strong>Machine Learning</strong> — to business problems. My recent work has focused on financial sentiment analysis, LLM-enabled content pipelines, and supply chain digitalisation. I am most energised when a technical project connects back to a concrete strategic question.</p>
-</section>
-<section id="technical-skills" class="level2">
-<h2 class="anchored" data-anchor-id="technical-skills">Technical Skills</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 67%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Category</th>
-<th>Tools &amp; Technologies</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Programming</strong></td>
-<td>Python (Scikit-learn, Pandas, NLTK), SQL</td>
-</tr>
-<tr class="even">
-<td><strong>Machine Learning</strong></td>
-<td>Random Forest, Gradient Boosting, Sentiment Analysis, TF-IDF Vectorisation</td>
-</tr>
-<tr class="odd">
-<td><strong>Business Intelligence</strong></td>
-<td>Advanced Microsoft Excel (KPI tracking, reporting tools), Power BI, Tableau</td>
-</tr>
-<tr class="even">
-<td><strong>Web &amp; Publishing</strong></td>
-<td>Quarto, HTML/CSS, Git, GitHub Pages</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="academic-focus" class="level2">
-<h2 class="anchored" data-anchor-id="academic-focus">Academic Focus</h2>
-<p>My MSc programme at <strong>Dublin City University</strong> centres on applying analytics directly to business problems:</p>
-<ul>
-<li><strong>Applied Business Analytics</strong> — statistical methods and analytical frameworks for business decision-making</li>
-<li><strong>Machine Learning for Business</strong> — supervised and unsupervised methods with applied case studies</li>
-<li><strong>Strategic AI Integration</strong> — how organisations deploy AI effectively within existing operations</li>
-</ul>
-<p><strong>Applied research:</strong> I developed an <a href="./projects/list/ai_content_pipeline.html">LLM-enabled content production pipeline</a> to optimise workflow efficiency for a retail client — a project that combined my interest in language models with the operational challenges of a real business.</p>
-</section>
-<section id="professional-background" class="level2">
-<h2 class="anchored" data-anchor-id="professional-background">Professional Background</h2>
-<p><strong>Florería y Regalos Martha</strong> — Customer Service / Social Media (Hermosillo, Mexico, Feb–May 2025)</p>
-<p>In this role I managed inventory and logistics for a retail environment, improving service delivery efficiency. I also developed commercial awareness through direct customer interaction and social media management. It was in positions like this that I first noticed the patterns in customer behaviour that would later draw me toward analytics as a discipline.</p>
-</section>
-<section id="goals" class="level2">
-<h2 class="anchored" data-anchor-id="goals">Goals</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="which-products-actually-made-money" class="level2">
+<h2 class="anchored" data-anchor-id="which-products-actually-made-money">Which products actually made money</h2>
+<div id="fig-netprofit" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Waterfall chart showing net profit by product from 2015 to 2024, with Printer and Building Material positive and Car and Smartphone strongly negative.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-netprofit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figure6-net-profit-by-product.png" class="img-fluid figure-img" alt="Waterfall chart showing net profit by product from 2015 to 2024, with Printer and Building Material positive and Car and Smartphone strongly negative.">
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Where I am heading
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-netprofit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Net profit by product, 2015–2024. Printer and Building Material were the only two products with a positive net profit over the period ($0.7M and $0.4M); Car (-$4.0M) and Smartphone (-$3.1M) were the biggest drags.
+</figcaption>
+</figure>
 </div>
+<p>Printer and Building Material were the only two products with a positive net profit over the full period, at $0.7M and $0.4M respectively. Car and Smartphone were the worst performers, at -$4.0M and -$3.1M.</p>
+</section>
+<section id="how-that-played-out-year-by-year" class="level2">
+<h2 class="anchored" data-anchor-id="how-that-played-out-year-by-year">How that played out year by year</h2>
+<div id="fig-trends" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Stacked column chart with a trend line showing net profit margin fluctuating between roughly +3% and -33% across 2016 to 2022, with only 2016 and 2021 positive.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figure7-net-profit-trends-by-product.png" class="img-fluid figure-img" alt="Stacked column chart with a trend line showing net profit margin fluctuating between roughly +3% and -33% across 2016 to 2022, with only 2016 and 2021 positive.">
 </div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><strong>Short term:</strong> Complete the MSc Business Analytics programme at DCU and build a portfolio of analytical work that demonstrates genuine technical depth in NLP and machine learning.</li>
-<li><strong>Medium term:</strong> Secure a role in <strong>Business Intelligence</strong> or <strong>Data Analysis</strong>, ideally at a company operating across international markets where my bilingual and cross-cultural background adds value.</li>
-<li><strong>Long term:</strong> Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence.</li>
-</ol>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Net profit trends by product, 2016–2022. Only two years in the window, 2016 and 2021, show a positive net profit; most products show a negative trend in the other years.
+</figcaption>
+</figure>
 </div>
+<p>Net profit margin fluctuated between roughly +3.1% and -32.9% across the period, and only two years, 2016 and 2021, came out positive. Building Material had the fewest fluctuations and performed the most consistently. Car and Smartphone underperformed in most years, with losses reaching -$766k (-25.61% of 2022 net profit) and -$960k (-25.20% of 2019 net profit) respectively.</p>
+</section>
+<section id="pricing-vs.-cost-product-by-product" class="level2">
+<h2 class="anchored" data-anchor-id="pricing-vs.-cost-product-by-product">Pricing vs.&nbsp;cost, product by product</h2>
+<p>Individual sales showed extreme outliers in unit price and unit cost, so I used the median rather than the mean to keep the year-by-year comparison meaningful.</p>
+<div id="fig-costprice" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Paired bar charts comparing unit cost and unit price by year for Building Material and Car, with a gross margin percentage line overlaid, showing sharp negative swings in certain years.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-costprice-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figure8-unit-cost-vs-price.png" class="img-fluid figure-img" alt="Paired bar charts comparing unit cost and unit price by year for Building Material and Car, with a gross margin percentage line overlaid, showing sharp negative swings in certain years.">
 </div>
-</section>
-<section id="continuous-professional-development" class="level2">
-<h2 class="anchored" data-anchor-id="continuous-professional-development">Continuous Professional Development</h2>
-<p>In addition to my formal programme at DCU, I have completed a structured set of online courses to strengthen my technical foundation in data analytics and AI. Selected highlights below, organised by area.</p>
-<section id="data-ai" class="level3">
-<h3 class="anchored" data-anchor-id="data-ai">Data &amp; AI</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Area</th>
-<th>Course</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>AI Fundamentals</strong></td>
-<td>Introduction to Generative AI</td>
-</tr>
-<tr class="even">
-<td><strong>AI Fundamentals</strong></td>
-<td>Large Language Models</td>
-</tr>
-<tr class="odd">
-<td><strong>AI Fundamentals</strong></td>
-<td>Prompt Engineering</td>
-</tr>
-<tr class="even">
-<td><strong>AI Fundamentals</strong></td>
-<td>Advanced Prompt Concepts</td>
-</tr>
-<tr class="odd">
-<td><strong>AI Fundamentals</strong></td>
-<td>Exploring ChatGPT</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sql-python" class="level3">
-<h3 class="anchored" data-anchor-id="sql-python">SQL &amp; Python</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Area</th>
-<th>Course</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Python Fundamentals</strong></td>
-<td>Python Fundamentals</td>
-</tr>
-<tr class="even">
-<td><strong>SQL</strong></td>
-<td>Understanding SQL Databases</td>
-</tr>
-<tr class="odd">
-<td><strong>SQL</strong></td>
-<td>Selecting and Filtering Data with SQL</td>
-</tr>
-<tr class="even">
-<td><strong>SQL</strong></td>
-<td>Joining Data with SQL</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="data-ethics-security-communication" class="level3">
-<h3 class="anchored" data-anchor-id="data-ethics-security-communication">Data Ethics, Security &amp; Communication</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Area</th>
-<th>Course</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Data Ethics &amp; Risk</strong></td>
-<td>Introduction to Data Ethics</td>
-</tr>
-<tr class="even">
-<td><strong>Data Ethics &amp; Risk</strong></td>
-<td>Applying Ethical Thinking in Data Ethics</td>
-</tr>
-<tr class="odd">
-<td><strong>Data Security</strong></td>
-<td>Keeping Your Information Safe</td>
-</tr>
-<tr class="even">
-<td><strong>Data Security</strong></td>
-<td>Handling Data Securely and Responsibly</td>
-</tr>
-<tr class="odd">
-<td><strong>Data Presentation Skills</strong></td>
-<td>Communicating Data Effectively</td>
-</tr>
-<tr class="even">
-<td><strong>Data Presentation Skills</strong></td>
-<td>Telling Stories with Data</td>
-</tr>
-<tr class="odd">
-<td><strong>Data Presentation Skills</strong></td>
-<td>Presenting Your Data</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="research-integrity" class="level3">
-<h3 class="anchored" data-anchor-id="research-integrity">Research Integrity</h3>
-<ul>
-<li><strong>Good Research Conduct Certificate</strong> — Epigeum / Dublin City University. Comprehensive training covering research ethics, data management, authorship, and responsible conduct in academic research.</li>
-</ul>
-</section>
-<section id="language-certifications" class="level3">
-<h3 class="anchored" data-anchor-id="language-certifications">Language Certifications</h3>
-<ul>
-<li><strong>IELTS Academic</strong> — Band 7 (Advanced / C1 English proficiency)</li>
-</ul>
-</section>
-</section>
-<section id="outside-of-work" class="level2">
-<h2 class="anchored" data-anchor-id="outside-of-work">Outside of Work</h2>
-<p><img src="carrauntoohil.jpg" class="img-fluid" style="float:right; margin-left:1.5em; margin-bottom:0.5em; border-radius:6px;;width:35.0%" alt="Photo from the hike up Carrauntoohil, Ireland’s highest peak."> Most of my free time is spent hiking, and Carrauntoohil, Ireland’s highest peak, is the climb that has stayed with me the most. I’m drawn to travel and the outdoors more broadly: I’ve cycled El Camino de la Muerte in Bolivia, spent time in the Andes, and stood on the salt flats of the Salar de Uyuni.</p>
-<p>I joined DCU’s swimming club when I started the Masters, as a beginner rather than a competitor, and I’ve also taken ocean swimming lessons to keep learning. Running and yoga, the latter a practice I’ve maintained since I was 20, round out how I spend my time away from screens.</p>
-<div style="clear: both;">
-
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-costprice-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Unit cost vs.&nbsp;unit price by year, Building Material and Car. Gross margin swings sharply negative in specific years, most severely for Car in 2019.
+</figcaption>
+</figure>
 </div>
+<p>The pattern repeats across products: prices regularly fell below cost. The worst cases were Car in 2019 (-367.13% gross margin), Laptop in 2015 (-382.86%), and Building Material in 2018 (-261.68%). Three products, Printer, Tablet, and Insurance Plan, held a mostly positive gross margin trend across the period, with only isolated dips (Printer and Tablet in 2017, Insurance Plan in 2024).</p>
 </section>
-<section id="interests" class="level2">
-<h2 class="anchored" data-anchor-id="interests">Interests</h2>
-<ul>
-<li>Applications of <strong>Natural Language Processing</strong> in financial and commercial contexts</li>
-<li><strong>Large Language Models</strong> for business automation and workflow optimisation</li>
-<li><strong>Data storytelling</strong> and effective communication of analytical results to non-technical audiences</li>
-<li>Cross-cultural and bilingual analytical contexts</li>
-</ul>
+<section id="what-this-pointed-to" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-pointed-to">What this pointed to</h2>
+<p>Reading the three views together: it isn’t that AutoMotion Co.’s costs were out of control, it’s that pricing wasn’t tracking cost closely enough, on specific products, in specific years. That distinction matters for what you’d actually recommend: an across-the-board price increase would overcorrect for the products that were already healthy, while a blanket cost-cutting push would miss that the real exposure sits in a handful of products and years, not the business as a whole.</p>
+<p>The team’s recommendation, based on this and the parallel regional analysis, was a differentiated pricing strategy by product and region, reviewed against these indicators on a regular cycle, rather than a single company-wide price or cost adjustment.</p>
 </section>
-<section id="a-note-on-this-site" class="level2">
-<h2 class="anchored" data-anchor-id="a-note-on-this-site">A Note on This Site</h2>
-<p>This portfolio was built with <a href="https://quarto.org/">Quarto</a>, styled with custom Sass, and deployed via GitHub Pages. The source code is <a href="https://github.com/cordova-lilian/eportfolio">publicly available on GitHub</a> — take a look if you are curious about the implementation.</p>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p><strong>Power BI</strong> for all visualisation (waterfall, stacked column with trend overlay, paired small-multiple bar charts with dual axes), working from a 500-row, 19-column dataset. Median-based comparison was used throughout the product analysis to keep outliers in individual transactions from skewing the year-by-year picture.</p>
 
 
 </section>
@@ -1094,5 +928,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
