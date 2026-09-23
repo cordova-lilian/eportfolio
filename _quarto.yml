@@ -36,6 +36,8 @@ website:
             text: "Fraud Detection"
           - href: projects/list/ai_content_pipeline.qmd
             text: "AI Content Production Pipeline"
+          - href: projects/list/product_performance_analysis.qmd
+            text: "Product Performance Analysis (Power BI)"
       - href: reflection.qmd
         text: Reflection
         icon: journal-text
