@@ -6,17 +6,15 @@ date: last-modified
 
 ## Who I Am
 
-I am a results-oriented Business Analyst with an MSc in Business Analytics, based in Ireland and specialising in AI-driven business solutions.**. My work sits at the intersection of international trade and advanced analytics - translating complex data into strategic insights that inform real decisions.
+I'm a Business Analyst whose path into analytics started in International Trade and Business at Universidad de Sonora, Mexico. After graduating, I spent four years in customer service and social media for a retail business in Hermosillo, where I managed inventory and logistics and saw first-hand how day-to-day commercial decisions play out on the ground.
 
-My professional perspective is built upon a foundation in International Trade and Business, further enriched by practical experience in high-volume commercial environments. During my time in customer-facing and operational roles, I developed an acute understanding of how supply chain dynamics, pricing fluctuations, and seasonal trends directly influence consumer behaviour. This firsthand observation of market variables served as the catalyst for my transition into advanced analytics.
-
-I am currently refining my technical proficiency in Python, SQL, and Business Intelligence tools to translate complex datasets into actionable business intelligence. My goal is to combine my international business background with rigorous quantitative analysis to help organisations bridge the gap between global strategy and localised operational impact.
+That experience is what drew me to Dublin City University's MSc in Business Analytics, where I could build on a commercial background with technical skills in Python, SQL, machine learning, and Business Intelligence tools. I'm now looking for roles in Business Intelligence, Data Analysis, Business Consulting, or NLP, where I can combine that technical grounding with the analytical and client-facing skills covered on this site.
 
 ::: {.callout-note}
 ## At a glance
-- **Current programme:** MSc Business Analytics, **Dublin City University** (Expected 2026)
-- **Prior education:** BSc in International Trade and Business, Universidad de Sonora (Mexico)
-- **Target roles:** Business Intelligence, Data Analysis, NLP Applications
+- **Programme:** MSc Business Analytics, Dublin City University, Second Class Honours, Grade 1 (2.1); conferral ceremony 19 October 2026
+- **Prior education:** Bachelor of International Trade and Business, Universidad de Sonora (Mexico)
+- **Target roles:** Business Intelligence, Data Analysis, Business Consulting, NLP
 - **Languages:** English (Advanced/C1 - IELTS Band 7), Spanish (Native)
 - **Based in:** Dublin, Ireland
 - **LinkedIn:** [lilian-cordova-hernandez](https://www.linkedin.com/in/lilian-cordova-hernandez-916a37232)
@@ -24,7 +22,7 @@ I am currently refining my technical proficiency in Python, SQL, and Business In
 
 ## What I Do
 
-I apply data science techniques — particularly **Natural Language Processing (NLP)** and **Machine Learning** — to business problems. My recent work has focused on financial sentiment analysis, LLM-enabled content pipelines, and supply chain digitalisation. I am most energised when a technical project connects back to a concrete strategic question.
+I apply data science techniques, particularly **Natural Language Processing (NLP)** and **Machine Learning**, to business problems. My recent work has focused on financial sentiment analysis and LLM-enabled content pipelines. I'm drawn to projects where a technical approach connects back to a concrete strategic question.
 
 ## Technical Skills
 
@@ -37,27 +35,31 @@ I apply data science techniques — particularly **Natural Language Processing (
 
 ## Academic Focus
 
-My MSc programme at **Dublin City University** centres on applying analytics directly to business problems:
+My MSc programme at **Dublin City University** centred on applying analytics directly to business problems:
 
-- **Applied Business Analytics** — statistical methods and analytical frameworks for business decision-making
-- **Machine Learning for Business** — supervised and unsupervised methods with applied case studies
-- **Strategic AI Integration** — how organisations deploy AI effectively within existing operations
+- **Applied Business Analytics**: statistical methods and analytical frameworks for business decision-making
+- **Machine Learning for Business**: supervised and unsupervised methods with applied case studies
+- **Strategic AI Integration**: how organisations deploy AI effectively within existing operations
 
-**Applied research:** I developed an [LLM-enabled content production pipeline](projects/list/ai_content_pipeline.qmd) to optimise workflow efficiency for a retail client — a project that combined my interest in language models with the operational challenges of a real business. 
+**Applied research:** As part of a six-person consultancy team, I worked on an [LLM-enabled content production pipeline](projects/list/ai_content_pipeline.qmd) to optimise workflow efficiency for a retail client (name withheld for confidentiality). My own contributions were the project's systematic literature review and the stakeholder interviews that helped shape the team's recommended build, a project that combined my interest in language models with the operational challenges of a real business.
 
 ## Professional Background
 
-**Florería y Regalos Martha** — Customer Service / Social Media (Hermosillo, Mexico, February 2020 – March 2024)
+**Florería y Regalos Martha**: Customer Service / Social Media (Hermosillo, Mexico, February 2020 – March 2024)
 
 In this role I managed inventory and logistics for a retail environment, improving service delivery efficiency. I also developed commercial awareness through direct customer interaction and social media management. It was in positions like this that I first noticed the patterns in customer behaviour that would later draw me toward analytics as a discipline.
+
+**Consultoría Especializada de Sonora (COESSO)**: Consulting and Quality Management (Hermosillo, Mexico, January 2015 – June 2015)
+
+Advised on workplace safety and health regulations imposed by STPS (Mexico's Labour Ministry) and Mexican Civil Protection, conducted emergency drills and brigade training courses, and supported environmental license reporting, risk diagnoses, and ISO quality-standard compliance work.
 
 ## Goals
 
 ::: {.callout-tip}
 ## Where I am heading
-1. **Short term:** Complete the MSc Business Analytics programme at DCU and build a portfolio of analytical work that demonstrates genuine technical depth in NLP and machine learning.
-2. **Medium term:** Secure a role in **Business Intelligence** or **Data Analysis**, ideally at a company operating across international markets where my bilingual and cross-cultural background adds value.
-3. **Long term:** Become a bridge between strategic decision-making and quantitative analysis — helping organisations make better choices with better evidence.
+1. **Short term:** Secure a role in **Business Intelligence**, **Data Analysis**, **Business Consulting**, or **NLP**, ideally at a company operating across international markets where my bilingual and cross-cultural background adds value.
+2. **Medium term:** Build on that first role to deepen my technical depth in NLP and machine learning, while taking on more client-facing analytical work.
+3. **Long term:** Become a bridge between strategic decision-making and quantitative analysis, helping organisations make better choices with better evidence.
 :::
 
 ## Continuous Professional Development
@@ -97,11 +99,11 @@ In addition to my formal programme at DCU, I have completed a structured set of 
 
 ### Research Integrity
 
-- **Good Research Conduct Certificate** — Epigeum / Dublin City University. Comprehensive training covering research ethics, data management, authorship, and responsible conduct in academic research.
+- **Good Research Conduct Certificate**: Epigeum / Dublin City University. Comprehensive training covering research ethics, data management, authorship, and responsible conduct in academic research.
 
 ### Language Certifications
 
-- **IELTS Academic** — Band 7 (Advanced / C1 English proficiency)
+- **IELTS Academic**: Band 7 (Advanced / C1 English proficiency)
 
 ## Outside of Work
 
@@ -120,4 +122,4 @@ I joined DCU's swimming club when I started the Masters, as a beginner rather th
 
 ## A Note on This Site
 
-This portfolio was built with [Quarto](https://quarto.org/), styled with custom Sass, and deployed via GitHub Pages. The source code is [publicly available on GitHub](https://github.com/cordova-lilian/eportfolio) — take a look if you are curious about the implementation.
+This portfolio was built with [Quarto](https://quarto.org/), styled with custom Sass, and deployed via GitHub Pages. The source code is [publicly available on GitHub](https://github.com/cordova-lilian/eportfolio): take a look if you are curious about the implementation.
